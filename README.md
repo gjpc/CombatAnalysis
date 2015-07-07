@@ -1,5 +1,5 @@
 # CombatAnalysis
-A Lord of the Rings Online Lua Plugin
+A Lord of the Rings Online Lua Plugin in the public domain
 
 This Lua Plugin was created by Evendale and I assumed ownership with his gracious permission.
 
