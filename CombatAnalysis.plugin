@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<Plugin>
+	<Information>
+		<Name>CombatAnalysis</Name>
+		<Author>James Bebbington and Gerard Cerchio</Author>
+		<Version>4.4.6</Version>
+		<Description>Combat Analysis parses the combat log and displays a range of useful combat information, in real time, regarding:
+
+- Damage Dealt &amp; Taken
+- Incoming &amp; Outgoing Healing
+- Incoming &amp; Outgoing Power Restores
+- Buff &amp; Debuff Durations
+
+For a full list of features, visit:
+http://www.lotrointerface.com/downloads/info881-CombatAnalysis.html
+
+This plugin is in the public domain
+</Description>
+    <Image>CombatAnalysis/Resources/plugin_manager_logo.tga</Image>
+	</Information>
+	<Package>CombatAnalysis.Main</Package>
+	<Configuration Apartment="Vitals"></Configuration>
+</Plugin>
