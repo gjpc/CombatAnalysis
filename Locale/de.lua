@@ -432,7 +432,26 @@ L["Average"] = "Durchschnitt";
 L["Maximum"] = "Maximum";
 L["Minimum"] = "Minimum";
 
+--- Added in v4.4.7 to support Normal Hits
+L["NormalHits"] = "Normale Hits";
+L["NormalHitChance"] = "Treffer Prozentsatz";
+L["NormalHitAvg"] = "Durchschnittlich Treffer";
+L["NormalHitMax"] = "Max Treffer"
+L["NormalHitMin"] = "Min Treffer"
+
+--- Added in v4.4.7 to support Critical Hits
 L["CriticalHits"] = "Kritische Treffer";
+L["CriticalHitChance"] = "Treffer Prozentsatz";
+L["CriticalHitAvg"] = "Durchschnittlich Treffer";
+L["CriticalHitMax"] = "Max Treffer"
+L["CriticalHitMin"] = "Min Treffer"
+
+--- Added in v4.4.7 to support Devastate Hits
+L["DevastateHits"] = "Verwüsten Treffer";    
+L["DevastateHitChance"] = "Treffer Prozentsatz";
+L["DevastateHitAvg"] = "Durchschnittlich Treffer";
+L["DevastateHitMax"] = "Max Treffer"       
+L["DevastateHitMin"] = "Min Treffer"
 
 L["Avoidance"] = "Verteidigung";
 L["Attacks"] = "Angriffe";

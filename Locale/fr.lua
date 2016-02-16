@@ -435,7 +435,26 @@ L["Average"] = "Moyenne";
 L["Maximum"] = "Maximum";
 L["Minimum"] = "Minimum";
 
-L["CriticalHits"] = "Coup critique";
+--- Added in v4.4.7 to support Normal Hits
+L["NormalHits"] = "Coup Ordinaire";
+L["NormalHitChance"] = "Coup de Chance";
+L["NormalHitAvg"] = "Coup Moyenne";
+L["NormalHitMax"] = "Max Hit"
+L["NormalHitMin"] = "Min Hit"
+
+--- Added in v4.4.7 to support Critical Hits
+L["CriticalHits"] = "Coup Critique";
+L["CriticalHitChance"] = "Coup de Chance";
+L["CriticalHitAvg"] = "Coup Moyenne";
+L["CriticalHitMax"] = "Max Hit"
+L["CriticalHitMin"] = "Min Hit"
+
+--- Added in v4.4.7 to support Devastate Hits
+L["DevastateHits"] = "Coup Dévaster";    
+L["DevastateHitChance"] = "Coup de Chance";
+L["DevastateHitAvg"] = "Coup Moyenne";
+L["DevastateHitMax"] = "Max Hit"       
+L["DevastateHitMin"] = "Min Hit"
 
 L["Avoidance"] = "Ã‰vitement";
 L["Attacks"] = "Attaque";
