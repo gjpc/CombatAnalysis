@@ -278,6 +278,11 @@ function StatOverviewStatsPanel:Constructor(tab,mainTitle,psTitle,showAvoids,sho
 	dmgChildren:Add(self.psNode);
 	self.attacksNode = StatOverviewTreeNode(self,2,L.Attacks,false);
 	dmgChildren:Add(self.attacksNode);
+	
+	--- Added in v4.4.7 to support AttacksPerSecond (APS)
+	self.attackpsNode = StatOverviewTreeNode(self,2,L.AttacksPS,false); 
+  dmgChildren:Add(self.attackpsNode);                                    
+  
 	self.aveNode = StatOverviewTreeNode(self,2,L.Average,false);
 	dmgChildren:Add(self.aveNode);
 	self.maxNode = StatOverviewTreeNode(self,2,L.Maximum,false);
@@ -285,15 +290,47 @@ function StatOverviewStatsPanel:Constructor(tab,mainTitle,psTitle,showAvoids,sho
 	self.minNode = StatOverviewTreeNode(self,2,L.Minimum,false);
 	dmgChildren:Add(self.minNode);
 	
-	-- criticals
-	self.criticalsNode = StatOverviewTreeNode(self,1,L.Criticals,true,overlayColor);
-	rootNode:Add(self.criticalsNode);
-	local criticalChildren = self.criticalsNode:GetChildNodes();
-	
-	self.critNode = StatOverviewTreeNode(self,2,L.CriticalHits,false);
-	criticalChildren:Add(self.critNode);
-	self.devNode = StatOverviewTreeNode(self,2,L.Devastates,false);
-	criticalChildren:Add(self.devNode);
+	--- Added in v4.4.7 to support Normal Hits
+  self.normalHitsNode = StatOverviewTreeNode(self,1,L.NormalHits,true,overlayColor);          
+  rootNode:Add(self.normalHitsNode);                                                          
+  local normalHitChildren = self.normalHitsNode:GetChildNodes();                              
+  
+  self.normalHitChanceNode = StatOverviewTreeNode(self,2,L.NormalHitChance,false);            
+  normalHitChildren:Add(self.normalHitChanceNode);                                            
+  self.normalHitAvgNode = StatOverviewTreeNode(self,2,L.NormalHitAvg,false);                  
+  normalHitChildren:Add(self.normalHitAvgNode);                                               
+  self.normalHitMaxNode = StatOverviewTreeNode(self,2,L.NormalHitMax,false);                  
+  normalHitChildren:Add(self.normalHitMaxNode);                                               
+  self.normalHitMinNode = StatOverviewTreeNode(self,2,L.NormalHitMin,false);                  
+  normalHitChildren:Add(self.normalHitMinNode);                                               
+  
+  --- Added in v4.4.7 to support Critical Hits
+  self.criticalHitsNode = StatOverviewTreeNode(self,1,L.CriticalHits,true,overlayColor);      
+  rootNode:Add(self.criticalHitsNode);                                                        
+  local criticalHitChildren = self.criticalHitsNode:GetChildNodes();                          
+  
+  self.criticalHitChanceNode = StatOverviewTreeNode(self,2,L.CriticalHitChance,false);        
+  criticalHitChildren:Add(self.criticalHitChanceNode);                                        
+  self.criticalHitAvgNode = StatOverviewTreeNode(self,2,L.CriticalHitAvg,false);              
+  criticalHitChildren:Add(self.criticalHitAvgNode);                                           
+  self.criticalHitMaxNode = StatOverviewTreeNode(self,2,L.CriticalHitMax,false);              
+  criticalHitChildren:Add(self.criticalHitMaxNode);                                             
+  self.criticalHitMinNode = StatOverviewTreeNode(self,2,L.CriticalHitMin,false);              
+  criticalHitChildren:Add(self.criticalHitMinNode);                                            
+  
+  --- Added in v4.4.7 to support Devastate Hits
+  self.devastateHitsNode = StatOverviewTreeNode(self,1,L.DevastateHits,true,overlayColor);    
+  rootNode:Add(self.devastateHitsNode);                                                       
+  local devastateHitChildren = self.devastateHitsNode:GetChildNodes();                        
+  
+  self.devastateHitChanceNode = StatOverviewTreeNode(self,2,L.DevastateHitChance,false);      
+  devastateHitChildren:Add(self.devastateHitChanceNode);                                      
+  self.devastateHitAvgNode = StatOverviewTreeNode(self,2,L.DevastateHitAvg,false);            
+  devastateHitChildren:Add(self.devastateHitAvgNode);                                         
+  self.devastateHitMaxNode = StatOverviewTreeNode(self,2,L.DevastateHitMax,false);            
+  devastateHitChildren:Add(self.devastateHitMaxNode);                                         
+  self.devastateHitMinNode = StatOverviewTreeNode(self,2,L.DevastateHitMin,false);            
+  devastateHitChildren:Add(self.devastateHitMinNode);                                         
 	
 	-- temp morale
 	if (self.showTempMorale) then
@@ -437,7 +474,15 @@ function StatOverviewStatsPanel:UpdateColor(color)
   self.color = Turbine.UI.Color(math.min(0.51,color.A*1.25),color.R*0.5,color.G*0.5,color.B*0.5);
   
   self.mainNode:UpdateColor(self.color);
-  self.criticalsNode:UpdateColor(self.color);
+  
+  --- Added in v4.4.7 to support Normal Hits
+  self.normalHitsNode:UpdateColor(self.color);   
+  
+  --- Added in v4.4.7 to support Critical Hits
+  self.criticalHitsNode:UpdateColor(self.color);   
+  
+  --- Added in v4.4.7 to support Devastate Hits
+  self.devastateHitsNode:UpdateColor(self.color); 
   
   if (self.showAvoids) then
     self.avoidanceNode:UpdateColor(self.color);
@@ -753,17 +798,37 @@ function StatOverviewStatsPanel:FullUpdate(duration,newSelection,forceNewSelecti
 	
 	-- update all fields
 	self.amount = dataSummary:TotalAmount();
+	--- Added in v4.4.7 to support AttacksPerSecond (APS)
+	self.attacks = dataSummary.attacks;
 	
 	self.totalNode:UpdateData(Misc.FormatValue(self.amount),Misc.FormatPerc(self.amount/(self.totalAmount == 0 and 1 or self.totalAmount),true));
 	self.psNode:UpdateData(Misc.FormatPs(self.amount/(self.duration == 0 and 1 or self.duration)));
 	self.attacksNode:UpdateData(Misc.FormatValue(dataSummary.attacks),Misc.FormatPerc(dataSummary.attacks/(self.totalAttacks == 0 and 1 or self.totalAttacks),true));
 	
+	--- Added in v4.4.7 to support AttackPerSecond (APS) Hits
+	self.attackpsNode:UpdateData(Misc.FormatPs(dataSummary.attacks/(self.duration == 0 and 1 or self.duration)));
+	
 	self.aveNode:UpdateData(Misc.FormatValue(dataSummary:Average()));
 	self.maxNode:UpdateData(Misc.FormatValue(dataSummary.max));
 	self.minNode:UpdateData(Misc.FormatValue(dataSummary.min));
 	
-	self.critNode:UpdateData(Misc.FormatValue(dataSummary.crits),Misc.FormatPerc(dataSummary:CritPercentage(),true));
-	self.devNode:UpdateData(Misc.FormatValue(dataSummary.devs),Misc.FormatPerc(dataSummary:DevPercentage(),true));
+	--- Added in v4.4.7 to support Normal Hits
+	self.normalHitChanceNode:UpdateData(Misc.FormatValue(dataSummary.normals),Misc.FormatPerc(dataSummary:NormalChance(),true));         
+	self.normalHitAvgNode:UpdateData(Misc.FormatValue(dataSummary:NormalAverage()));                                                     
+	self.normalHitMaxNode:UpdateData(Misc.FormatValue(dataSummary.normalMax));                                                           
+	self.normalHitMinNode:UpdateData(Misc.FormatValue(dataSummary.normalMin));                                                           
+	
+	--- Added in v4.4.7 to support Critical Hits
+	self.criticalHitChanceNode:UpdateData(Misc.FormatValue(dataSummary.crits),Misc.FormatPerc(dataSummary:CriticalChance(),true));       
+	self.criticalHitAvgNode:UpdateData(Misc.FormatValue(dataSummary:CriticalAverage()));                                                 
+	self.criticalHitMaxNode:UpdateData(Misc.FormatValue(dataSummary.critMax));                                                           
+  self.criticalHitMinNode:UpdateData(Misc.FormatValue(dataSummary.critMin));                                                           
+	
+	--- Added in v4.4.7 to support Devastate Hits
+	self.devastateHitChanceNode:UpdateData(Misc.FormatValue(dataSummary.devs),Misc.FormatPerc(dataSummary:DevastateChance(),true));      
+	self.devastateHitAvgNode:UpdateData(Misc.FormatValue(dataSummary:DevastateAverage()));                                               
+	self.devastateHitMaxNode:UpdateData(Misc.FormatValue(dataSummary.devMax));                                                           
+  self.devastateHitMinNode:UpdateData(Misc.FormatValue(dataSummary.devMin));                                                           
 	
 	if (self.showTempMorale) then
 		self.regularHealsNode:UpdateData(Misc.FormatValue(dataSummary.amount),Misc.FormatPerc(dataSummary.amount/(self.amount == 0 and 1 or self.amount),true));
@@ -812,27 +877,70 @@ function StatOverviewStatsPanel:Update(duration)
 	if (self.amount ~= nil) then
 		self.psNode:UpdateData(Misc.FormatPs(self.amount/(self.duration == 0 and 1 or self.duration)));
 	end
+	if (self.attacks ~= nil) then
+	  self.attackpsNode:UpdateData(Misc.FormatPs(self.attacks/(self.duration == 0 and 1 or self.duration)));  --- Added in v4.4.7 to support AttackPerSecond (APS)
+  end
 end
 
 -- stored empty data summary (used for quick updates of no data)
-StatOverviewStatsPanel.emptyDataSummary =
-	{amount = 0, wastedTemporaryMoraleAmount = 0, temporaryMoraleAmount = 0, TotalAmount = function() return 0 end,
-	 attacks = 0, Average = function() return 0 end, max = 0, min = 0,
-	 crits = 0, CritPercentage = function() return 0 end, devs = 0, DevPercentage = function() return 0 end,
-	 hits = 0, absorbs = 0, immunes = 0, misses = 0, deflects = 0, resists = 0, PhysicalAvoids = function() return 0 end,
-	 FullPhysicalAvoids = function() return 0 end, PartialAvoids = function() return 0 end,
-	 blocks = 0, parrys = 0, evades = 0, pblocks = 0, pparrys = 0, pevades = 0, interrupts = 0, corruptions = 0,
-	 dmgTypes = {}};
-
-
-
-
+--- Added in v4.4.7 to support AttackPerSecond (APS), Normal, Critical, and Devastate Hits
+StatOverviewStatsPanel.emptyDataSummary = 
+	{amount = 0, 
+	wastedTemporaryMoraleAmount = 0, 
+	temporaryMoraleAmount = 0, 
+	TotalAmount = function() return 0 end, 
+	attacks = 0, 
+	Average = function() return 0 end, 
+	max = 0, 
+	min = 0,
+	normals = 0,                                    
+  NormalChance = function() return 0 end,         
+  NormalAverage = function() return 0 end,
+  normalMin = 0,
+  normalMax = 0,        
+	crits = 0,                                      
+	CriticalChance = function() return 0 end,       
+	CriticalAverage = function() return 0 end,
+	critMin = 0,
+	critMax = 0,      
+	devs = 0,                                       
+	DevastateChance = function() return 0 end,      
+	DevastateAverage = function() return 0 end,     
+	devMin = 0,
+	devMax = 0,
+	hits = 0, 
+	absorbs = 0, 
+	immunes = 0, 
+	misses = 0, 
+	deflects = 0, 
+	resists = 0, 
+	PhysicalAvoids = function() return 0 end,
+	FullPhysicalAvoids = function() return 0 end, 
+	PartialAvoids = function() return 0 end,
+	blocks = 0, 
+	parrys = 0, 
+	evades = 0, 
+	pblocks = 0, 
+	pparrys = 0, 
+	pevades = 0, 
+	interrupts = 0, 
+	corruptions = 0,
+	dmgTypes = {}};
+  
 -- Get state method
 function StatOverviewStatsPanel:GetState()
 	local state = {}
 	
 	state["totals"] = self.mainNode.expanded;
-	state["crits"] = self.criticalsNode.expanded;
+	
+	--- Added in v4.4.7 to support Normal Hits
+	state["normals"] = self.normalHitsNode.expanded;
+	
+	--- Added in v4.4.7 to support Critical Hits
+	state["crits"] = self.criticalHitsNode.expanded;
+		
+	--- Added in v4.4.7 to support Devastate Hits
+	state["devs"] = self.devastateHitsNode.expanded;
 	
 	if (self.showAvoids) then
 		state["avoidance"] = self.avoidanceNode.expanded;
@@ -853,7 +961,15 @@ end
 -- Restore state method (NB: not static like the other restore state methods)
 function StatOverviewStatsPanel:Restore(savedState)
 	self.mainNode:SetExpanded(savedState["totals"]);
-	self.criticalsNode:SetExpanded(savedState["crits"]);
+	
+	--- Added in v4.4.7 to support Normal Hits
+	self.normalHitsNode:SetExpanded(savedState["normals"]); 
+	
+	--- Added in v4.4.7 to support Critical Hits
+	self.criticalHitsNode:SetExpanded(savedState["crits"]); 
+	
+	--- Added in v4.4.7 to support Devastate Hits
+	self.devastateHitsNode:SetExpanded(savedState["devs"]); 
 	
 	if (self.showAvoids) then
 		-- hack to ensure nodes correctly expanded

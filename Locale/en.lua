@@ -422,8 +422,6 @@ L["Knockdown"] = "Knockdown";
 
 L["AllData"] = "All Data";
 L["NonCrits"] = "Non Crits";
-L["Criticals"] = "Criticals";
-L["Devastates"] = "Devastates";
 L["CritsAndDevs"] = "Crits & Devs";
 L["Partials"] = "Partials";
 
@@ -432,10 +430,30 @@ L["Average"] = "Average";
 L["Maximum"] = "Maximum";
 L["Minimum"] = "Minimum";
 
+--- Added in v4.4.7 to support Normal Hits
+L["NormalHits"] = "Normal Hits";
+L["NormalHitChance"] = "Hit Chance";
+L["NormalHitAvg"] = "Average Hit";
+L["NormalHitMax"] = "Max Hit"
+L["NormalHitMin"] = "Min Hit"
+
+--- Added in v4.4.7 to support Critical Hits
 L["CriticalHits"] = "Critical Hits";
+L["CriticalHitChance"] = "Hit Chance";
+L["CriticalHitAvg"] = "Average Hit";
+L["CriticalHitMax"] = "Max Hit"
+L["CriticalHitMin"] = "Min Hit"
+
+--- Added in v4.4.7 to support Devastate Hits
+L["DevastateHits"] = "Devastate Hits";    
+L["DevastateHitChance"] = "Hit Chance";
+L["DevastateHitAvg"] = "Average Hit";
+L["DevastateHitMax"] = "Max Hit"       
+L["DevastateHitMin"] = "Min Hit"
 
 L["Avoidance"] = "Avoidance";
 L["Attacks"] = "Attacks";
+L["AttacksPS"] = "APS";
 L["Hits"] = "Hits";
 L["Absorbs"] = "Absorbs";
 L["Misses"] = "Misses";
