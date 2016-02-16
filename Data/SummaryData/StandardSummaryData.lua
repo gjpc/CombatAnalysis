@@ -9,9 +9,7 @@ such as interrupts, and corruption removals.
 
 All Standard Summary Data includes an aggregate amount,
 ave/min/max values, a count of attacks, and the number
-of critical/devastating hits.
-
-Ravdor/Bamor 
+of critical/devastating hits. 
 
 ]]--
 
