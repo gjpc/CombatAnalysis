@@ -12,7 +12,7 @@ All coders, LUA enthusists and LoTRO Peeps are encouraged to fork this repositor
 
 Thanks!
 
-Update 4.4.7 by Ravdor/Bamor (8 Feb 2016)
+Update 4.5.0 by Ravdor/Bamor (8 Feb 2016)
 Separated hits into Normal, Critical, and Devastates
 Added APS (Attacks Per Second)
 
