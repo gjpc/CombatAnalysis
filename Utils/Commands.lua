@@ -70,6 +70,12 @@ function UpdateCommand:Execute(cmd, args)
       combatData:ResetTotals(true);
       return;
     end
+	
+	if ( string.find( args, L.CleanUpCommand ) == 1 ) then
+      combatData:ResetTotals(true);
+	  collectgarbage();
+      return;
+    end
     
     if ( string.find( args, L.ResetCommand ) == 1 ) then
       if (not player:IsInCombat()) then

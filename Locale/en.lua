@@ -270,8 +270,9 @@ L["UnlockCommand"] = "unlock";
 L["ResetCommand"] = "reset";
 L["ResetTotalsCommand"] = "reset totals";
 L["LockToggleCommand"] = "lock toggle";
+L["CleanUpCommand"] = "cleanup";
 
-L["CommandUsage"] = "usage: /ca "..L.Options.." | "..L.SaveCommand.." | "..L.LoadCommand.." | "..L.ToggleCommand.." | "..L.ShowCommand.." | "..L.HideCommand.." | "..L.LockToggleCommand.." | "..L.LockCommand.." | "..L.UnlockCommand.." | "..L.ResetCommand.." | "..L.ResetTotalsCommand;
+L["CommandUsage"] = "usage: /ca "..L.Options.." | "..L.SaveCommand.." | "..L.LoadCommand.." | "..L.ToggleCommand.." | "..L.ShowCommand.." | "..L.HideCommand.." | "..L.LockToggleCommand.." | "..L.LockCommand.." | "..L.UnlockCommand.." | "..L.ResetCommand.." | "..L.ResetTotalsCommand.." | "..L.CleanUpCommand;
 -- Value/Date Formatting
 
 L["Thousand"] = "K";
@@ -389,6 +390,7 @@ L["RestoreTab"] = "Restore Tab";
 L["CloseTab"] = "Close Tab";
 
 L["ResetTotals"] = "Reset Totals";
+L["CleanUp"] = "Garbage Collect";
 
 -- Chat Menu (indexed by {command, channel name})
 
