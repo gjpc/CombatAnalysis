@@ -2,8 +2,8 @@
 <Plugin>
 	<Information>
 		<Name>CombatAnalysis</Name>
-		<Author>James Bebbington and Gerard Cerchio and Ravdor</Author>
-		<Version>4.5.0</Version>
+		<Author>James Bebbington, Gerard Cerchio, hdflux and Ravdor</Author>
+		<Version>4.6.0</Version>
 		<Description>Combat Analysis parses the combat log and displays a range of useful combat information, in real time, regarding:
 
 - Damage Dealt &amp; Taken
@@ -13,6 +13,8 @@
 
 For a full list of features, visit:
 http://www.lotrointerface.com/downloads/info881-CombatAnalysis.html
+To partcipate join Github:
+https://github.com/gjpc/CombatAnalysis
 
 This plugin is in the public domain
 </Description>
