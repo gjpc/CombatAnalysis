@@ -13,8 +13,8 @@ _G.CombatAnalysisTreePanel = class(Turbine.UI.Control);
 -- configuration parameters
 CombatAnalysisTreePanel.indentationWidth = 16;
 CombatAnalysisTreePanel.treeNodePadding = 2;
-CombatAnalysisTreePanel.valueLabelWidth = 40;
-CombatAnalysisTreePanel.minLabelWidth = 38;
+CombatAnalysisTreePanel.valueLabelWidth = 50;
+CombatAnalysisTreePanel.minLabelWidth = 42;
 
 function CombatAnalysisTreePanel:Constructor(indentationWidth,fullScrollbar,paddingLeft,paddingTop,paddingRight,paddingBottom)
 	Turbine.UI.Control.Constructor(self);

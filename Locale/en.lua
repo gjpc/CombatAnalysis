@@ -11,7 +11,7 @@ L["FailedToLoadSettingsMessage"] = "It is recommended you unload the plugin now.
 
 L["Logo"] = "Logo";
 L["LockWindows"] = "Lock Windows";
-L["UnlockWindows"] = "Unlock Windows";
+L["UnlockWindows"] = "Unlock Windows";/LargeFontTooltip
 L["SaveData"] = "Save Data";
 L["LoadData"] = "Load Data";
 L["OpenTheMenu"] = "Open the Menu";
@@ -30,6 +30,7 @@ L["About"] = "About";
 L["GeneralSettingsTitle"] = "General Settings";
 L["AutoSelectNewEncounters"] = "Select New Encounters";
 L["ConfirmDialogOnReset"] = "Show Confirmation Dialog on Reset";
+L["largeFont"] = "Larger Stat Fonts (requires reload)";
 
 L["ShowLogo"] = "Show Combat Analysis Logo";
 
@@ -169,6 +170,7 @@ L["AutoSelectTooltip"] = "When Combat Begins, immediately select the new encount
 L["ConfirmOnResetTooltip"] = "Show a confirmation dialog when resetting the totals encounter.";
 L["ShowLogoTooltip"] = "Show or hide the Combat Analysis Logo that is used to Show/Hide all the other windows or to access the menu.";
 L["LockWindowsTooltip"] = "Locks all windows in place so that they cannot be moved, resized, or closed, except through the tab menu or main menu.";
+L["LargeFontTooltip"] = "Increase stats font size in overview and stats windows.  Once this is checked you must unload and then load CA to see the larger fonts. Otherwise it will take effect on next start";
 L["MaxEncountersTooltip"] = "Set the number of encounters that can be stored in history.";
 L["MaxLoadedEncountersTooltip"] = "Set the number of loaded encounters that can be stored in history.";
 L["CombatTimeoutTooltip"] = "Set the grace period after combat ends in which damage is still counted towards this encounter.";

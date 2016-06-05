@@ -29,6 +29,7 @@ L["About"] = "\195\156ber";
 L["GeneralSettingsTitle"] = "Allgemeine Einstellungen";
 L["AutoSelectNewEncounters"] = "Neuen Kampf automatisch w\195\164hlen";
 L["ConfirmDialogOnReset"] = "Best\195\164tigungsdialog beim Zur\195\188cksetzen anzeigen";
+L["largeFont"] = "Größere Schrift benötigt neu laden";
 
 L["ShowLogo"] = "Zeige das Combat Analysis Logo";
 
@@ -168,6 +169,7 @@ L["AutoSelectTooltip"] = "Sobald ein Kampf begint, automatisch den neuen Kampf a
 L["ConfirmOnResetTooltip"] = "Best\195\164tigungsdialog anzeigen, bevor gesamte K\195\164mpfe zur\195\188ckgesetzt werden.";
 L["ShowLogoTooltip"] = "Zeige oder verstecke das Combat Analysis Logo das verwendet wird, um alle anderen Fenster zu zeigen/verstecken oder um das Men\195\188 aufzurufen.";
 L["LockWindowsTooltip"] = "Sperre alle Fenster an ihrem Ort, sodass sie nicht mehr bewegt, vergr\195\182\195\159ert/verkleinert oder geschlossen werden k\195\182nnen, au\195\159er \195\188ber das Tab Men\195\188 oder das Hauptmen\195\188.";
+L["LargeFontTooltip"] = "Erhöhte SChrift im Überblick und Statistiken fenster. Wenn dies aktiviert ist musst du CA bewenden und neu laden. Ansonsten wird der Effekt beim nächsten STart aktiviert";
 L["MaxEncountersTooltip"] = "Setze die Anzahl von K\195\164mpfen, die im Verlauf gespeichert werden k\195\182nnen.";
 L["MaxLoadedEncountersTooltip"] = "Setze die Anzahl von geladenen K\195\164mpfen, die im Verlauf gespeichert werden k\195\182nnen.";
 L["CombatTimeoutTooltip"] = "Setze die Toleranzzeit nach Beendigung eines Kampfes, in der Schaden weiterhin f\195\188r den Kampf gewertet wird.";

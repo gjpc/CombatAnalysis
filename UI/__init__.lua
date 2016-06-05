@@ -5,6 +5,11 @@ _G.idCounter = 1;
 _G.windowsLocked = false;
 _G.windowsHidden = false;
 
+_G.lageFonts = false;
+
+-- 14 standard 18 large
+_G.statFont = Turbine.UI.Lotro.Font.TrajanPro14;
+
 -- set some UI default colors
 
 _G.borderColor = Turbine.UI.Color(28/255,28/255,28/255);             -- dark, slightly silver

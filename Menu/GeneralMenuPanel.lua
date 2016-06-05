@@ -6,7 +6,7 @@ function GeneralMenuPanel:Constructor(window)
 	
 	self.window = window;
 	self.width = 420;
-	self.height = 702;
+	self.height = 750;
 	
 	self:SetBackColor(Turbine.UI.Color(0.925,0,0,0));
 	self:SetHeight(self.height);
@@ -114,8 +114,8 @@ function GeneralMenuPanel:Constructor(window)
 			sender.showCombatAnalysisIcon:SetChecked(showCombatAnalysisIcon);
 		end
 	end, self, self);
-  
-  self.windowsLocked = Turbine.UI.Lotro.CheckBox();
+    
+    self.windowsLocked = Turbine.UI.Lotro.CheckBox();
 	self.windowsLocked:SetTop(self.showCombatAnalysisIcon:GetTop()+27);
 	self.windowsLocked:SetMultiline(false);
 	self.windowsLocked:SetCheckAlignment(Turbine.UI.ContentAlignment.MiddleLeft);
@@ -125,8 +125,8 @@ function GeneralMenuPanel:Constructor(window)
 	self.windowsLocked:SetText(" " .. L.LockWindows);
 	self.windowsLocked:SetParent(self.content);
 	self.windowsLocked:SetSize(self.width-20,20);
-  TooltipManager.SetTooltip(self.windowsLocked,L.LockWindowsTooltip,TooltipStyle.LOTRO,500);
-  
+    TooltipManager.SetTooltip(self.windowsLocked,L.LockWindowsTooltip,TooltipStyle.LOTRO,500);
+
 	self.windowsLocked.MouseDown = function(sender,args)
 		WindowManager.MouseWasPressed(self.window);
 	end
@@ -141,11 +141,50 @@ function GeneralMenuPanel:Constructor(window)
 			sender.windowsLocked:SetChecked(windowsLocked);
 		end
 	end, self, self);
-  
+    
+    self.largeFont = Turbine.UI.Lotro.CheckBox();
+	self.largeFont:SetTop(self.windowsLocked:GetTop()+27);
+	self.largeFont:SetMultiline(false);
+	self.largeFont:SetCheckAlignment(Turbine.UI.ContentAlignment.MiddleLeft);
+	self.largeFont:SetTextAlignment(Turbine.UI.ContentAlignment.MiddleLeft);
+	self.largeFont:SetFont(Turbine.UI.Lotro.Font.TrajanPro14);
+	self.largeFont:SetForeColor(control2LightColor);
+	self.largeFont:SetText(" " .. L.largeFont);
+	self.largeFont:SetParent(self.content);
+	self.largeFont:SetSize(self.width-20,20);
+    self.largeFont:SetChecked( _G.settings.largeFont );
+    TooltipManager.SetTooltip(self.largeFont,L.LargeFontTooltip,TooltipStyle.LOTRO,500);
+ 
+ 	self.largeFont.MouseDown = function(sender,args)
+		WindowManager.MouseWasPressed(self.window);
+	end
+	
+	self.largeFont.CheckedChanged = function(sender,args)
+		if (_G.largeFont ~= self.largeFont:IsChecked()) then
+			_G.largeFont = self.largeFont:IsChecked();
+			_G.settings.largeFont = _G.largeFont;
+			
+			if ( _G.largeFont ) then
+				_G.statFont = Turbine.UI.Lotro.Font.TrajanPro18;
+			else
+				_G_statFont = Turbine.UI.Lotro.Font.TrajanPro14;
+			end;
+			
+			--_G.CombatAnalysisTreePanel:DepthFirstTraversal(CombatAnalysisTreePanel.LayoutNode);
+			SaveSettings();
+		end
+	end
+	
+	Misc.AddListener(nil, "largeFont", function(sender)
+		if (sender.largeFont:IsChecked() ~= largeFont) then
+			sender.largeFont:SetChecked(largeFont);
+		end
+	end, self, self);
+ 
   self.maxEncountersSlider = Slider();
   self.maxEncountersSlider:SetParent(self.content);
   self.maxEncountersSlider:SetText(L.MaxStandardEncounters);
-  self.maxEncountersSlider:SetTop(self.windowsLocked:GetTop()+42); -- 125
+  self.maxEncountersSlider:SetTop(self.largeFont:GetTop()+42); -- 125
   self.maxEncountersSlider:SetSize(400,40);
   self.maxEncountersSlider:SetFormat("%d");
   self.maxEncountersSlider:SetStep(1);
@@ -362,6 +401,7 @@ function GeneralMenuPanel:Layout()
 	self.confirmOnReset:SetLeft(math.max(0,(w-20-self.width)/2)+15);
   self.showCombatAnalysisIcon:SetLeft(math.max(0,(w-20-self.width)/2)+15);
   self.windowsLocked:SetLeft(math.max(0,(w-20-self.width)/2)+15);
+  self.largeFont:SetLeft(math.max(0,(w-20-self.width)/2)+15);
   
   self.maxEncountersSlider:SetLeft(math.max(0,(w-20-self.width)/2)+10);
   self.maxLoadedEncountersSlider:SetLeft(math.max(0,(w-20-self.width)/2)+10);

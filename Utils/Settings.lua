@@ -118,6 +118,9 @@ local restoreV410Settings = function()
   -- show confirm dialog when reset is clicked by default
   settings.confirmOnReset = true;
   
+  -- use a larger font
+  settings.largeFont = true;
+  settings.statFont = 2.0;
   -- default file dialog settings
   settings["fileDialog"] = {}
 end
@@ -180,6 +183,7 @@ local restoreV420Settings = function()
   
   -- the first of potentially more tutorial hints
   settings.combatAnalysisLogoTutorialViewed = false;
+ 
 end
 
 local shutDownAll = function ()
@@ -202,6 +206,14 @@ local interpretSettings = function ()
 	local maxId = 1;
 	local windows = {}
 	local noStatOverviewWindows = 0;
+  
+  if ( settings.largeFont == true ) then
+	_G.largeFont = true;
+	_G.statFont = Turbine.UI.Lotro.Font.TrajanPro18;
+  else
+	_G.largeFont = false;
+	_G.statFont = Turbine.UI.Lotro.Font.TrajanPro14;
+  end
   
   -- sort windows by id
   local windowStates = {}

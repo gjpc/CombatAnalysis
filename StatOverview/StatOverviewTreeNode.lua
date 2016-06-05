@@ -38,6 +38,11 @@ function StatOverviewTreeNode:UpdateColor(color)
 end
 
 function StatOverviewTreeNode:UpdateData(value1Text,value2Text)
+
+	self.value1:SetFont(_G.statFont);
+	self.value2:SetFont(_G.statFont);
+	self.label:SetFont(_G.statFont);
+	
 	self.value1:SetText(value1Text);
 	
 	if (value2Text ~= nil) then

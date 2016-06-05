@@ -12,6 +12,9 @@ All coders, LUA enthusists and LoTRO Peeps are encouraged to fork this repositor
 
 Thanks!
 
+Update 4.7.0 Landal/gjpc (5 June 2016)
+added larger fonts option for the stat panels
+
 Update 4.6.0 hdflux (4 June 2016)
 added the **/ca cleanup** command. Clears the stats and cleans the cache
 

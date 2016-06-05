@@ -21,11 +21,11 @@ _G.CombatAnalysisTreeNode = class(Turbine.UI.TreeNode);
 
 function CombatAnalysisTreeNode:Constructor(panel,depth,text,hasChildren)
 	Turbine.UI.TreeNode.Constructor(self);
-	
+		
 	self.panel = panel;
 	self.depth = depth;
 	
-	self:SetHeight(16);
+	self:SetHeight(18);
 	
 	if (self.depth == 1) then
 		self:SetBackground("CombatAnalysis/Resources/box_treelist_header_Gray.tga");
@@ -48,11 +48,11 @@ function CombatAnalysisTreeNode:Constructor(panel,depth,text,hasChildren)
 	self.label:SetTextAlignment(Turbine.UI.ContentAlignment.MiddleLeft);
 	self.label:SetMultiline(false);
 	if (hasChildren) then
-		self.label:SetFont(Turbine.UI.Lotro.Font.TrajanPro14);
+		self.label:SetFont(_G.statFont);
 		self.label:SetForeColor(control2Color);
 		self.label:SetFontStyle(Turbine.UI.FontStyle.Outline);
 	else
-		self.label:SetFont(Turbine.UI.Lotro.Font.TrajanPro13);
+		self.label:SetFont(_G.statFont);
 	end
 		
 	self.label:SetText(text);
@@ -65,7 +65,7 @@ function CombatAnalysisTreeNode:Constructor(panel,depth,text,hasChildren)
 	self.value1:SetMouseVisible(false);
 	self.value1:SetTextAlignment(Turbine.UI.ContentAlignment.MiddleRight);
 	self.value1:SetMultiline(false);
-	self.value1:SetFont(Turbine.UI.Lotro.Font.Verdana12);
+	self.value1:SetFont(_G.statFont);
 	
 	-- value 2 (the percentage value, where applicable)
 	self.value2 = Turbine.UI.Label();
@@ -75,11 +75,18 @@ function CombatAnalysisTreeNode:Constructor(panel,depth,text,hasChildren)
 	self.value2:SetMouseVisible(false);
 	self.value2:SetTextAlignment(Turbine.UI.ContentAlignment.MiddleCenter);
 	self.value2:SetMultiline(false);
-	self.value2:SetFont(Turbine.UI.Lotro.Font.Verdana12);
+	self.value2:SetFont(_G.statFont);
 end
 
 function CombatAnalysisTreeNode:Layout()
 	local w = self:GetWidth();
+
+	self.label:SetFont(_G.statFont);
+	self.label:SetText( self.label:GetText());
+	self.value1:SetFont(_G.statFont);
+	self.value1:SetText( self.value1:GetText());
+	self.value2:SetFont(_G.statFont);
+	self.value2:SetText( self.value2:GetText());
 	
 	if (self.icon) then
 		self.label:SetWidth(math.max(0,w-27));
