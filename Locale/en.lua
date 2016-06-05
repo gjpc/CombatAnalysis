@@ -11,7 +11,7 @@ L["FailedToLoadSettingsMessage"] = "It is recommended you unload the plugin now.
 
 L["Logo"] = "Logo";
 L["LockWindows"] = "Lock Windows";
-L["UnlockWindows"] = "Unlock Windows";/LargeFontTooltip
+L["UnlockWindows"] = "Unlock Windows";
 L["SaveData"] = "Save Data";
 L["LoadData"] = "Load Data";
 L["OpenTheMenu"] = "Open the Menu";
