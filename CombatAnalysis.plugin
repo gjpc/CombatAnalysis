@@ -3,7 +3,7 @@
 	<Information>
 		<Name>CombatAnalysis</Name>
 		<Author>James Bebbington, Gerard Cerchio, hdflux and Ravdor</Author>
-		<Version>4.7.0</Version>
+		<Version>4.7.1</Version>
 		<Description>Combat Analysis parses the combat log and displays a range of useful combat information, in real time, regarding:
 
 - Damage Dealt &amp; Taken

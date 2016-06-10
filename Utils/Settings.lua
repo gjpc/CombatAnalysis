@@ -160,6 +160,7 @@ local restoreV420Settings = function()
   -- global window state
   settings.windowsLocked = false;
   settings.windowsHidden = false;
+  settings.largeFont = false;
   
   -- auto save encounters (Off, SaveTotals, SaveEncounters)
   settings.autoSave = "Off";
@@ -341,12 +342,13 @@ local interpretSettings = function ()
   Misc.SetValue(combatData,"minDuration",settings.targetTimeout,true);
   Misc.SetValue(nil,"logDelay",settings.logDelay,true);
   Misc.SetValue(nil,"effectDelay",settings.effectDelay,true);
-	Misc.SetValue(nil,"autoSelectNewEncounters",settings.autoSelectNewEncounters,true);
-	Misc.SetValue(nil,"confirmOnReset",settings.confirmOnReset,true);
+  Misc.SetValue(nil,"autoSelectNewEncounters",settings.autoSelectNewEncounters,true);
+  Misc.SetValue(nil,"confirmOnReset",settings.confirmOnReset,true);
   Misc.SetValue(nil,"autoSave",settings.autoSave,true);
   Misc.SetValue(nil,"showCombatAnalysisIcon",settings.showCombatAnalysisIcon,true);
   Misc.SetValue(nil,"windowsLocked",settings.windowsLocked,true);
   Misc.SetValue(nil,"windowsHidden",settings.windowsHidden,true);
+  Misc.SetValue(nil,"largeFont",settings.largeFont, true);
   
   if (not showCombatAnalysisIcon) then WindowManager.ShowHideWindows({combatAnalysisIcon},false,true,"combatAnalysisIcon") end
   if (windowsLocked) then combatAnalysisIcon:LockWindows(true,true) end

@@ -12,6 +12,9 @@ All coders, LUA enthusists and LoTRO Peeps are encouraged to fork this repositor
 
 Thanks!
 
+Update 4.7.1  Landal/gjpc (10 June 2016)
+Fix crash for firs time users caused by larger font feature
+
 Update 4.7.0 Landal/gjpc (5 June 2016)
 added larger fonts option for the stat panels
 

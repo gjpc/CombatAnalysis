@@ -152,7 +152,6 @@ function GeneralMenuPanel:Constructor(window)
 	self.largeFont:SetText(" " .. L.largeFont);
 	self.largeFont:SetParent(self.content);
 	self.largeFont:SetSize(self.width-20,20);
-    self.largeFont:SetChecked( _G.settings.largeFont );
     TooltipManager.SetTooltip(self.largeFont,L.LargeFontTooltip,TooltipStyle.LOTRO,500);
  
  	self.largeFont.MouseDown = function(sender,args)
