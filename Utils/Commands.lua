@@ -73,6 +73,7 @@ function UpdateCommand:Execute(cmd, args)
 	
 	if ( string.find( args, L.CleanUpCommand ) == 1 ) then
       combatData:ResetTotals(true);
+	  combatData:Initialize();
 	  collectgarbage();
       return;
     end
