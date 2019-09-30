@@ -239,7 +239,7 @@ end
 function StatOverviewTab:EnableChatSendButton()
 	self.chatSendEnabled = true;
 	
-	if (self.window ~= nil and self.window.selected == self and not self.window.minimized and not self.window:GetWantsUpdates() and self.showSendChat) then
+	if (self.window ~= nil and self.window.selected == self and not self.window.minimized and not self.window:GetWantsUpdates() and self.showSendChat and self.window:IsVisible()) then
 		self.panel.chatSendWindow:SetSize(100,19);
 	end
 	
