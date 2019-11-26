@@ -241,6 +241,9 @@ function StatOverviewPanel:Constructor(tab,chatMenu,encounters,targets,hasTwoPar
 	end
 	
 	self.chatSendShortcut = Turbine.UI.Lotro.Shortcut(Turbine.UI.Lotro.ShortcutType.Alias,nil);
+    self.chatSend.DragDrop=function()
+        self.chatSend:SetShortcut(self.chatSendShortcut)
+    end
 	
 	-- show stats (info) button window
   self.infoButtonWindow = Turbine.UI.Window();
