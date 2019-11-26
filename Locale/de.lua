@@ -565,7 +565,7 @@ L["Parse"] = function(line)
 		if targetName == nil then
 			targetName = TrimArticles(targetNameAmountAndType);
 			amount = 0;
-			dmgType = 10;
+			dmgType = 13;
 			moralePower = 3;
 		-- some damage was dealt
 		else

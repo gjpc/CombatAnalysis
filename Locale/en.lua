@@ -559,7 +559,7 @@ L["Parse"] = function(line)
 		if targetName == nil then
 			targetName = string.gsub(targetNameAmountAndType,"^[Tt]he ","");
 			amount = 0;
-			dmgType = 12;
+			dmgType = 13;
 			moralePower = 3;
 		-- some damage was dealt
 		else
@@ -678,7 +678,7 @@ L["Parse"] = function(line)
 		if (avoidType == 1) then return nil end
 		
 		-- Update
-		return 1,initiatorName,targetName,skillName,0,avoidType,1,10;
+		return 1,initiatorName,targetName,skillName,0,avoidType,1,13;
 	end
 	
 	-- 5) Reflect line --
@@ -704,7 +704,9 @@ L["Parse"] = function(line)
 				dmgType == "Light " and 7 or
 				dmgType == "Beleriand " and 8 or
 				dmgType == "Westernesse " and 9 or
-				dmgType == "Ancient Dwarf-make " and 10 or 11;
+				dmgType == "Ancient Dwarf-make " and 10 or
+				dmgType == "Orc-craft " and 11 or
+				dmgType == "Fell-wrought " and 12 or 13;
 						
 			-- Update
 			return 1,initiatorName,targetName,skillName,amount,1,1,dmgType;
