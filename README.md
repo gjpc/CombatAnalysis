@@ -4,7 +4,7 @@ A Lord of the Rings Online Lua Plugin in the public domain
 Contributors 
 Evendale - Creator
 Landal/gjpc - Successor 
-Ravdor/Bamor - Engineer
+hdflux,Ravdor/Bamor/Drono - Engineers
 
 Non coder type people can easily download this plugin at http://www.lotrointerface.com/downloads/fileinfo.php?id=881&so=
 
@@ -12,8 +12,11 @@ All coders, LUA enthusists and LoTRO Peeps are encouraged to fork this repositor
 
 Thanks!
 
+Update 4.8.0 (26 Nov 2019)
+Added Fell Wrought damage, reset stats on encountes and Dromo removed ghost button 
+
 Update 4.7.1  Landal/gjpc (10 June 2016)
-Fix crash for firs time users caused by larger font feature
+Fix crash for first time users caused by larger font feature
 
 Update 4.7.0 Landal/gjpc (5 June 2016)
 added larger fonts option for the stat panels
