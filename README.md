@@ -12,6 +12,9 @@ All coders, LUA enthusists and LoTRO Peeps are encouraged to fork this repositor
 
 Thanks!
 
+Update 4.8.1 (28 Nov 2019)
+Temporary fix to allow French client communications
+
 Update 4.8.0 (26 Nov 2019)
 Added Fell Wrought damage, reset stats on encountes and Dromo removed ghost button 
 

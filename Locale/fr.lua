@@ -396,10 +396,13 @@ L["ResetTotals"] = "Réinitialiser le cumulatif";
 -- Chat Menu (indexed by {command, channel name})
 
 L["Say"] = {"parler","Parler"};
-L["Fellowship"] = {"comm","Communauté"};
+-- L["Fellowship"] = {"comm","Communauté"};
+[code]L["Fellowship"] = {"f","CommunautÃ©"};
 L["Raid"] = {"ra","Raid"};
-L["Kinship"] = {"conf","Confrérie"};
-L["Tribe"] = {"conf","Tribu"};
+-- L["Kinship"] = {"conf","Confrérie"};
+L["Kinship"] = {"k","ConfrÃ©rie"};
+-- L["Tribe"] = {"conf","Tribu"};
+L["Tribe"] = {"k","Tribu"};
 L["Gap"] = "------------------";
 
 -- Other
