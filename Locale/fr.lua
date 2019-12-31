@@ -397,7 +397,7 @@ L["ResetTotals"] = "Réinitialiser le cumulatif";
 
 L["Say"] = {"parler","Parler"};
 -- L["Fellowship"] = {"comm","Communauté"};
-[code]L["Fellowship"] = {"f","CommunautÃ©"};
+L["Fellowship"] = {"f","CommunautÃ©"};
 L["Raid"] = {"ra","Raid"};
 -- L["Kinship"] = {"conf","Confrérie"};
 L["Kinship"] = {"k","ConfrÃ©rie"};
