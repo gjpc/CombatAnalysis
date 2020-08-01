@@ -4,13 +4,16 @@ A Lord of the Rings Online Lua Plugin in the public domain
 Contributors 
 Evendale - Creator
 Landal/gjpc - Successor 
-hdflux,Ravdor/Bamor/Drono - Engineers
+Julie Charrier,hdflux,Ravdor/Bamor/Drono - Engineers
 
 Non coder type people can easily download this plugin at http://www.lotrointerface.com/downloads/fileinfo.php?id=881&so=
 
 All coders, LUA enthusists and LoTRO Peeps are encouraged to fork this repository and particiapte!
 
 Thanks!
+
+Update 4.8.3 (1 Aug 2020)
+Adopt Jullie Charrier's mods to the French language module
 
 Update 4.8.2 (28 Nov 2019)
 Temporary fix to really allow French client communications
