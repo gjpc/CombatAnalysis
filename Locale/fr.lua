@@ -1,9 +1,9 @@
--- Database for Combat Analysis (Français)
+-- Database for Combat Analysis (FranÃ§ais)
 -- Encodage: utf-8 '
 -- Version 0.4 du 23 juin 2015
 
 L["DevelopedBy"] = "Developed by Evendale enhanced by Landal";
-L["TranslatedBy"] = "Français Mayara(Sirannon), Ardi(Estel)";
+L["TranslatedBy"] = "FranÃ§ais Mayara(Sirannon), Ardi(Estel)";
 
 L["FailedToLoadTraitsResetConfirmation"] = "Failed to load traits. Reset and continue?".."\n".."Warning: You will lose all your customized buff & debuff configurations.";-- pas de trad
 L["FailedToLoadTraitsMessage"] = "It is recommended you unload the plugin now. You can attempt to check your traits file for errors:\n\"Documents\\The_Lord_of_the_Rings_Online\\PluginData\\<UserName>\\<Server>\\<CharacterName>\\CombatAnalysisTraits.plugindata\"";-- pas de trad
@@ -13,8 +13,8 @@ L["FailedToLoadSettingsMessage"] = "It is recommended you unload the plugin now.
 -- Icon Menu
 
 L["Logo"] = "Logo";
-L["LockWindows"] = "Verrouillage de la fenêtre";
-L["UnlockWindows"] = "Déverrouillage de la fenêtre";
+L["LockWindows"] = "Verrouillage de la fenÃªtre";
+L["UnlockWindows"] = "DÃ©verrouillage de la fenÃªtre";
 L["SaveData"] = "Sauvegader";
 L["LoadData"] = "Charger";
 L["OpenTheMenu"] = "Ouvrir le menu";
@@ -23,21 +23,21 @@ L["OpenTheMenu"] = "Ouvrir le menu";
 
 L["MenuTitle"] = "Combat Analysis";
 
-L["General"] = "Général";
+L["General"] = "GÃ©nÃ©ral";
 L["Stats"] = "Stats";
 L["Buffs"] = "Buffs";
 L["About"] = "A Propos";
 
 -- General Menu
 
-L["GeneralSettingsTitle"] = "Réglages Généraux";
-L["AutoSelectNewEncounters"] = "Sélection d'une nouvelle rencontre";
+L["GeneralSettingsTitle"] = "RÃ©glages GÃ©nÃ©raux";
+L["AutoSelectNewEncounters"] = "SÃ©lection d'une nouvelle rencontre";
 L["ConfirmDialogOnReset"] = "Afficher le dialogue de confirmation pour un Reset";
 
 L["ShowLogo"] = "Afficher le logo de Combat Analysis";
 
 L["MaxStandardEncounters"] = "Nombre max de rencontres";
-L["MaxLoadedEncounters"] = "Nombre max de rencontres chargées";
+L["MaxLoadedEncounters"] = "Nombre max de rencontres chargÃ©es";
 
 L["TimerConfigurationsTitle"] = "Timer Configurations";-- pas de trad
 L["CombatTimeout"] = "Combat Timeout";-- pas de trad
@@ -46,7 +46,7 @@ L["LogDelay"] = "Delais d'enregistrement";
 L["EffectDelay"] = "Delais pour les effets";
 
 L["SaveLoadTitle"] = "Sauvegarde/Restauration";
-L["AutoSaveData"] = "Sauvegarde automatique des données";
+L["AutoSaveData"] = "Sauvegarde automatique des donnÃ©es";
 L["Off"] = "Off";
 L["SaveOnExit"] = "Sauvegarde en quittant";
 L["SaveEncounters"] = "Sauvegarde des rencontres";
@@ -55,49 +55,49 @@ L["SaveEncounters"] = "Sauvegarde des rencontres";
 
 L["UI"] = "UI";
 L["Tabs"] = "Onglets";
-L["Windows"] = "Fenêtres";
+L["Windows"] = "FenÃªtres";
 L["Tab"] = "Onglet";
-L["Window"] = "Fenêtre";
+L["Window"] = "FenÃªtre";
 
-L["TabsAndWindowsConfigurationTitle"] = "Configuration des onglets et fenêtres";
-L["TabsAndWindowsDescription"] = "> Déplacez l'onglet pour reconfigurer votre UI\n> Déplacez les onglets non utiles dans le buffer sur la droite";
+L["TabsAndWindowsConfigurationTitle"] = "Configuration des onglets et fenÃªtres";
+L["TabsAndWindowsDescription"] = "> DÃ©placez l'onglet pour reconfigurer votre UI\n> DÃ©placez les onglets non utiles dans le buffer sur la droite";
 
-L["TabSettingsTitle"] = "Paramétrage de l'onglet";
-L["SelectedTab"] = "Onglet sélectionné";
+L["TabSettingsTitle"] = "ParamÃ©trage de l'onglet";
+L["SelectedTab"] = "Onglet sÃ©lectionnÃ©";
 L["ColorScheme"] = "Palette de couleur";
 L["TempMorale"] = "Moral temporaire";
-L["AutoSelectPlayer"] = "Sélection automatique du joueur";
+L["AutoSelectPlayer"] = "SÃ©lection automatique du joueur";
 
-L["WindowSettingsTitle"] = "Paramétrage de la fenêtre";
-L["SelectedWindow"] = "fenêtre sélectionnée";
-L["Background"] = "arrière-plan";
+L["WindowSettingsTitle"] = "ParamÃ©trage de la fenÃªtre";
+L["SelectedWindow"] = "fenÃªtre sÃ©lectionnÃ©e";
+L["Background"] = "arriÃ¨re-plan";
 L["XPos"] = "x-pos";
 L["YPos"] = "y-pos";
 L["Width"] = "Largeur";
 L["Height"] = "Hauteur";
-L["Minimized"] = "Réduite";
-L["CenterOnScreen"] = "Centrer sur l'écran";
-L["AutoHideTabs"] = "Cacher au départ de la souris";
-L["ShowBackground"] = "Afficher l'arrière-plan et les bords";
+L["Minimized"] = "RÃ©duite";
+L["CenterOnScreen"] = "Centrer sur l'Ã©cran";
+L["AutoHideTabs"] = "Cacher au dÃ©part de la souris";
+L["ShowBackground"] = "Afficher l'arriÃ¨re-plan et les bords";
 L["ShowMiniTitleBar"] = "Afficher les mini-titres";
-L["ShowTitleAndDuration"] = "Afficher titre et durée";
+L["ShowTitleAndDuration"] = "Afficher titre et durÃ©e";
 L["ShowEncountersList"] = "Afficher la liste des rencontres";
 L["ShowTargetsList"] = "Afficher la liste des cibles";
 L["ShowExtraButtons"] = "Afficher envoyer vers le Chat et autres boutons";
 
 L["StatsWindowsConfigurationTitle"] = "Configuration des statistiques";
-L["StatsWindowsDescription"] = "> Déplacez les panneaux de statistiques pour reconfigurer votre UI\n> Déplacez les panneaux inutiles à droite";
+L["StatsWindowsDescription"] = "> DÃ©placez les panneaux de statistiques pour reconfigurer votre UI\n> DÃ©placez les panneaux inutiles Ã  droite";
 
-L["StatsWindowSettingsTitle"] = "Paramètres de la fenêtre de statistiques";
-L["Visibility"] = "Visibilité";
+L["StatsWindowSettingsTitle"] = "ParamÃ¨tres de la fenÃªtre de statistiques";
+L["Visibility"] = "VisibilitÃ©";
 L["AlwaysShow"] = "Toujours visible";
 L["ShowOnHover"] = "Afficher au passage de la souris";
 L["ShowOnLock"] = "afficher au verrouillage";
 
-L["ReOrder"] = "réorganiser";
+L["ReOrder"] = "rÃ©organiser";
 L["InsertTab"] = "Insertion d'un volet";
-L["NewWindow"] = "Nouvelle fenêtre";
-L["CloseWindow"] = "Fermer fenêtre";
+L["NewWindow"] = "Nouvelle fenÃªtre";
+L["CloseWindow"] = "Fermer fenÃªtre";
 
 -- Buffs Menu
 
@@ -107,8 +107,8 @@ L["CrowdControl"] = "CC";
 L["Bubbles"] = "Bulles";
 
 L["TraitConfigurationsTitle"] = "Configurations des Traits";
-L["SelectedConfiguration"] = "Configuration sélectionné";
-L["RemoveTraitConfigurationConfirmation"] = "Êtes vous sûr de supprimer cette configuration ?";
+L["SelectedConfiguration"] = "Configuration sÃ©lectionnÃ©";
+L["RemoveTraitConfigurationConfirmation"] = "ÃŠtes vous sÃ»r de supprimer cette configuration ?";
 
 L["AddConfiguration"] = "Ajout de Configuration";
 L["ConfigurationName"] = "Nom de la Configuration";
@@ -118,7 +118,7 @@ L["Add"] = "Ajouter";
 L["Remove"] = "Supprimer";
 
 L["ConfigurationNameRequired"] = "Un nom de Configuration est obligatoire";
-L["ConfigurationNameAlreadyExists"] = "Ce Nom de Configuration existe déjà";
+L["ConfigurationNameAlreadyExists"] = "Ce Nom de Configuration existe dÃ©jÃ ";
 L["ColorSchemeRequired"] = "Une palette de couleur est obligatoire";
 
 L["AddBuff"] = "Ajout des Buff";
@@ -141,7 +141,7 @@ L["NameRequiredPrefix"] = "Nom Obligatoire";
 L["EffectName"] = "Nom de l'Effet";
 L["BuffName"] = "Nom du Buff";
 L["DebuffName"] = "Nom du Debuff";
-L["IconFileName"] = "Nom de l'icône";
+L["IconFileName"] = "Nom de l'icÃ´ne";
 L["RemovalOnly"] = "Suppression seulement";
 L["ToggleSkill"] = "Toggle Skill";-- pas de trad
 L["Removes"] = "Removes";-- pas de trad
@@ -150,7 +150,7 @@ L["EffectModifiers"] = "Effect Modifiers";-- pas de trad
 L["IsStance"] = "Is Stance";-- pas de trad
 L["StackingBuffs"] = "Stacking Buffs";-- pas de trad
 L["LogName"] = "Nom du Log";
-L["AppliedBy"] = "Appliqué Par";
+L["AppliedBy"] = "AppliquÃ© Par";
 L["CritsOnlyAbbreviation"] = "Crit";
 L["DelayAbbreviation"] = "Del";
 L["DurationAbbreviation"] = "Dur";
@@ -158,11 +158,11 @@ L["DurationAbbreviation"] = "Dur";
 -- About Menu
 
 L["AboutTitle"] = "A propos";
-L["VersionNo"] = "Version N°";
+L["VersionNo"] = "Version NÂ°";
 L["RestoreSettings"] = "Restauration de la configuration";
-L["RestoreSettingsConfirmation"] = "Êtes vous sur de mettre tous les paramètres (A l'exclusion des traits) par défaut?";
+L["RestoreSettingsConfirmation"] = "ÃŠtes vous sur de mettre tous les paramÃ¨tres (A l'exclusion des traits) par dÃ©faut?";
 L["RestoreTraits"] = "Restauration des Traits";
-L["RestoreTraitsConfirmation"] = "Êtes vous sur de mettre tous la configuration des traits par défaut?";-- pas de trad
+L["RestoreTraitsConfirmation"] = "ÃŠtes vous sur de mettre tous la configuration des traits par dÃ©faut?";-- pas de trad
 L["PluginUsageMessage"] = "Pour plus d'information sur l'utilisation de ce plugin, visitez:";
 L["FoundABugMessage"] = "Un Bug? Signalez le en laissant un commentaire a l'adresse ci-dessus.";
 
@@ -249,7 +249,7 @@ L["DurationTooltip"] = "Set the duration for which the debuff lasts.";
 
 L["DoNotShowHintInFuture"] = " Do not show this\n  hint in the future"; -- be sure to include line break and spaces
 L["LogoTitle"] = "Utilisation du Logo Combat Analysis";
-L["LogoMessage"] = " Clic Gauche sur le logo pour Afficher/Masquer les fenêtres de Combat Analysis. Clic droit pour faire apparaitre l'option de sauvegarde/restauration ou le menu principal.\n\nDéplacez le Logo en pressant 'Control-\\', ou vous pouvez le dévalider a partir du menu.";
+L["LogoMessage"] = " Clic Gauche sur le logo pour Afficher/Masquer les fenÃªtres de Combat Analysis. Clic droit pour faire apparaitre l'option de sauvegarde/restauration ou le menu principal.\n\nDÃ©placez le Logo en pressant 'Control-\\', ou vous pouvez le dÃ©valider a partir du menu.";
 
 -- Colors by { FullName, Single Letter Abbreviation }
 L["Yellow"] = {"Jaune", "J"};
@@ -261,7 +261,7 @@ L["Alpha"] = {"Alpha", "A"};
 -- Commands
 
 L["Options"] = "options";
-L["Settings"] = "paramètres";
+L["Settings"] = "paramÃ¨tres";
 L["Setup"] = "configuration";
 L["ShowCommand"] = "afficher";
 L["HideCommand"] = "cacher";
@@ -269,7 +269,7 @@ L["ToggleCommand"] = "basculer";
 L["SaveCommand"] = "sauver";
 L["LoadCommand"] = "charger";
 L["LockCommand"] = "verrouiller";
-L["UnlockCommand"] = "déverrouiller";
+L["UnlockCommand"] = "dÃ©verrouiller";
 L["ResetCommand"] = "RAZ";
 L["LockToggleCommand"] = "lock toggle";
 
@@ -283,7 +283,7 @@ L["Billion"] = "G";
 L["Trillion"] = "T";
 
 L["Jan"] = {"Jan","Janvier"};
-L["Feb"] = {"Fév","Février"};
+L["Feb"] = {"FÃ©v","FÃ©vrier"};
 L["Mar"] = {"Mar","Mars"};
 L["Apr"] = {"Avr","Avril"};
 L["May"] = {"Mai","Mai"};
@@ -293,11 +293,11 @@ L["Aug"] = {"Aou","Aout"};
 L["Sep"] = {"Sep","Septembre"};
 L["Oct"] = {"Oct","Octobre"};
 L["Nov"] = {"Nov","Novembre"};
-L["Dec"] = {"Déc","Décembre"};
+L["Dec"] = {"DÃ©c","DÃ©cembre"};
 
 -- Options
 
-L["ResetTotalsMessage"] = "Êtes vous sûr de vouloir réinitialiser le cumulatif?";
+L["ResetTotalsMessage"] = "ÃŠtes vous sÃ»r de vouloir rÃ©initialiser le cumulatif?";
 L["Yes"] = "Oui";
 L["No"] = "Non";
 L["OK"] = "OK";
@@ -310,10 +310,10 @@ L["Champion"] = {"Champion","CHN"};
 L["Guardian"] = {"Gardien","GRD"};
 L["Hunter"] = {"Chasseur","CHS"};
 L["LoreMaster"] = {"Maitre de Savoir","MDS"};
-L["Minstrel"] = {"Ménestrel","MNS"};
+L["Minstrel"] = {"MÃ©nestrel","MNS"};
 L["RuneKeeper"] = {"Gardien des Runes","GDR"};
 L["Warden"] = {"Sentinelle","SEN"};
-L["Beorning"] = {"Béornide","BRN"};
+L["Beorning"] = {"BÃ©ornide","BRN"};
 
 L["BlackArrow"] = {"Black Arrow","BLA"};
 L["Defiler"] = {"Defiler","DEF"};
@@ -328,7 +328,7 @@ L["OtherClass"] = {"Autre","UNK"};
 
 -- Select File Dialog
 
-L["Select"] = "Sélectionner";
+L["Select"] = "SÃ©lectionner";
 L["Save"] = "Sauvegarder";
 L["Saves"] = "Sauvegardes";
 L["Load"] = "Charger";
@@ -337,70 +337,70 @@ L["Cancel"] = "Annuler";
 
 L["FileName"] = "Nom du ficher";
 
-L["SelectAll"] = "Sélectionner tout";
-L["ClearAll"] = "Dé-sélectionner tout";
+L["SelectAll"] = "SÃ©lectionner tout";
+L["ClearAll"] = "DÃ©-sÃ©lectionner tout";
 
 L["Delete"] = "Effacer";
 
-L["AreYouSureYouWantToDeleteMessage"] = "Êtes-vous sûr de vouloir supprimer\nle(s) fichier(s) sélectionné(s)?";
+L["AreYouSureYouWantToDeleteMessage"] = "ÃŠtes-vous sÃ»r de vouloir supprimer\nle(s) fichier(s) sÃ©lectionnÃ©(s)?";
 
 L["Encounters"] = "Rencontres";
 L["Items"] = "Objets";
 L["CombineWith"] = "Combiner Avec";
 L["CombineInto"] = "Combiner Dans";
 
-L["SelectCurrentDataToCombineWith"] = "Combiner les données chargées avec les données actuelles";
-L["LoadDataAsTotalsEncounter"] = "Remplacer le cumulatif avec les données chargées";
+L["SelectCurrentDataToCombineWith"] = "Combiner les donnÃ©es chargÃ©es avec les donnÃ©es actuelles";
+L["LoadDataAsTotalsEncounter"] = "Remplacer le cumulatif avec les donnÃ©es chargÃ©es";
 
 L["SelectSaveFile"] = "Choisir une sauvegarde";
-L["SelectFileToLoad"] = "Choisir le fichier à charger";
-L["SelectDataToSave"] = "Choisir le fichier à sauvegarder";
+L["SelectFileToLoad"] = "Choisir le fichier Ã  charger";
+L["SelectDataToSave"] = "Choisir le fichier Ã  sauvegarder";
 L["SelectDataToCombineWith"] = "Combiner avec";
 
-L["TooLong"] = "Vous ne pouvez entrer qu'un maximum de 64 caractères.";
-L["IllegalCharacters"] = "Vous ne pouvez entrer que des lettres, des chiffres, des espaces et des soulignés.";
+L["TooLong"] = "Vous ne pouvez entrer qu'un maximum de 64 caractÃ¨res.";
+L["IllegalCharacters"] = "Vous ne pouvez entrer que des lettres, des chiffres, des espaces et des soulignÃ©s.";
 
-L["NoDataMessage"] = "Il n\'y a actuellement aucune données à enregistrer.";
-L["NoFileMessage"] = "Pas de fichier spécifié.";
-L["NoDataSelectedMessage"] = "Aucune donnée n'a été sélectionnée.";
-L["OverwriteFileMessage"] = "Le fichier existe déjà. Voulez-vous combiner les données enregistrées avec ce fichier ou les remplacer?";
-L["CombineOrSeparateMessage"] = "Vous avez sélectionné plusieurs fichiers. Voulez-vous combiner les données ou les charger séparément?";
-L["TooManyCharactersMessage"] = "Le nom de fichier spécifié est trop long(longueur maximale = 64 caractères)";
-L["InvalidCharactersMessage"] = "Le nom de fichier spécifié contient des caractères non valides..";
-L["FileNotFoundMessage"] = "L'un des fichiers spécifié n'a pu être trouvée.";
-L["SaveFailedMessage"] = "Échec de la sauvegarde: ";
-L["LoadFailedMessage"] = "Échec du chargement: ";
-L["CombineMessage"] = "Êtes-vous sûr de vouloir combiner les fichiers sélectionnés?";
-L["LoadBeforeSaveMessage"] = "L'un des fichiers sélectionné est actuellement utilisé et ne peut donc pas être encore chargé. Essayez à nouveau dans environ 10-15 secondes."
+L["NoDataMessage"] = "Il n\'y a actuellement aucune donnÃ©es Ã  enregistrer.";
+L["NoFileMessage"] = "Pas de fichier spÃ©cifiÃ©.";
+L["NoDataSelectedMessage"] = "Aucune donnÃ©e n'a Ã©tÃ© sÃ©lectionnÃ©e.";
+L["OverwriteFileMessage"] = "Le fichier existe dÃ©jÃ . Voulez-vous combiner les donnÃ©es enregistrÃ©es avec ce fichier ou les remplacer?";
+L["CombineOrSeparateMessage"] = "Vous avez sÃ©lectionnÃ© plusieurs fichiers. Voulez-vous combiner les donnÃ©es ou les charger sÃ©parÃ©ment?";
+L["TooManyCharactersMessage"] = "Le nom de fichier spÃ©cifiÃ© est trop long(longueur maximale = 64 caractÃ¨res)";
+L["InvalidCharactersMessage"] = "Le nom de fichier spÃ©cifiÃ© contient des caractÃ¨res non valides..";
+L["FileNotFoundMessage"] = "L'un des fichiers spÃ©cifiÃ© n'a pu Ãªtre trouvÃ©e.";
+L["SaveFailedMessage"] = "Ã‰chec de la sauvegarde: ";
+L["LoadFailedMessage"] = "Ã‰chec du chargement: ";
+L["CombineMessage"] = "ÃŠtes-vous sÃ»r de vouloir combiner les fichiers sÃ©lectionnÃ©s?";
+L["LoadBeforeSaveMessage"] = "L'un des fichiers sÃ©lectionnÃ© est actuellement utilisÃ© et ne peut donc pas Ãªtre encore chargÃ©. Essayez Ã  nouveau dans environ 10-15 secondes."
 
 L["Combine"] = "Combiner";
 L["Combines"] = "Combines";
 L["Overwrite"] = "Remplacer";
-L["Combined"] = "Combiné";
-L["Separate"] = "Séparer";
+L["Combined"] = "CombinÃ©";
+L["Separate"] = "SÃ©parer";
 
 -- Encounter Default Names
 
 L["Totals"] = "Cumulatif";
 L["Encounter"] = "Rencontre";
 L["CurrentEncounter"] = "Rencontre actuelle";
-L["CompletedEncounter"] = "Rencontre terminée";
+L["CompletedEncounter"] = "Rencontre terminÃ©e";
 
 -- Right Click Menu
 
 L["RestoreTab"] = "Restaurer l'onglet";
 L["CloseTab"] = "Fermer l'onglet";
 
-L["ResetTotals"] = "Réinitialiser le cumulatif";
+L["ResetTotals"] = "RÃ©initialiser le cumulatif";
 
 -- Chat Menu (indexed by {command, channel name})
 
 L["Say"] = {"parler","Parler"};
--- L["Fellowship"] = {"comm","Communauté"};
-L["Fellowship"] = {"f","CommunautÃ©"};
+-- L["Fellowship"] = {"comm","CommunautÃ©"};
+L["Fellowship"] = {"f","CommunautÃƒÂ©"};
 L["Raid"] = {"ra","Raid"};
--- L["Kinship"] = {"conf","Confrérie"};
-L["Kinship"] = {"k","ConfrÃ©rie"};
+-- L["Kinship"] = {"conf","ConfrÃ©rie"};
+L["Kinship"] = {"k","ConfrÃƒÂ©rie"};
 -- L["Tribe"] = {"conf","Tribu"};
 L["Tribe"] = {"k","Tribu"};
 L["Gap"] = "------------------";
@@ -408,29 +408,29 @@ L["Gap"] = "------------------";
 -- Other
 
 L["AllPlayers"] = "Tous les joueurs";
-L["AllSkills"] = "Compétences (tous)";
-L["Duration"] = "Durée";
+L["AllSkills"] = "CompÃ©tences (tous)";
+L["Duration"] = "DurÃ©e";
 L["SendToChat"] = "Envoi vers le Chat";
-L["CombatAnalysisSummary"] = "Résumé de Combat Analysis";
+L["CombatAnalysisSummary"] = "RÃ©sumÃ© de Combat Analysis";
 
-L["DirectDamage"] = "Dégât direct";
+L["DirectDamage"] = "DÃ©gÃ¢t direct";
 
 L["MinutesAbbr"] = "m";
 L["SecondsAbbr"] = "s";
 
-L["Daze"] = "Hébété";
-L["Root"] = "Enraciné";
+L["Daze"] = "HÃ©bÃ©tÃ©";
+L["Root"] = "EnracinÃ©";
 L["Fear"] = "Peur";
-L["Stun"] = "Assommé";
-L["Knockdown"] = "renversé";
+L["Stun"] = "AssommÃ©";
+L["Knockdown"] = "renversÃ©";
 
 -- Statistics Headings
 
-L["AllData"] = "Données (Tous)";
+L["AllData"] = "DonnÃ©es (Tous)";
 L["NonCrits"] = "on critique";
 L["Criticals"] = "Critique";
-L["Devastates"] = "Dévastateur";
-L["CritsAndDevs"] = "Crit & Dévast";
+L["Devastates"] = "DÃ©vastateur";
+L["CritsAndDevs"] = "Crit & DÃ©vast";
 L["Partials"] = "Evite partiel";
 
 L["Total"] = "Total";
@@ -453,27 +453,27 @@ L["CriticalHitMax"] = "Max Hit"
 L["CriticalHitMin"] = "Min Hit"
 
 --- Added in v4.4.7 to support Devastate Hits
-L["DevastateHits"] = "Coup D�vaster";    
+L["DevastateHits"] = "Coup Dévaster";    
 L["DevastateHitChance"] = "Coup de Chance";
 L["DevastateHitAvg"] = "Coup Moyenne";
 L["DevastateHitMax"] = "Max Hit"       
 L["DevastateHitMin"] = "Min Hit"
 
-L["Avoidance"] = "Évitement";
+L["Avoidance"] = "Ã‰vitement";
 L["Attacks"] = "Attaque";
-L["Hits"] = "Coups Réussis";
-L["Absorbs"] = "Coups Absorbés";
-L["Misses"] = "Coups Ratés";
-L["Deflects"] = "Coups Reflétés";
-L["Immune"] = "Immunisé";
-L["Resists"] = "Résisté";
-L["PhysicalAvoids"] = "Évitement Physique";
-L["FullAvoids"] = "Évitement Complet";
-L["PartialAvoids"] = "Évitement Partiel";
-L["Avoids"] = "Évité";
-L["Blocks"] = "Bloqué";
-L["Parrys"] = "Parré";
-L["Evades"] = "Esquivé";
+L["Hits"] = "Coups RÃ©ussis";
+L["Absorbs"] = "Coups AbsorbÃ©s";
+L["Misses"] = "Coups RatÃ©s";
+L["Deflects"] = "Coups ReflÃ©tÃ©s";
+L["Immune"] = "ImmunisÃ©";
+L["Resists"] = "RÃ©sistÃ©";
+L["PhysicalAvoids"] = "Ã‰vitement Physique";
+L["FullAvoids"] = "Ã‰vitement Complet";
+L["PartialAvoids"] = "Ã‰vitement Partiel";
+L["Avoids"] = "Ã‰vitÃ©";
+L["Blocks"] = "BloquÃ©";
+L["Parrys"] = "ParrÃ©";
+L["Evades"] = "EsquivÃ©";
 L["PartialBlocks"] = "Blocage Partiel";
 L["PartialParrys"] = "Parade Partielle";
 L["PartialEvades"] = "Esquive Partielle";
@@ -482,7 +482,7 @@ L["Other"] = "Autre";
 L["Interrupts"] = "Interruption";
 L["CorruptionsRemoved"] = "Corruptions";
 
-L["DmgTypes"] = "Type des dégâts";
+L["DmgTypes"] = "Type des dÃ©gÃ¢ts";
 
 L["TempMorale"] = "Moral temporaire";
 L["RegularHeals"] = "Soins normaux";
@@ -491,27 +491,27 @@ L["WastedTempHeals"] = "Soins perdus";
 
 -- Note the following elements are indexed by: {Short Name, Full Name, Per Second Abbreviation, Tab Title, Tab Tooltip}
 
-L["Dmg"] = {"Off","Dégâts Infligés","DPS","Dégâts Infligés","Onglet des Dégâts Infligés"}
-L["Taken"] = {"Def","Dégâts Reçus","TPS","Dégâts Reçus","Onglet des Dégâts Reçus"}
-L["Heal"] = {"Soin","Soin","HPS","Soins","Onglet des Soins Reçus et Prodigués"}
-L["Power"] = {"Puis","Puissance","PPS","Puissance","Onglet sur la Puissance Reçue et Absorbée"}
+L["Dmg"] = {"Off","DÃ©gÃ¢ts InfligÃ©s","DPS","DÃ©gÃ¢ts InfligÃ©s","Onglet des DÃ©gÃ¢ts InfligÃ©s"}
+L["Taken"] = {"Def","DÃ©gÃ¢ts ReÃ§us","TPS","DÃ©gÃ¢ts ReÃ§us","Onglet des DÃ©gÃ¢ts ReÃ§us"}
+L["Heal"] = {"Soin","Soin","HPS","Soins","Onglet des Soins ReÃ§us et ProdiguÃ©s"}
+L["Power"] = {"Puis","Puissance","PPS","Puissance","Onglet sur la Puissance ReÃ§ue et AbsorbÃ©e"}
 
-L["Debuff"] = {"Debuff","Debuff","Debuff","Onglet des Debuffs","Onglet sur la durée des Debuffs"}
-L["Buff"] = {"Buff","Buff","Buff","Onglet des Buffs","Onglet sur la durée des Buffs"}
+L["Debuff"] = {"Debuff","Debuff","Debuff","Onglet des Debuffs","Onglet sur la durÃ©e des Debuffs"}
+L["Buff"] = {"Buff","Buff","Buff","Onglet des Buffs","Onglet sur la durÃ©e des Buffs"}
 
 L["Death"] = {"Mort","Mort"}
-L["Corruption"] = {"Corruption","Corruption Retirée"}
+L["Corruption"] = {"Corruption","Corruption RetirÃ©e"}
 L["Interrupt"] = {"Interruption","Interruption"}
-L["CombatEntered"] = {"Début Combat","Début du Combat"}
+L["CombatEntered"] = {"DÃ©but Combat","DÃ©but du Combat"}
 L["CombatExited"] = {"Fin Combat","Fin du Combat"}
 
 
-L["AvoidanceEnum"] = {{"Aucun","Aucun"},{"Raté","Raté"},{"Immunisé","Immunisé"},{"Résiste","Résiste"},
-                      {"Bloqué","Bloqué"},{"Paré","Paré"},{"Esquivé","Esquivé"},
-                      {"Bloqué-P","Bloqué partiellement"},{"Paré-P","Paré partiellement"},{"Esquivé-P","Esquivé partiellement"},
+L["AvoidanceEnum"] = {{"Aucun","Aucun"},{"RatÃ©","RatÃ©"},{"ImmunisÃ©","ImmunisÃ©"},{"RÃ©siste","RÃ©siste"},
+                      {"BloquÃ©","BloquÃ©"},{"ParÃ©","ParÃ©"},{"EsquivÃ©","EsquivÃ©"},
+                      {"BloquÃ©-P","BloquÃ© partiellement"},{"ParÃ©-P","ParÃ© partiellement"},{"EsquivÃ©-P","EsquivÃ© partiellement"},
                       {"Deflect", "Deflect"}}
 
-L["CriticalEnum"] = {{"Aucun","Aucun"},{"Critique","Coups Critique"},{"Dévastateur","Coups Dévastateur"}}
+L["CriticalEnum"] = {{"Aucun","Aucun"},{"Critique","Coups Critique"},{"DÃ©vastateur","Coups DÃ©vastateur"}}
 
 L["DmgTypeEnum"] = {
 	{"Commun", "Commun"},
@@ -520,7 +520,7 @@ L["DmgTypeEnum"] = {
 	{"Froid", "Froid"},
 	{"Acide", "Acide"},
 	{"Ombre", "Ombre"},
-	{"Lumiére", "Lumiére"},
+	{"LumiÃ©re", "LumiÃ©re"},
 	{"Bele", "Beleriand"},
 	{"Ouist", "Ouistrenesse"},
 	{"Nain", "Nain d\'antan"},
@@ -556,7 +556,7 @@ local function trim_articles(name)
 		return nil;
 	end
 
-	-- Articles possibles: Mayara, LeMayara, Le Mayara, LaMayara, La Mayara, L' Mayara, L’Mayara, et peut être d'autres?
+	-- Articles possibles: Mayara, LeMayara, Le Mayara, LaMayara, La Mayara, L' Mayara, Lâ€™Mayara, et peut Ãªtre d'autres?
 	return string.gsub(name, "^[Ll].-(%u)", "%1");
 end
 
@@ -565,18 +565,18 @@ L["Parse"] = function(line)
 
 	-- 1) Damage line ---
 	
-	local initiatorName,avoidAndCrit,skillName,targetName,amount,dmgType,moralePower = string.match(line,"^(.*) a infligé un coup (.*)avec (.*) sur (.*) pour ([%d,]*) points de type (.*) à l'entité ?(.*)%.$"); -- (updated in v4.1.0)
+	local initiatorName,avoidAndCrit,skillName,targetName,amount,dmgType,moralePower = string.match(line,"^(.*) a infligÃ© un coup (.*)avec (.*) sur (.*) pour ([%d,]*) points de type (.*) Ã  l'entitÃ© ?(.*)%.$"); -- (updated in v4.1.0)
 	
 	if (initiatorName ~= nil) then
 		
 		local avoidType =
-			string.match(avoidAndCrit,"partiellement bloqué") and 8 or
-			string.match(avoidAndCrit,"partiellement paré") and 9 or
-			string.match(avoidAndCrit,"partiellement esquivé ") and 10 or 
+			string.match(avoidAndCrit,"partiellement bloquÃ©") and 8 or
+			string.match(avoidAndCrit,"partiellement parÃ©") and 9 or
+			string.match(avoidAndCrit,"partiellement esquivÃ© ") and 10 or 
 			1;
 		local critType =
 			string.match(avoidAndCrit,"critique") and 2 or
-			string.match(avoidAndCrit,"dévastateur") and 3 or 1;
+			string.match(avoidAndCrit,"dÃ©vastateur") and 3 or 1;
 			
 		-- skillName = string.match(skillName,"^ avec (.*)$") or L.DirectDamage; -- (as of v4.1.0)
 
@@ -602,7 +602,7 @@ L["Parse"] = function(line)
 				dmgType == "Froid" and 4 or
 				dmgType == "Acide" and 5 or
 				dmgType == "Ombre" and 6 or
-				dmgType == "Lumière" and 7 or
+				dmgType == "LumiÃ¨re" and 7 or
 				dmgType == "Beleriand" and 8 or
 				dmgType == "Ouistrenesse" and 9 or
 				dmgType == "de nain d'antan" and 10 or 
@@ -622,18 +622,18 @@ L["Parse"] = function(line)
 	--     (note the distinction with which self heals are now handled)
 	--     (note we consider the case of heals of zero magnitude, even though they presumably never occur)
 	
-	--	[slfHeal] Arc du Juste a appliqué un soin critique à Ardichas, redonnant 52 points à l'entité Puissance.
-	--  [slfHeal] Esprit de soliloque a appliqué un soin critique à Yogimen, redonnant 228 points à l'entité Moral.
-	--  [Heal]    Eleria a appliqué un soin avec Paroles de guérison Ardicapde, redonnant 227 points à Moral.
+	--	[slfHeal] Arc du Juste a appliquÃ© un soin critique Ã  Ardichas, redonnant 52 points Ã  l'entitÃ© Puissance.
+	--  [slfHeal] Esprit de soliloque a appliquÃ© un soin critique Ã  Yogimen, redonnant 228 points Ã  l'entitÃ© Moral.
+	--  [Heal]    Eleria a appliquÃ© un soin avec Paroles de guÃ©rison Ardicapde, redonnant 227 points Ã  Moral.
 	initiator_name, match = string.match(line, '^(.*) a appliqu\195\169 un soin (.*)%.$');
 
 	if (initiator_name ~= nil) then
 			crit_type =
 				string.match(match, 'critique') and 2 or
-				string.match(match, 'dévastateur') and 3 or
+				string.match(match, 'dÃ©vastateur') and 3 or
 				1;
 			match = string.gsub(match, '^critique ', '');
-			match = string.gsub(match, '^dévastateur ', '');
+			match = string.gsub(match, '^dÃ©vastateur ', '');
 
 		local self_heal = (string.match(match, '^\195\160 ') and true or false);
 
@@ -655,9 +655,9 @@ L["Parse"] = function(line)
 	end
 	
 	-- 3) Buff line --
-	-- MarieChantal a appliqué un bénéfice avec Paroles de guérison Eleria.
+	-- MarieChantal a appliquÃ© un bÃ©nÃ©fice avec Paroles de guÃ©rison Eleria.
 
-	local initiatorName,skillName,targetName = string.match(line,"^(.*) a appliqué un bénéfice avec (.*) (.*)%.$");
+	local initiatorName,skillName,targetName = string.match(line,"^(.*) a appliquÃ© un bÃ©nÃ©fice avec (.*) (.*)%.$");
 	
 	if (initiatorName ~= nil) then
 		
@@ -666,21 +666,21 @@ L["Parse"] = function(line)
 	end
 	
 	-- 4) Avoid line --
-	-- L' Profanateur ghâshfra vigoureux a essayé d'utiliser une attaque de lancer faible sur MarieChantal mais a esquivé la tentative.
-	-- L' Berserker hante-jours a essayé d'utiliser une double attaque au corps à corps sur Eleria mais elle a paré la tentative.
-	-- L' Archer corsaire a essayé d'utiliser une attaque au corps à corps faible sur Cashel mais il a paré la tentative.
-	-- Ardichas a essayé d'utiliser Tir pénétrant amélioré : Brûlure sur le Trompeur immonde vigoureux mais il a esquivé la tentative.
+	-- L' Profanateur ghÃ¢shfra vigoureux a essayÃ© d'utiliser une attaque de lancer faible sur MarieChantal mais a esquivÃ© la tentative.
+	-- L' Berserker hante-jours a essayÃ© d'utiliser une double attaque au corps Ã  corps sur Eleria mais elle a parÃ© la tentative.
+	-- L' Archer corsaire a essayÃ© d'utiliser une attaque au corps Ã  corps faible sur Cashel mais il a parÃ© la tentative.
+	-- Ardichas a essayÃ© d'utiliser Tir pÃ©nÃ©trant amÃ©liorÃ©Â : BrÃ»lure sur le Trompeur immonde vigoureux mais il a esquivÃ© la tentative.
 
-	-- 4a) Évitements complets (Full avoids)
-	local initiator_name, skill_name, target_name, avoidType = string.match(line, "^(.*) a essayé d'utiliser (.*) sur (.*) mais (.*) la tentative%.$");
+	-- 4a) Ã‰vitements complets (Full avoids)
+	local initiator_name, skill_name, target_name, avoidType = string.match(line, "^(.*) a essayÃ© d'utiliser (.*) sur (.*) mais (.*) la tentative%.$");
 
 	if (initiator_name ~= nil) then
 		avoid_Type =
-			string.match(avoidType,"bloqué") and 5 or
-			string.match(avoidType,"paré") and 6 or
-			string.match(avoidType,"esquivé") and 7 or
-			string.match(avoidType,"résisté") and 4 or
-			string.match(avoidType,"immunisé contre") and 3 or 1;
+			string.match(avoidType,"bloquÃ©") and 5 or
+			string.match(avoidType,"parÃ©") and 6 or
+			string.match(avoidType,"esquivÃ©") and 7 or
+			string.match(avoidType,"rÃ©sistÃ©") and 4 or
+			string.match(avoidType,"immunisÃ© contre") and 3 or 1;
 
 		if (avoid_type == 1) then
 			return nil;
@@ -689,8 +689,8 @@ L["Parse"] = function(line)
 	end
 	
 	-- 4b) miss or deflect (deflect added in v4.2.2)
-	-- La Berserker hante-jours n'a pas réussi à utiliser une frappe de taille faible sur la Eleria.
-	local initiator_name, skill_name, target_name = string.match(line, "^(.*) n'a pas réussi à utiliser (.*) sur (.*)%.$");
+	-- La Berserker hante-jours n'a pas rÃ©ussi Ã  utiliser une frappe de taille faible sur la Eleria.
+	local initiator_name, skill_name, target_name = string.match(line, "^(.*) n'a pas rÃ©ussi Ã  utiliser (.*) sur (.*)%.$");
 
 	if (initiator_name ~= nil) then
 		avoid_type = 2;
@@ -699,15 +699,15 @@ L["Parse"] = function(line)
 	end
 	
 	-- 5) Reflect line --
-	-- Norchador a renvoyé 210 Ombre de dégâts au Moral de la Eleria.
-	-- Le Sangsue gardienne a renvoyé 339 points redonnés au Moral de Eleria.
-	local initiatorName,amount,dmgType,targetName = string.match(line,"^(.*) a renvoyé ([%d,]*) (.*) au Moral de (.*)%.$");
+	-- Norchador a renvoyÃ© 210 Ombre de dÃ©gÃ¢ts au Moral de la Eleria.
+	-- Le Sangsue gardienne a renvoyÃ© 339 points redonnÃ©s au Moral de Eleria.
+	local initiatorName,amount,dmgType,targetName = string.match(line,"^(.*) a renvoyÃ© ([%d,]*) (.*) au Moral de (.*)%.$");
 	
 	if (initiatorName ~= nil) then
 		local skillName = "Reflect";
 		amount = string.gsub(amount,",","")+0;
 		
-		local dmgType = string.match(dmgType,"^(.*)de dégâts$");
+		local dmgType = string.match(dmgType,"^(.*)de dÃ©gÃ¢ts$");
 		-- a damage reflect
 		if (dmgType ~= nil) then
 			dmgType = 
@@ -717,7 +717,7 @@ L["Parse"] = function(line)
 				dmgType == "Froid" and 4 or
 				dmgType == "Acide" and 5 or
 				dmgType == "Ombre" and 6 or
-				dmgType == "Lumière" and 7 or
+				dmgType == "LumiÃ¨re" and 7 or
 				dmgType == "Beleriand" and 8 or
 				dmgType == "Ouistrenesse" and 9 or
 				dmgType == "Nain d'antan" and 10 or 11;
@@ -743,7 +743,7 @@ L["Parse"] = function(line)
 	-- 7) Combat State Break notice (as of 4.1.0)
 	
 	-- 7a) Root broken
-	initiator_name, target_name = string.match(line, "^(.*) délivrée? ?(.*) de l'immobilisation\194\160!$");
+	initiator_name, target_name = string.match(line, "^(.*) dÃ©livrÃ©e? ?(.*) de l'immobilisation\194\160!$");
 
 	if (initiator_name ~= nil) then
 		initiator_name =
@@ -760,7 +760,7 @@ L["Parse"] = function(line)
 	end
 	
 	-- 7b) Daze broken
-	initiator_name, target_name = string.match(line, "^(.*) délivrée? ?(.*) de l'hébétement\194\160!$");
+	initiator_name, target_name = string.match(line, "^(.*) dÃ©livrÃ©e? ?(.*) de l'hÃ©bÃ©tement\194\160!$");
 
 	if (initiator_name ~= nil) then
 		initiator_name =
@@ -778,7 +778,7 @@ L["Parse"] = function(line)
 	
 	-- 8) Interrupt line --
 	
-	local target_name, initiator_name = string.match(line, "^(.*) a été interrompu par (.*)!$");
+	local target_name, initiator_name = string.match(line, "^(.*) a Ã©tÃ© interrompu par (.*)!$");
 
 	if (target_name ~= nil) then
 		return 7, trim_articles(initiator_name), trim_articles(target_name);
@@ -786,7 +786,7 @@ L["Parse"] = function(line)
 	
 	-- 9) Dispell line (corruption removal) --
 	
-	local corruption, target_name = string.match(line, "Vous avez dissipé l'effet (.*) affectant (.*)%.$");
+	local corruption, target_name = string.match(line, "Vous avez dissipÃ© l'effet (.*) affectant (.*)%.$");
 
 	if (corruption ~= nil) then
 		initiator_name = player.name;
@@ -817,7 +817,7 @@ L["Parse"] = function(line)
 	end
 
 	-- 10c) Defeat line 3 (a player was killed or died)
-	initiator_name = string.match(line, "^(.*) a péri%.$");
+	initiator_name = string.match(line, "^(.*) a pÃ©ri%.$");
 
 	if (initiator_name ~= nil) then
 		
@@ -826,7 +826,7 @@ L["Parse"] = function(line)
 	end
 
 	-- 10d) Defeat line 4 (you were killed)
-	match = string.match(line, "^.* a réussi à vous mettre hors de combat%.$");
+	match = string.match(line, "^.* a rÃ©ussi Ã  vous mettre hors de combat%.$");
 
 	if (match ~= nil) then
 		
@@ -835,7 +835,7 @@ L["Parse"] = function(line)
 	end
 
 	-- 10e) Defeat line 5 (you died)
-	match = string.match(line, "^Un incident vous a réduit à l'impuissance%.$");
+	match = string.match(line, "^Un incident vous a rÃ©duit Ã  l'impuissance%.$");
 
 	if (match ~= nil) then
 		
@@ -854,7 +854,7 @@ L["Parse"] = function(line)
 	-- 11) Revive lines --
 	
 	-- 11a) Revive line 1 (player revived)
-	local initiatorName = string.match(line,"^(.*) revient à la vie%.$");
+	local initiatorName = string.match(line,"^(.*) revient Ã  la vie%.$");
 	
 	if (initiatorName ~= nil) then
 	  
@@ -863,7 +863,7 @@ L["Parse"] = function(line)
 	end
 	
 	-- 11b) Revive line 2 (player succumbed)
-	local initiatorName = string.match(line,"^(.*) a succombé à ses blessures%.$");
+	local initiatorName = string.match(line,"^(.*) a succombÃ© Ã  ses blessures%.$");
 	
 	if (initiatorName ~= nil) then
 	  
@@ -872,7 +872,7 @@ L["Parse"] = function(line)
 	end
 	
 	-- 11c) Revive line 3 (you were revived)
-	local match = string.match(line,"^Vous revenez à la vie%.$");
+	local match = string.match(line,"^Vous revenez Ã  la vie%.$");
 	
 	if (match ~= nil) then
 	  initiatorName = player.name;
@@ -985,7 +985,7 @@ L["MarblesTier3"] = "Marbles Tier 3";
 -- Trait Lines
 L["LeadTheCharge"] = "A la charge!";
 L["LeaderOfMen"] = "Meneur d'hommes";
-L["HandsOfHealing"] = "Mains Guérisseuses";
+L["HandsOfHealing"] = "Mains GuÃ©risseuses";
 -- Buffs (effect name)
 L["MusterCourage"] = "Rassemblement du courage";
 L["InHarmsWay"] = "In Harm's Way";
@@ -995,32 +995,32 @@ L["Motivated"] = "Motivation";
 L["OnGuard"] = "En garde";
 L["RelentlessAttack"] = "Relentless Attack";
 L["Focus"] = "Focus";
-L["ShieldBrother"] = "Frère de bouclier";
-L["WatchfulShieldBrother"] = "Frère de bouclier vigilant";
-L["SongBrother"] = "Frère de chants";
-L["BladeBrother"] = "Frère d'armes";
+L["ShieldBrother"] = "FrÃ¨re de bouclier";
+L["WatchfulShieldBrother"] = "FrÃ¨re de bouclier vigilant";
+L["SongBrother"] = "FrÃ¨re de chants";
+L["BladeBrother"] = "FrÃ¨re d'armes";
 L["ShieldOfTheDunedain"] = "Bouclier des D\195\186nedain";
-L["ToArmsShieldBrother"] = "Aux armes! (Frère de bouclier)";
-L["ToArmsFellowshipShieldBrother"] = "Aux armes! (Frère de bouclier communauté)";
-L["ToArmsSongBrother"] = "Aux armes! (Frère de chants)";
-L["ToArmsFellowshipSongBrother"] = "Aux armes! (Frère de chants communauté)";
-L["ToArmsBladeBrother"] = "Aux armes! (Frère d'armes)";
-L["ToArmsFellowshipBladeBrother"] = "Aux armes! (Frère d'armes communauté)";
-L["StrengthOfWillShieldBrother"] = "Inspiration (Frère de bouclier)";
-L["StrengthOfWillFellowshipShieldBrother"] = "Inspiration (Frère de bouclier communauté)";
-L["StrengthOfWillSongBrother"] = "Inspiration (Frère de chants)";
-L["StrengthOfWillFellowshipSongBrother"] = "Inspiration (FFrère de chants communauté)";
-L["StrengthOfWillBladeBrother"] = "Inspiration (Frère d'armes)";
-L["StrengthOfWillFellowshipBladeBrother"] = "Inspiration (Frère d'armes communauté)";
+L["ToArmsShieldBrother"] = "Aux armes! (FrÃ¨re de bouclier)";
+L["ToArmsFellowshipShieldBrother"] = "Aux armes! (FrÃ¨re de bouclier communautÃ©)";
+L["ToArmsSongBrother"] = "Aux armes! (FrÃ¨re de chants)";
+L["ToArmsFellowshipSongBrother"] = "Aux armes! (FrÃ¨re de chants communautÃ©)";
+L["ToArmsBladeBrother"] = "Aux armes! (FrÃ¨re d'armes)";
+L["ToArmsFellowshipBladeBrother"] = "Aux armes! (FrÃ¨re d'armes communautÃ©)";
+L["StrengthOfWillShieldBrother"] = "Inspiration (FrÃ¨re de bouclier)";
+L["StrengthOfWillFellowshipShieldBrother"] = "Inspiration (FrÃ¨re de bouclier communautÃ©)";
+L["StrengthOfWillSongBrother"] = "Inspiration (FrÃ¨re de chants)";
+L["StrengthOfWillFellowshipSongBrother"] = "Inspiration (FFrÃ¨re de chants communautÃ©)";
+L["StrengthOfWillBladeBrother"] = "Inspiration (FrÃ¨re d'armes)";
+L["StrengthOfWillFellowshipBladeBrother"] = "Inspiration (FrÃ¨re d'armes communautÃ©)";
 L["RallyingCry"] = "Cri de ralliement";
-L["InDefenceOfMiddleEarth"] = "A la défense de la Terre du Milieu";
+L["InDefenceOfMiddleEarth"] = "A la dÃ©fense de la Terre du Milieu";
 L["DefensiveStrike"] = "Defensive Strike";
 L["ImprovedDefensiveStrike"] = "Improved Defensive Strike";
 L["LastStand"] = "Dernier combat";
 -- Debuffs (log name)
 L["NobleMark"] = "Marque de noblesse";
 L["TellingMark"] = "Marque efficace";
-L["RevealingMark"] = "Marque révélatrice";
+L["RevealingMark"] = "Marque rÃ©vÃ©latrice";
 
 -- 3) Champion Skills
 
@@ -1084,19 +1084,19 @@ L["ImminentCleansing"] = "Imminent Cleansing";
 -- 5) Hunter Skills
 
 -- Trait lines
-L["TheBowmaster"] = "Maître archer";
-L["TheTrapperOfFoes"] = "Piégeur d'ennemis";
-L["TheHuntsman"] = "Flèche Sylvaine";
+L["TheBowmaster"] = "MaÃ®tre archer";
+L["TheTrapperOfFoes"] = "PiÃ©geur d'ennemis";
+L["TheHuntsman"] = "FlÃ¨che Sylvaine";
 -- Buffs (effect name)
 L["StanceStrength"] = "Posture: force";
-L["StancePrecision"] = "Posture: précision";
+L["StancePrecision"] = "Posture: prÃ©cision";
 L["StanceEndurance"] = "Posture: endurance";
 L["BurnHot"] = "Vive flamme";
 L["CoolBurn"] = "Cool Burn";
-L["Fleetness"] = "Célérité";
-L["ImprovedFleetness"] = "Célérité améliorée";
-L["SwiftStroke"] = "Décochage rapide";
-L["NeedfulHaste"] = "Hâte nécessaire";
+L["Fleetness"] = "CÃ©lÃ©ritÃ©";
+L["ImprovedFleetness"] = "CÃ©lÃ©ritÃ© amÃ©liorÃ©e";
+L["SwiftStroke"] = "DÃ©cochage rapide";
+L["NeedfulHaste"] = "HÃ¢te nÃ©cessaire";
 L["HuntersArt"] = "Hunter's Art";-- Always exist ????
 -- Debuffs (log name)
 L["QuickShot"] = "Tir rapide";
@@ -1104,26 +1104,26 @@ L["LowCut"] = "Coups au jambes";
 L["CripplingShot"] = "Crippling Shot";
 L["SlowingCut"] = "Slowing Cut";
 -- Crowd Control (log name)
-L["DazingBlow"] = "Coups d'hébétement";
-L["ImprovedDazingBlow"] = "Coups d'hébètement amélioré";
+L["DazingBlow"] = "Coups d'hÃ©bÃ©tement";
+L["ImprovedDazingBlow"] = "Coups d'hÃ©bÃ¨tement amÃ©liorÃ©";
 L["DistractingShot"] = "Tir de distraction";
-L["RainOfThorns"] = "Pluie d'épines";
-L["CryOfThePredator"] = "Cri du prédateur";
-L["BardsArrow"] = "Flèche de Bard";
-L["TrapDamage"] = "Dégâts de piège";
+L["RainOfThorns"] = "Pluie d'Ã©pines";
+L["CryOfThePredator"] = "Cri du prÃ©dateur";
+L["BardsArrow"] = "FlÃ¨che de Bard";
+L["TrapDamage"] = "DÃ©gÃ¢ts de piÃ¨ge";
 
 -- 6) Lore-Master Skills
 
 -- Trait lines
-L["MasterOfNaturesFury"] = "Maître de la fureur naturelle";
-L["TheAncientMaster"] = "Maître ancien";
+L["MasterOfNaturesFury"] = "MaÃ®tre de la fureur naturelle";
+L["TheAncientMaster"] = "MaÃ®tre ancien";
 L["TheKeeperOfAnimals"] = "Gardien des animaux";
 -- Buffs (effect name)
 L["AirLore"] = "Connaissance de l'air";
 L["ContinualAirLore"] = "Continual Air-lore"; --exist ??
-L["SignOfPowerRighteousness"] = "Signe du pouvoir : Intégrité";
-L["SignOfPowerVigilance"] = "Signe du pouvoir : Vigilance";
-L["SignOfTheWildRage"] = "Signe du pouvoir : Rage"; --exist ??
+L["SignOfPowerRighteousness"] = "Signe du pouvoirÂ : IntÃ©gritÃ©";
+L["SignOfPowerVigilance"] = "Signe du pouvoirÂ : Vigilance";
+L["SignOfTheWildRage"] = "Signe du pouvoirÂ : Rage"; --exist ??
 L["ImprovedSignOfTheWildRage"] = "Improved Sign of the Wild: Rage"; --exist ??
 L["SignOfTheWildProtection"] = "Sign of the Wild: Protection"; --exist ??
 -- Debuffs (log name)
@@ -1133,39 +1133,39 @@ L["FireLore"] = "Connaissance du feu";
 L["WindLore"] = "Connaissance du vent";
 L["FrostLore"] = "Connaissance du froid";
 L["AncientCraft"] = "Artisanat ancien";
-L["SignOfPowerCommand"] = "Signe du pouvoir : Commandement";
-L["ImprovedSignOfPowerCommand"] = "Signe du pouvoir : commandement amélioré";
-L["SignOfPowerSeeAllEnds"] = "Signe du pouvoir : voir la fin des choses";
+L["SignOfPowerCommand"] = "Signe du pouvoirÂ : Commandement";
+L["ImprovedSignOfPowerCommand"] = "Signe du pouvoirÂ : commandement amÃ©liorÃ©";
+L["SignOfPowerSeeAllEnds"] = "Signe du pouvoirÂ : voir la fin des choses";
 -- Crowd Control (log name)
-L["BlindingFlash"] = "Lumière aveuglante";
-L["ImprovedBlindingFlash"] = "Lumière aveuglante améliorée";
+L["BlindingFlash"] = "LumiÃ¨re aveuglante";
+L["ImprovedBlindingFlash"] = "LumiÃ¨re aveuglante amÃ©liorÃ©e";
 L["BaneFlare"] = "Eclat fatal";
 L["HerbLore"] = "Connaissance des plantes";
-L["CrackedEarth"] = "Terre craquelée";
+L["CrackedEarth"] = "Terre craquelÃ©e";
 L["StormLore"] = "Connaissance de l'orage";
-L["LightOfTheRisingDawn"] = "Lumière de l'aube naissante";
-L["TestOfWill"] = "Test de volonté";
-L["EntsGoToWar"] = "Marche guerrière des Ents";
-L["ImprovedStaffStrike"] = "Coup de bâton améliore";
+L["LightOfTheRisingDawn"] = "LumiÃ¨re de l'aube naissante";
+L["TestOfWill"] = "Test de volontÃ©";
+L["EntsGoToWar"] = "Marche guerriÃ¨re des Ents";
+L["ImprovedStaffStrike"] = "Coup de bÃ¢ton amÃ©liore";
 
 -- 7) Minstrel Skills
 
 -- Trait lines
 L["TheWarriorSkald"] = "Skalde guerrier";
 L["TheProtectorOfSong"] = "Protecteur des chants";
-L["TheWatcherOfResolve"] = "Veilleur déterminé";
+L["TheWatcherOfResolve"] = "Veilleur dÃ©terminÃ©";
 -- Buffs (effect name)
 L["AnthemOfWar"] = "Hymne de guerre";
 L["AnthemOfTheFreePeoples"] = "Hymne des Peuples Libres";
 L["AnthemOfProwess"] = "Anthem of Prowess";
 L["AnthemOfComposure"] = "Hymne de contenance";
-L["TheMelodyOfBattle"] = "Mélodie de bataille";
+L["TheMelodyOfBattle"] = "MÃ©lodie de bataille";
 L["InspireFellows"] = "Inspire Fellows";
 L["SoliloquyOfSpirit"] = "Esprit de soliloque";
 L["ImprovedChordOfSalvation"] = "Improved Chord of Salvation";
-L["TaleOfHeroism"] = "Epopée héroïque";
-L["TaleOfBattle"] = "Epopée de combat";
-L["TaleOfWarding"] = "Epopée de répit"; -- Tale of Warding ???
+L["TaleOfHeroism"] = "EpopÃ©e hÃ©roÃ¯que";
+L["TaleOfBattle"] = "EpopÃ©e de combat";
+L["TaleOfWarding"] = "EpopÃ©e de rÃ©pit"; -- Tale of Warding ???
 L["TaleOfWardingAndHope"] = "Tale of Warding and Hope";
 L["TaleOfFrostAndFlame"] = "Tale of Frost and Flame";
 L["TaleOfFrostAndFlamesBattle"] = "Tale of Frost and Flame's Battle";
@@ -1174,13 +1174,13 @@ L["SymphonyOfTheHopefulHeart"] = "Symphony of the Hopeful Heart";
 L["Harmony"] = "Harmonie";
 L["WarSpeech"] = "Discours de guerre";
 L["AnthemOfCompassion"] = "Hymne de sympathie";
-L["AnthemOfTheThirdAge"] = "Hymne du Troisième Age";
-L["AnthemOfTheThirdAgeWarSpeech"] = "Hymne dissonant du Troisième Age";
-L["AnthemOfTheThirdAgeHarmony"] = "Hymne résonant du Troisième Age";
+L["AnthemOfTheThirdAge"] = "Hymne du TroisiÃ¨me Age";
+L["AnthemOfTheThirdAgeWarSpeech"] = "Hymne dissonant du TroisiÃ¨me Age";
+L["AnthemOfTheThirdAgeHarmony"] = "Hymne rÃ©sonant du TroisiÃ¨me Age";
 L["MinorBallad"] = "Ballade mineure";
 L["MajorBallad"] = "Ballade majeure";
 L["PerfectBallad"] = "Ballade parfaite";
-L["StillAsDeath"] = "Immobilité de cadavre";
+L["StillAsDeath"] = "ImmobilitÃ© de cadavre";
 -- Debuffs (log name)
 L["CallOfOrome"] = "Appel d'Orom\195\171";
 L["CryOfTheWizards"] = "Cri des Magiciens";
@@ -1235,10 +1235,10 @@ L["ShieldDefence"] = "Shield-defence";
 L["ShieldTactics"] = "Shield-tactics";
 L["DanceOfBattleEvade"] = "Dance of Battle - Evade";
 L["TacticallySound"] = "Tactically Sound";
-L["T1HealOverTime"] = "Guérison au fil du temps de niveau 1";
-L["T2HealOverTime"] = "Guérison au fil du temps de niveau 2";
-L["T3HealOverTime"] = "Guérison au fil du temps de niveau 3";
-L["T4HealOverTime"] = "Guérison au fil du temps de niveau 4";
+L["T1HealOverTime"] = "GuÃ©rison au fil du temps de niveau 1";
+L["T2HealOverTime"] = "GuÃ©rison au fil du temps de niveau 2";
+L["T3HealOverTime"] = "GuÃ©rison au fil du temps de niveau 3";
+L["T4HealOverTime"] = "GuÃ©rison au fil du temps de niveau 4";
 
 -- 10) Racial Skills
 L["DutyBound"] = "Duty Bound";
