@@ -12,6 +12,9 @@ All coders, LUA enthusists and LoTRO Peeps are encouraged to fork this repositor
 
 Thanks!
 
+Update 4.8.2 (28 Nov 2019)
+Temporary fix to really allow French client communications
+
 Update 4.8.1 (28 Nov 2019)
 Temporary fix to allow French client communications
 
