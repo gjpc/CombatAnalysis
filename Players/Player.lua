@@ -63,7 +63,7 @@ end
 Misc.AddCallback(player,"InCombatChanged",function()
 	local inCombat = player:IsInCombat();
 	-- send combat state change update
-	combatData:Update(inCombat and 11 or 12,Turbine.Engine.GetGameTime(),player.name);
+	combatData:Update(inCombat and event_type.COMBAT_START or event_type.COMBAT_END,Turbine.Engine.GetGameTime(),player.name);
 	-- if we just exited combat, clear all pending & running debuffs
 	if (not inCombat) then
     pendingDebuffs:Clear();

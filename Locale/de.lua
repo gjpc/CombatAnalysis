@@ -592,7 +592,7 @@ L["Parse"] = function(line)
 		if (moralePower == 2) then return nil end
 		
 		-- Update
-		return 1,initiatorName,targetName,skillName,amount,avoidType,critType,dmgType;
+		return event_type.DMG_DEALT,initiatorName,targetName,skillName,amount,avoidType,critType,dmgType;
 	end
 	
 	-- 2) Heal line --
@@ -615,7 +615,7 @@ L["Parse"] = function(line)
 		amount = string.gsub(amount,",","")+0;
 		
 		-- Update
-		return (moralePower == 2 and 4 or 3),initiatorName,targetName,skillName,amount,critType;
+		return (moralePower == 2 and event_type.POWER_RESTORE or event_type.HEAL),initiatorName,targetName,skillName,amount,critType;
 	end
 	
 	-- 2.2) Self Heal
@@ -630,7 +630,7 @@ L["Parse"] = function(line)
 		critType = critType == "kritische " and 2 or
 				   critType == "zerst\195\182rerische " and 3 or 1;
 		
-		return (moralPower == 2 and 4 or 3), initiatorName, initiatorName, skillName, amount, critType;
+		return (moralPower == 2 and event_type.POWER_RESTORE or event_type.HEAL), initiatorName, initiatorName, skillName, amount, critType;
 	end
 	
 	-- 3) Buff line --
@@ -640,7 +640,7 @@ L["Parse"] = function(line)
 		initiatorName = TrimArticles(initiatorName);
 		targetName = TrimArticles(targetName);
 		-- Update
-		return 17,initiatorName,targetName,skillName;
+		return event_type.BENEFIT,initiatorName,targetName,skillName;
 	end
 	
 	-- 4) Avoid line --
@@ -661,7 +661,7 @@ L["Parse"] = function(line)
 				string.match(avoidType,"Immunit\195\164t") and 3 or 1;
 		-- Sanity check: must have avoided in some manner
 		if (avoidType == 1) then return nil end
-		return 1,initiatorName,targetName,skillName,0,avoidType,1,10;
+		return event_type.DMG_DEALT,initiatorName,targetName,skillName,0,avoidType,1,10;
 	end
 		
 	-- miss
@@ -673,7 +673,7 @@ L["Parse"] = function(line)
 		skillName = string.gsub(skillName, "\"", "");
 		local avoidType = 2;
 		-- Update
-		return 1,initiatorName,targetName,skillName,0,avoidType,1,10;
+		return event_type.DMG_DEALT,initiatorName,targetName,skillName,0,avoidType,1,10;
 	end
 		
 	
@@ -703,10 +703,10 @@ L["Parse"] = function(line)
 				dmgType == "\"Ork-Waffe\"" and 11 or
 				dmgType == "\"Hass\"" and 12 or 13;
 			-- a dmg reflect
-			return 1,initiatorName,targetName,skillName,amount,1,1,dmgType;
+			return event_type.DMG_DEALT,initiatorName,targetName,skillName,amount,1,1,dmgType;
 		else
 			-- a heal reflect
-			return 3,initiatorName,targetName,skillName,amount,1;
+			return event_type.HEAL,initiatorName,targetName,skillName,amount,1;
 		end
 	end
 	
@@ -715,7 +715,7 @@ L["Parse"] = function(line)
 	if (amount ~= nil) then
 		amount = string.gsub(amount,",","")+0;
 		-- the only information we can extract directly is the target and amount
-		return 14,nil,player.name,nil,amount;
+		return event_type.TEMP_MORALE_LOST,nil,player.name,nil,amount;
 	end
 	
 	-- 7) Combat State Break notice (as of 4.1.0)
@@ -725,7 +725,7 @@ L["Parse"] = function(line)
 	if (targetName ~= nil) then
 		targetName = TrimArticles(targetName);
 		-- the only information we can extract directly is the target name
-		return 16,nil,targetName,nil;
+		return event_type.CC_BROKEN,nil,targetName,nil;
 	end
 	
 	-- 7b) Daze broken
@@ -733,7 +733,7 @@ L["Parse"] = function(line)
 	if (targetName ~= nil) then
 		targetName = TrimArticles(targetName);
 		-- the only information we can extract directly is the target name
-		return 16,nil,targetName,nil;
+		return event_type.CC_BROKEN,nil,targetName,nil;
 	end
 	
 	-- 7c) Fear broken
@@ -741,7 +741,7 @@ L["Parse"] = function(line)
 	if(targetName ~= nil) then
 		targetName = TrimArticles(targetName);
 		-- the only information we can extract directly is the target name
-		return 16,nil,targetName,nil;
+		return event_type.CC_BROKEN,nil,targetName,nil;
 	end
 		
 	
@@ -752,7 +752,7 @@ L["Parse"] = function(line)
 		targetName = TrimArticles(targetName);
 		
 		-- Update
-		return 7,initiatorName,targetName;
+		return event_type.INTERRUPT,initiatorName,targetName;
 	end
 	
 	-- 9) Dispell line (corruption removal) --
@@ -762,7 +762,7 @@ L["Parse"] = function(line)
 		-- NB: Currently ignore corruption name
 		
 		-- Update
-		return 8,player.name,targetName;
+		return event_type.CORRUPTION,player.name,targetName;
 	end
 	
 	-- 10) Defeat lines ---
@@ -773,7 +773,7 @@ L["Parse"] = function(line)
 	if (initiatorName ~= nil) then
 		initiatorName = TrimArticles(initiatorName);
 		-- Update
-		return 9,initiatorName;
+		return event_type.DEATH,initiatorName;
 	end
 	
 	-- 10b) Defeat line 2 (mob died)
@@ -782,7 +782,7 @@ L["Parse"] = function(line)
 	if (initiatorName ~= nil) then
 		initiatorName = TrimArticles(initiatorName);
 		-- Update
-		return 9,initiatorName;
+		return event_type.DEATH,initiatorName;
 	end
 	
 	-- 10c) Defeat line 3 (a player was killed or died)
@@ -791,7 +791,7 @@ L["Parse"] = function(line)
 	if (initiatorName ~= nil) then
 		initiatorName = TrimArticles(initiatorName);
 		-- Update
-		return 9,initiatorName;
+		return event_type.DEATH,initiatorName;
 	end
 	
 	-- 10d) Defeat line 4 (you were killed)
@@ -799,7 +799,7 @@ L["Parse"] = function(line)
 
 	if (match ~= nil) then
 		-- Update
-		return 9,player.name;
+		return event_type.DEATH,player.name;
 	end
 	
 	-- 10e) Defeat line 5 (you died)
@@ -807,7 +807,7 @@ L["Parse"] = function(line)
 
 	if (match ~= nil) then
 		-- Update
-		return 9,player.name;
+		return event_type.DEATH,player.name;
 	end
 	
 	-- 11) Revive lines --
@@ -818,7 +818,7 @@ L["Parse"] = function(line)
 	if (initiatorName ~= nil) then
 		initiatorName = TrimArticles(initiatorName);
 		-- Update
-	  return 10,initiatorName;
+	  return event_type.REVIVE,initiatorName;
 	end
 	
 	-- 11b) Revive line 2 (player succumbed)
@@ -827,7 +827,7 @@ L["Parse"] = function(line)
 	if (initiatorName ~= nil) then
 	  initiatorName = TrimArticles(initiatorName);
 		-- Update
-	  return 10,initiatorName;
+	  return event_type.REVIVE,initiatorName;
 	end
 	
 	-- 11c) Revive line 3 (you were revived)
@@ -835,7 +835,7 @@ L["Parse"] = function(line)
 	
 	if (match ~= nil) then
 		-- Update
-	  return 10,player.name;
+	  return event_type.REVIVE,player.name;
 	end
 	
 	-- 11d) Revive line 4 (you succumbed)
@@ -843,7 +843,7 @@ L["Parse"] = function(line)
 	
 	if (match ~= nil) then
 		-- Update
-	  return 10,player.name;
+	  return event_type.REVIVE,player.name;
 	end
 	
 	-- if we reach here, we were unable to parse the line
