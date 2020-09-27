@@ -25,6 +25,7 @@ import "CombatAnalysis.Utils.OrderedFileList"
 import "CombatAnalysis.Utils.Settings"
 import "CombatAnalysis.Utils.DataStorage"
 import "CombatAnalysis.Utils.Misc"
+import "CombatAnalysis.Utils.Enums"
 
 import "CombatAnalysis.Utils.Commands"
 import "CombatAnalysis.Utils.KeyManager"

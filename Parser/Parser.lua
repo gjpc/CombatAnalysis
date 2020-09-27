@@ -23,55 +23,57 @@ Misc.AddCallback(Turbine.Chat,"Received",function(sender, args)
 	-- Now, perform some preprocessing on the parsed output, and then pass along the info to update combat data
   
 	-- Determine if this is damage dealt or damage received and update accordingly
-	if (updateType == 1 or updateType == 7) then
+	if (updateType == event_type.DMG_DEALT or updateType == event_type.INTERRUPT) then
     
 		-- a) Check for player name as initiator
 		if (initiatorName == player.name) then
       
       -- Check for self damage
 			if (targetName == player.name) then
-        -- NB: currently just ignore self interrupts
-        if (updateType == 7) then return end
-        
+
+		        -- NB: currently just ignore self interrupts
+		        if (updateType == event_type.INTERRUPT) then return end
+
 				if (printDebug) then
-					Turbine.Shell.WriteLine("self damage > "..tostring(updateType == 1 and 2 or 13)..","..tostring(timestamp)..","..tostring(initiatorName)..","..tostring(targetName)..","..tostring(skillName)..","..tostring(var1)..","..tostring(var2)..","..tostring(var3)..","..tostring(var4));
+					Turbine.Shell.WriteLine("self damage > "..tostring(updateType == event_type.DMG_DEALT and event_type.DMG_TAKEN or event_type.MOB_INTERRUPT)..","..tostring(timestamp)..","..tostring(initiatorName)..","..tostring(targetName)..","..tostring(skillName)..","..tostring(var1)..","..tostring(var2)..","..tostring(var3)..","..tostring(var4));
 				end
-				updateType = 2;
-        
+
+				updateType = event_type.DMG_TAKEN;
+	        
 			-- Check if the skill used is a tracked Debuff (if it wasn't avoided)
-			elseif (updateType == 1 and (var2 == 1 or (var2 > 7 and var2 < 11))) then
-        if (debuffApplications[skillName] ~= nil) then
-          for debuffName, skillInfo in pairs(debuffApplications[skillName]) do
-            InitiateDebuff(timestamp,var3,initiatorName,targetName,debuffName,skillInfo,true);
-          end
-        end
-        if (ccApplications[skillName] ~= nil) then
-          for debuffName, skillInfo in pairs(ccApplications[skillName]) do
-            InitiateDebuff(timestamp,var3,initiatorName,targetName,debuffName,skillInfo,false);
-          end
-        end
+			elseif (updateType == event_type.DMG_DEALT and (var2 == 1 or (var2 > 7 and var2 < 11))) then
+		        if (debuffApplications[skillName] ~= nil) then
+		          for debuffName, skillInfo in pairs(debuffApplications[skillName]) do
+		            InitiateDebuff(timestamp,var3,initiatorName,targetName,debuffName,skillInfo,true);
+		          end
+		        end
+		        if (ccApplications[skillName] ~= nil) then
+		          for debuffName, skillInfo in pairs(ccApplications[skillName]) do
+		            InitiateDebuff(timestamp,var3,initiatorName,targetName,debuffName,skillInfo,false);
+		          end
+		        end
 			end
 			
 		-- b) Check for player name as target
 		elseif (targetName == player.name) then
-			if (updateType == 7) then
-				updateType = 13;
+			if (updateType == event_type.INTERRUPT) then
+				updateType = event_type.MOB_INTERRUPT;
 			else
-				updateType = 2;
+				updateType = event_type.DMG_TAKEN;
 			end
 			
 			targetName = initiatorName;
 			initiatorName = player.name;
     
     -- c) Ignore any interrupts that don't involve the player
-    elseif (updateType == 7) then
+    elseif (updateType == event_type.INTERRUPT) then
       return;
       
     -- d) Make adjustments if pet was target
-		elseif (updateType == 1 and args.ChatType == Turbine.ChatType.EnemyCombat) then
+		elseif (updateType == event_type.DMG_DEALT and args.ChatType == Turbine.ChatType.EnemyCombat) then
       -- NB: Currently ignore the possibility of self inflicted pet damage, and debuffs applied by pets
       
-      updateType = 2;
+      updateType = event_type.DMG_TAKEN;
       local petName = targetName;
       targetName = initiatorName;
       initiatorName = petName;
@@ -79,14 +81,14 @@ Misc.AddCallback(Turbine.Chat,"Received",function(sender, args)
 		end
 	
 	-- Check check if the skill used was a tracked morale bubble
-	elseif (updateType == 3 or updateType == 4) then
+	elseif (updateType == event_type.HEAL or updateType == event_type.POWER_RESTORE) then
 		-- TODO (if this is a self heal, we should check to see that the skill name doesn't match the
 		--         name of a player in the group - ie: is actually a direct heal with no skill name)
 		
 		CheckMoraleBubble(timestamp,targetName,skillName,initiatorName,true);
     
 	-- terminate all pending & running debuffs on a mob that has died
-	elseif (updateType == 9) then
+	elseif (updateType == event_type.DEATH) then
     -- remove all pending debuffs for this target
     local i = 1;
     while i <= #pendingDebuffs.list do
@@ -100,7 +102,7 @@ Misc.AddCallback(Turbine.Chat,"Received",function(sender, args)
     combatData.runningDebuffs:Terminated(timestamp,initiatorName);
     
 	-- Determine who the most recent successful initiator of a temporary morale bubble was
-	elseif (updateType == 14) then
+	elseif (updateType == event_type.TEMP_MORALE_LOST) then
 		
 		-- If there are no active bubbles specified for this target, add this info to a pending list
 		if (activeBubbles[targetName] == nil) then
@@ -118,7 +120,7 @@ Misc.AddCallback(Turbine.Chat,"Received",function(sender, args)
 			Misc.StartTimer(var1,timestamp,logDelay,RemoveRecentTempMoraleLost);
 		end
 		
-	elseif (updateType == 16) then
+	elseif (updateType == event_type.CC_BROKEN) then
 		
 		-- terminate any dazes/roots/fears on the target
 		if (combatData.runningDebuffs.crowdControl[targetName] ~= nil) then
@@ -129,10 +131,10 @@ Misc.AddCallback(Turbine.Chat,"Received",function(sender, args)
 		end
 		return;
 		
-	elseif (updateType == 17) then
+	elseif (updateType == event_type.BENEFIT) then
 		-- Check if the skill used was a tracked Benefit
 		if (benefits[skillName] ~= nil) then
-			updateType = 3;
+			updateType = event_type.HEAL;
 			var1 = 0; -- a zero heal
 			var2 = 1; -- a hit
 		end
@@ -141,18 +143,18 @@ Misc.AddCallback(Turbine.Chat,"Received",function(sender, args)
 		CheckMoraleBubble(timestamp,targetName,skillName,initiatorName,false);
 		
 		-- If this benefit was not tracked, do nothing
-		if (updateType == 17) then return end
+		if (updateType == event_type.BENEFIT) then return end
 		
 	end
 	
 	-- finally, check if taken damage corresponds to an earlier (always earlier) loss of temporary morale
-	if (updateType == 2) then
+	if (updateType == event_type.DMG_TAKEN) then
 		if (recentTempMorale[initiatorName] ~= nil) then
 			for index,tempMoraleInfo in ipairs(recentTempMorale[initiatorName]) do
 				if (tempMoraleInfo[3] == var1 and tempMoraleInfo[4] == nil) then
 					-- if this heal has already been assigned to an effect, then it can now be removed from the list
 					if (tempMoraleInfo[2]) then
-						combatData:Update(15,timestamp,tempMoraleInfo[2][1],initiatorName,tempMoraleInfo[2][2],var1);
+						combatData:Update(event_type.TEMP_MORALE_NOT_WASTED,timestamp,tempMoraleInfo[2][1],initiatorName,tempMoraleInfo[2][2],var1);
 						table.remove(recentTempMorale[initiatorName],index);
 					-- otherwise, just update the wasted status of the item to false
 					else
@@ -298,7 +300,7 @@ function _G.ApplyDebuff(timestamp,effectInfo)
   
 	-- record all debuffs in CA
 	if (isDebuff and skillInfo.ca) then
-		combatData:Update(5,timestamp,initiatorName,targetName,skillName,conflictingToggleTarget,conflictingToggleSkillName,(not skillInfo.toggleSkill and duration or nil));
+		combatData:Update(event_type.DEBUFF_APPLIED,timestamp,initiatorName,targetName,skillName,conflictingToggleTarget,conflictingToggleSkillName,(not skillInfo.toggleSkill and duration or nil));
 	end
 end
 
@@ -366,7 +368,7 @@ function _G.NotifyPendingTempMorale(targetName)
 		
 		local tempMoraleInfo = recentTempMorale[targetName][index];
 		if (not tempMoraleInfo[2]) then
-			combatData:Update(14,tempMoraleInfo[1],initiatorName,targetName,skillName,tempMoraleInfo[3],tempMoraleInfo[4]);
+			combatData:Update(event_type.TEMP_MORALE_LOST,tempMoraleInfo[1],initiatorName,targetName,skillName,tempMoraleInfo[3],tempMoraleInfo[4]);
 			-- if it has already been determined whether or not this heal was wasted, then it can now be removed from the list
 			if (tempMoraleInfo[4] ~= nil) then
 				table.remove(recentTempMorale[targetName],index);
@@ -398,7 +400,7 @@ function _G.CheckMoraleBubble(timestamp,targetName,logName,initiatorName,wasHeal
 	-- send through an update (type = heal, amount = 0, crit type = none) so #attacks gets incremented by one (do this
 	--   even if no effect gets created so that clever users will be able to notice that a bubble has been wasted)
 	if (not wasHeal) then
-		combatData:Update(3,timestamp,initiatorName,targetName,logName,0,1);
+		combatData:Update(event_type.HEAL,timestamp,initiatorName,targetName,logName,0,1);
 	end
 	
 	local effectNames = tempMoraleSkills[logName];

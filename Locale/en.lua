@@ -588,7 +588,7 @@ L["Parse"] = function(line)
 		if (moralePower == 2) then return nil end
 		
 		-- Update
-		return 1,initiatorName,targetName,skillName,amount,avoidType,critType,dmgType;
+		return event_type.DMG_DEALT,initiatorName,targetName,skillName,amount,avoidType,critType,dmgType;
 	end
 	
 	-- 2) Heal line --
@@ -627,7 +627,7 @@ L["Parse"] = function(line)
 		end
 		
 		-- Update
-		return (moralePower == 2 and 4 or 3),initiatorName,targetName,skillName,amount,critType;
+		return (moralePower == 2 and event_type.POWER_RESTORE or event_type.HEAL),initiatorName,targetName,skillName,amount,critType;
 	end
 	
 	-- 3) Buff line --
@@ -639,7 +639,7 @@ L["Parse"] = function(line)
 		targetName = string.gsub(targetName,"^[Tt]he ","");
 		
 		-- Update
-		return 17,initiatorName,targetName,skillName;
+		return event_type.BENEFIT,initiatorName,targetName,skillName;
 	end
 	
 	-- 4) Avoid line --
@@ -678,7 +678,7 @@ L["Parse"] = function(line)
 		if (avoidType == 1) then return nil end
 		
 		-- Update
-		return 1,initiatorName,targetName,skillName,0,avoidType,1,13;
+		return event_type.DMG_DEALT,initiatorName,targetName,skillName,0,avoidType,1,13;
 	end
 	
 	-- 5) Reflect line --
@@ -709,11 +709,11 @@ L["Parse"] = function(line)
 				dmgType == "Fell-wrought " and 12 or 13;
 						
 			-- Update
-			return 1,initiatorName,targetName,skillName,amount,1,1,dmgType;
+			return event_type.DMG_DEALT,initiatorName,targetName,skillName,amount,1,1,dmgType;
 		-- a heal reflect
 		else
 			-- Update
-			return 3,initiatorName,targetName,skillName,amount,1;
+			return event_type.HEAL,initiatorName,targetName,skillName,amount,1;
 		end
 	end
 	
@@ -723,7 +723,7 @@ L["Parse"] = function(line)
 		amount = string.gsub(amount,",","")+0;
 		
 		-- the only information we can extract directly is the target and amount
-		return 14,nil,player.name,nil,amount;
+		return event_type.TEMP_MORALE_LOST,nil,player.name,nil,amount;
 	end
 	
 	-- 7) Combat State Break notice (as of 4.1.0)
@@ -734,7 +734,7 @@ L["Parse"] = function(line)
 		targetName = string.gsub(targetName,"^[Tt]he ","");
 		
 		-- the only information we can extract directly is the target name
-		return 16,nil,targetName,nil;
+		return event_type.CC_BROKEN,nil,targetName,nil;
 	end
 	
 	-- 7b) Daze broken
@@ -743,7 +743,7 @@ L["Parse"] = function(line)
 		targetName = string.gsub(targetName,"^[Tt]he ","");
 		
 		-- the only information we can extract directly is the target name
-		return 16,nil,targetName,nil;
+		return event_type.CC_BROKEN,nil,targetName,nil;
 	end
 	
 	-- 7c) Fear broken (TODO: Check)
@@ -752,7 +752,7 @@ L["Parse"] = function(line)
 		targetName = string.gsub(targetName,"^[Tt]he ","");
 		
 		-- the only information we can extract directly is the target name
-		return 16,nil,targetName,nil;
+		return event_type.CC_BROKEN,nil,targetName,nil;
 	end
 	
 	-- 8) Interrupt line --
@@ -764,7 +764,7 @@ L["Parse"] = function(line)
 		targetName = string.gsub(targetName,"^[Tt]he ","");
 		
 		-- Update
-		return 7,initiatorName,targetName;
+		return event_type.INTERRUPT,initiatorName,targetName;
 	end
 	
 	-- 9) Dispell line (corruption removal) --
@@ -778,7 +778,7 @@ L["Parse"] = function(line)
 		-- NB: Currently ignore corruption name
 		
 		-- Update
-		return 8,initiatorName,targetName;
+		return event_type.CORRUPTION,initiatorName,targetName;
 	end
 	
 	-- 10) Defeat lines ---
@@ -790,7 +790,7 @@ L["Parse"] = function(line)
 		initiatorName = string.gsub(initiatorName,"^[Tt]he ","");
 		
 		-- Update
-		return 9,initiatorName;
+		return event_type.DEATH,initiatorName;
 	end
 	
 	-- 10b) Defeat line 2 (mob died)
@@ -800,7 +800,7 @@ L["Parse"] = function(line)
 		initiatorName = string.gsub(initiatorName,"^[Tt]he ","");
 		
 		-- Update
-		return 9,initiatorName;
+		return event_type.DEATH,initiatorName;
 	end
 	
 	-- 10c) Defeat line 3 (a player was killed or died)
@@ -810,7 +810,7 @@ L["Parse"] = function(line)
 		initiatorName = string.gsub(initiatorName,"^[Tt]he ","");
 		
 		-- Update
-		return 9,initiatorName;
+		return event_type.DEATH,initiatorName;
 	end
 	
 	-- 10d) Defeat line 4 (you were killed)
@@ -820,7 +820,7 @@ L["Parse"] = function(line)
 		initiatorName = player.name;
 		
 		-- Update
-		return 9,initiatorName;
+		return event_type.DEATH,initiatorName;
 	end
 	
 	-- 10e) Defeat line 5 (you died)
@@ -830,7 +830,7 @@ L["Parse"] = function(line)
 		initiatorName = player.name;
 		
 		-- Update
-		return 9,initiatorName;
+		return event_type.DEATH,initiatorName;
 	end
 	
 	-- 10f) Defeat line 6 (you killed a mob)
@@ -840,7 +840,7 @@ L["Parse"] = function(line)
 		initiatorName = string.gsub(initiatorName,"^[Tt]he ","");
 		
 		-- Update
-		return 9,initiatorName;
+		return event_type.DEATH,initiatorName;
 	end
 	
 	-- 11) Revive lines --
@@ -852,7 +852,7 @@ L["Parse"] = function(line)
 	  initiatorName = string.gsub(initiatorName,"^[Tt]he ","");
 	  
 		-- Update
-	  return 10,initiatorName;
+	  return event_type.REVIVE,initiatorName;
 	end
 	
 	-- 11b) Revive line 2 (player succumbed)
@@ -862,7 +862,7 @@ L["Parse"] = function(line)
 	  initiatorName = string.gsub(initiatorName,"^[Tt]he ","");
 	  
 		-- Update
-	  return 10,initiatorName;
+	  return event_type.REVIVE,initiatorName;
 	end
 	
 	-- 11c) Revive line 3 (you were revived)
@@ -872,7 +872,7 @@ L["Parse"] = function(line)
 	  initiatorName = player.name;
 	  
 		-- Update
-	  return 10,initiatorName;
+	  return event_type.REVIVE,initiatorName;
 	end
 	
 	-- 11d) Revive line 4 (you succumbed)
@@ -882,7 +882,7 @@ L["Parse"] = function(line)
 	  initiatorName = player.name;
 	  
 		-- Update
-	  return 10,initiatorName;
+	  return event_type.REVIVE,initiatorName;
 	end
 	
 	-- if we reach here, we were unable to parse the line

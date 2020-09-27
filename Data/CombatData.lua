@@ -39,7 +39,7 @@ function CombatData:Initialize()
 	
 	-- if in combat on startup, initiate a combat entered update immediately
 	if (player:IsInCombat()) then		
-		self:Update(11,gameStartTime,player.name);
+		self:Update(event_type.COMBAT_START,gameStartTime,player.name);
 	end
 end
 
@@ -86,7 +86,7 @@ A complete list of all combat events (everything that happened in the combat log
 
 function CombatData:Update(updateType,timestamp,playerName,targetName,skillName,var1,var2,var3,var4)
 	-- mob or player death
-	if updateType == 9 then
+	if updateType == event_type.DEATH then
 		
 		local targetIdentified = false;
 		local wasPending = false;
@@ -126,14 +126,14 @@ function CombatData:Update(updateType,timestamp,playerName,targetName,skillName,
 		Misc.StartTimer(playerName,timestamp,combatData.timer,CombatData.RestoreFinished,self);
 		
 	-- player revived
-	elseif updateType == 10 then
+	elseif updateType == event_type.REVIVE then
 		if (self.inCombat) then
 			self.currentEncounter:RestoreRevived(timestamp,playerName);
 			self.totalsEncounter:RestoreRevived(timestamp,playerName);
 		end
 		
 	-- combat entered
-	elseif updateType == 11 then
+	elseif updateType == event_type.COMBAT_START then
 		-- in the rare chance the previous encounter is not yet completed, reset it and continue
 		if (self.inCombat) then
 			-- note we don't always need to reset (may have entered combat via damage, and then again via actual combat)
@@ -176,7 +176,7 @@ function CombatData:Update(updateType,timestamp,playerName,targetName,skillName,
 		buffTab:SetWantsUpdates(true);
 		
 	-- combat exited
-	elseif updateType == 12 then
+	elseif updateType == event_type.COMBAT_END then
 		-- notify encounters that combat has ended
 		self.currentEncounter:CombatExited(true,timestamp);
 		self.totalsEncounter:CombatExited(false,timestamp);
@@ -200,10 +200,10 @@ function CombatData:Update(updateType,timestamp,playerName,targetName,skillName,
 		Misc.StartTimer(nil,timestamp,combatData.timer,CombatData.EncounterFinished,self);
 		
 	-- standard update of summary data
-	elseif (self.inCombat or (updateType == 1 and var1 > 0)) then
+	elseif (self.inCombat or (updateType == event_type.DMG_DEALT and var1 > 0)) then
 		-- initiate combat on positive damage
 		if (not self.inCombat) then
-			self:Update(11,timestamp,playerName,nil,true);
+			self:Update(event_type.COMBAT_START,timestamp,playerName,nil,true);
 			-- since combat does not initiate on AoE damage that kills targets instantly, check that we are still in combat after 3 seconds
 			Misc.StartTimer(nil,timestamp,3,CombatData.CheckCombatStatus,self);
 		end
@@ -213,17 +213,17 @@ function CombatData:Update(updateType,timestamp,playerName,targetName,skillName,
 		self.totalsEncounter:Update(false,updateType,timestamp,targetName,playerName,skillName,var1,var2,var3,var4);
 		
 		-- update relevant summary displays
-		if (updateType == 1 or updateType == 7 or updateType == 8) then
+		if (updateType == event_type.DMG_DEALT or updateType == event_type.INTERRUPT or updateType == event_type.CORRUPTION) then
 			dmgTab:FullUpdate();
-		elseif (updateType == 2 or updateType == 13) then
+		elseif (updateType == event_type.DMG_TAKEN or updateType == event_type.MOB_INTERRUPT) then
 			takenTab:FullUpdate();
-		elseif (updateType == 3 or updateType == 14 or updateType == 15) then
+		elseif (updateType == event_type.HEAL or updateType == event_type.TEMP_MORALE_LOST or updateType == event_type.TEMP_MORALE_NOT_WASTED) then
 			healTab:FullUpdate();
-		elseif (updateType == 4) then
+		elseif (updateType == event_type.POWER_RESTORE) then
 			powerTab:FullUpdate();
-		elseif (updateType == 5) then
+		elseif (updateType == event_type.DEBUFF_APPLIED) then
 			debuffTab:FullUpdate();
-		elseif (updateType == 6) then
+		elseif (updateType == event_type.BUFF_APPLIED) then
 			buffTab:FullUpdate();
 		end
 	end
@@ -321,7 +321,7 @@ end
 -- notification to check combat state and determine if combat should be ended
 function CombatData:CheckCombatStatus(timestamp)
 	if (not player:IsInCombat()) then
-		self:Update(12,Turbine.Engine.GetGameTime(),playerName,nil,true);
+		self:Update(event_type.COMBAT_END,Turbine.Engine.GetGameTime(),playerName,nil,true);
     pendingDebuffs:Clear();
 		combatData.runningDebuffs:Clear();
 	end
