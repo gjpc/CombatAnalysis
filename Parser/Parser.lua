@@ -30,9 +30,9 @@ Misc.AddCallback(Turbine.Chat,"Received",function(sender, args)
       
       -- Check for self damage
 			if (targetName == player.name) then
-
 		        -- NB: currently just ignore self interrupts
 		        if (updateType == event_type.INTERRUPT) then return end
+
 
 				if (printDebug) then
 					Turbine.Shell.WriteLine("self damage > "..tostring(updateType == event_type.DMG_DEALT and event_type.DMG_TAKEN or event_type.MOB_INTERRUPT)..","..tostring(timestamp)..","..tostring(initiatorName)..","..tostring(targetName)..","..tostring(skillName)..","..tostring(var1)..","..tostring(var2)..","..tostring(var3)..","..tostring(var4));
@@ -42,6 +42,7 @@ Misc.AddCallback(Turbine.Chat,"Received",function(sender, args)
 	        
 			-- Check if the skill used is a tracked Debuff (if it wasn't avoided)
 			elseif (updateType == event_type.DMG_DEALT and (var2 == 1 or (var2 > 7 and var2 < 11))) then
+
 		        if (debuffApplications[skillName] ~= nil) then
 		          for debuffName, skillInfo in pairs(debuffApplications[skillName]) do
 		            InitiateDebuff(timestamp,var3,initiatorName,targetName,debuffName,skillInfo,true);
@@ -138,10 +139,16 @@ Misc.AddCallback(Turbine.Chat,"Received",function(sender, args)
 			var1 = 0; -- a zero heal
 			var2 = 1; -- a hit
 		end
-		
+		-- If player wanted to track the benefit as a debuff, initiate
+		if (debuffApplications[skillName] ~= nil) then
+          for debuffName, skillInfo in pairs(debuffApplications[skillName]) do
+            InitiateDebuff(timestamp,var3,initiatorName,targetName,debuffName,skillInfo,true);
+          end
+        end
+
 		-- Also check if the skill used was a tracked morale bubble
 		CheckMoraleBubble(timestamp,targetName,skillName,initiatorName,false);
-		
+
 		-- If this benefit was not tracked, do nothing
 		if (updateType == event_type.BENEFIT) then return end
 		
@@ -203,13 +210,13 @@ end
 function _G.ApplyDebuff(timestamp,effectInfo)
 	local initiatorName = effectInfo[1];
 	local targetName = effectInfo[2];
-  local skillName = effectInfo[3];
+	local skillName = effectInfo[3];
 	local applicationInfo = effectInfo[4]; -- crits only, duration, delay
-  local isDebuff = effectInfo[5];
-  local skillInfo = (isDebuff and debuffs[skillName] or cc[skillName]); -- skill type, removal only, overwrites, icon, conflicts, buff effects
-  timestamp = math.max((combatData.currentEncounter and combatData.currentEncounter.orderedMobs[1].gameStartTime or Turbine.Engine.GetGameTime()), timestamp + (applicationInfo.delay or 0));
+	local isDebuff = effectInfo[5];
+  	local skillInfo = (isDebuff and debuffs[skillName] or cc[skillName]); -- skill type, removal only, overwrites, icon, conflicts, buff effects
+  	timestamp = math.max((combatData.currentEncounter and combatData.currentEncounter.orderedMobs[1].gameStartTime or Turbine.Engine.GetGameTime()), timestamp + (applicationInfo.delay or 0));
   
-  -- 1) ensure that debuffs aren't applied if a conflicting debuff is on the mob
+  	-- 1) ensure that debuffs aren't applied if a conflicting debuff is on the mob
 	if (not skillInfo.removalOnly and skillInfo.conflicts ~= nil) then
     -- debuff
     if (isDebuff) then
