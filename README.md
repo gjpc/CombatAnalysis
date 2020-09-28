@@ -4,11 +4,15 @@ A Lord of the Rings Online Lua Plugin in the public domain
 Contributors 
 Evendale - Creator
 Landal/gjpc - Successor 
-hdflux,Ravdor/Bamor/Drono - Engineers
+hdflux,Ravdor/Bamor/Drono/argonui - Engineers
 
 Non coder type people can easily download this plugin at http://www.lotrointerface.com/downloads/fileinfo.php?id=881&so=
 
 All coders, LUA enthusists and LoTRO Peeps are encouraged to fork this repository and particiapte!
+
+Update 4.8.5 (28 Sep 2020)
+argonui Add ability for Benefits to be sent to BuffBars & added internal enhancements
+Thanks!
 
 Thanks!
 Update 4.8.4 (7 Aug 2020)
