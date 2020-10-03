@@ -1,0 +1,11 @@
+return {
+  _all = {
+  },
+  default = {
+    verbose = true,
+    lpath = "Parser/?.lua;Utils/?.lua;Locale/?.lua",
+    ROOT = {"."},
+    recursive = true,
+    pattern = "_spec.lua",
+  },
+}
