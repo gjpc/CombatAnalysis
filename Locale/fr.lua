@@ -398,7 +398,7 @@ L["ResetTotals"] = "Réinitialiser le cumulatif";
 L["Say"] = {"parler","Parler"};
 L["Fellowship"] = {"comm","Communauté"};
 L["Raid"] = {"ra","Raid"};
-L["Kinship"] = {"conf","Confrérie"};
+L["Kinship"] = {"k","Confrérie"};
 L["Tribe"] = {"conf","Tribu"};
 L["Gap"] = "------------------";
 
@@ -450,7 +450,7 @@ L["CriticalHitMax"] = "Max Hit"
 L["CriticalHitMin"] = "Min Hit"
 
 --- Added in v4.4.7 to support Devastate Hits
-L["DevastateHits"] = "Coup D�vaster";    
+L["DevastateHits"] = "Coup D�vaster";    
 L["DevastateHitChance"] = "Coup de Chance";
 L["DevastateHitAvg"] = "Coup Moyenne";
 L["DevastateHitMax"] = "Max Hit"       
