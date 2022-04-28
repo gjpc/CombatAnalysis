@@ -2,8 +2,8 @@
 <PluginConfig>
     <Id>502</Id>
     <Name>Combat Analysis</Name>
-    <Version>4.8.5</Version>
-    <Author>Evendale and Landal and Ravdor</Author>
+    <Version>4.8.6</Version>
+    <Author>Landal</Author>
     <InfoUrl>http://www.lotrointerface.com/downloads/info881-CombatAnalysis.html</InfoUrl>
     <DownloadUrl>http://www.lotrointerface.com/downloads/download881-CombatAnalysis</DownloadUrl>
     <Descriptors>
