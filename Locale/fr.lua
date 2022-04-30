@@ -1,255 +1,257 @@
 -- Database for Combat Analysis (Français)
--- Encodage: utf-8 '
--- Version 0.4 du 23 juin 2015
+-- Encodage: UTF8
+-- Version du 11 mars 2016
 
-L["DevelopedBy"] = "Developed by Evendale enhanced by Landal";
-L["TranslatedBy"] = "Français Mayara(Sirannon), Ardi(Estel)";
+L["DevelopedBy"] = "Developpé par Evendale, amélioré par Landal.";
+L["TranslatedBy"] = "Traduction : Mayara@Sirannon Ardi@Estel Adra@Sirannon";
 
-L["FailedToLoadTraitsResetConfirmation"] = "Failed to load traits. Reset and continue?".."\n".."Warning: You will lose all your customized buff & debuff configurations.";-- pas de trad
-L["FailedToLoadTraitsMessage"] = "It is recommended you unload the plugin now. You can attempt to check your traits file for errors:\n\"Documents\\The_Lord_of_the_Rings_Online\\PluginData\\<UserName>\\<Server>\\<CharacterName>\\CombatAnalysisTraits.plugindata\"";-- pas de trad
-L["FailedToLoadSettingsResetConfirmation"] = "Failed to load settings. Reset and continue?".."\n".."Warning: You will lose all your customized options (excluding buff & debuff configurations).";-- pas de trad
-L["FailedToLoadSettingsMessage"] = "It is recommended you unload the plugin now. You can attempt to check your settings file for errors:\n\"Documents\\The_Lord_of_the_Rings_Online\\PluginData\\<UserName>\\<Server>\\<CharacterName>\\CombatAnalysis.plugindata\"";-- pas de trad
+L["FailedToLoadTraitsResetConfirmation"] = "Échec du chargement des traits. Réinitialiser et continuer ?".."\n".."Attention : Vous perdrez toutes vos configurations personnelles de buffs et débuffs.";
+L["FailedToLoadTraitsMessage"] = "Il est recommandé que vous déchargiez le plugin maintenant. Vous pouvez tenter de rechercher les erreurs dans votre fichier de traits :\n\"Documents\\The_Lord_of_the_Rings_Online\\PluginData\\<NomDuCompte>\\<NomDuServeur>\\<NomDuPerso>\\CombatAnalysisTraits.plugindata\"";
+L["FailedToLoadSettingsResetConfirmation"] = "Échec du chargement de vos paramètres de configuration. Réinitialiser et continuer ?".."\n".."Attention : Vous perdrez tous vos paramètres personnels (excepté les configurations de buffs et débuffs).";
+L["FailedToLoadSettingsMessage"] = "Il est recommandé que vous déchargiez le plugin maintenant. Vous pouvez tenter de rechercher les erreurs dans votre fichier de configuration :\n\"Documents\\The_Lord_of_the_Rings_Online\\PluginData\\<NomDuCompte>\\<NomDuServeur>\\<NomDuPerso>\\CombatAnalysis.plugindata\"";
 
 -- Icon Menu
 
 L["Logo"] = "Logo";
-L["LockWindows"] = "Verrouillage de la fenêtre";
-L["UnlockWindows"] = "Déverrouillage de la fenêtre";
-L["SaveData"] = "Sauvegader";
-L["LoadData"] = "Charger";
-L["OpenTheMenu"] = "Ouvrir le menu";
+L["LockWindows"] = "Verrouiller les fenêtres";
+L["UnlockWindows"] = "Déverrouiller fenêtres";
+L["SaveData"] = "Sauveg. données";
+L["LoadData"] = "Import. données";
+L["OpenTheMenu"] = "Ouvrir menu principal";
 
 -- Menu Headings
 
 L["MenuTitle"] = "Combat Analysis";
 
 L["General"] = "Général";
-L["Stats"] = "Stats";
+L["Stats"] = "Statistiques";
 L["Buffs"] = "Buffs";
-L["About"] = "A Propos";
+L["About"] = "À propos";
 
 -- General Menu
 
-L["GeneralSettingsTitle"] = "Réglages Généraux";
-L["AutoSelectNewEncounters"] = "Sélection d'une nouvelle rencontre";
-L["ConfirmDialogOnReset"] = "Afficher le dialogue de confirmation pour un Reset";
+L["GeneralSettingsTitle"] = "Réglages généraux";
+L["AutoSelectNewEncounters"] = "Sélection automatique des nouvelles rencontres";
+L["ConfirmDialogOnReset"] = "Dialogue de confirmation pour la remise à zéro";
+L["largeFont"] = "Agrandir texte des stats (redémarrage requis)";
 
 L["ShowLogo"] = "Afficher le logo de Combat Analysis";
 
 L["MaxStandardEncounters"] = "Nombre max de rencontres";
-L["MaxLoadedEncounters"] = "Nombre max de rencontres chargées";
+L["MaxLoadedEncounters"] = "Nombre max de rencontres importées";
 
-L["TimerConfigurationsTitle"] = "Timer Configurations";-- pas de trad
-L["CombatTimeout"] = "Combat Timeout";-- pas de trad
-L["TargetTimeout"] = "Target Timeout";-- pas de trad
-L["LogDelay"] = "Delais d'enregistrement";
-L["EffectDelay"] = "Delais pour les effets";
+L["TimerConfigurationsTitle"] = "Calibrages temporels";
+L["CombatTimeout"] = "Délai d'expiration du combat";
+L["TargetTimeout"] = "Délai d'expiration de la cible";
+L["LogDelay"] = "Délais d'enregistrement";
+L["EffectDelay"] = "Délais pour les effets";
 
-L["SaveLoadTitle"] = "Sauvegarde/Restauration";
-L["AutoSaveData"] = "Sauvegarde automatique des données";
-L["Off"] = "Off";
-L["SaveOnExit"] = "Sauvegarde en quittant";
-L["SaveEncounters"] = "Sauvegarde des rencontres";
+L["SaveLoadTitle"] = "Sauvegarde/Importation";
+L["AutoSaveData"] = "Sauvegarde auto. des données";
+L["Off"] = "Désactivée";
+L["SaveOnExit"] = "Enregistre en quittant";
+L["SaveEncounters"] = "Enreg. les rencontres";
 
 -- UI Menu
 
-L["UI"] = "UI";
+L["UI"] = "Interface";
 L["Tabs"] = "Onglets";
-L["Windows"] = "Fenêtres";
-L["Tab"] = "Onglet";
-L["Window"] = "Fenêtre";
+L["Windows"] = "Panneaux";
+L["Tab"] = "Onglets";
+L["Window"] = "Panneau";
 
-L["TabsAndWindowsConfigurationTitle"] = "Configuration des onglets et fenêtres";
-L["TabsAndWindowsDescription"] = "> Déplacez l'onglet pour reconfigurer votre UI\n> Déplacez les onglets non utiles dans le buffer sur la droite";
+L["TabsAndWindowsConfigurationTitle"] = "Configuration des onglets et des panneaux";
+L["TabsAndWindowsDescription"] = "Déplacez les onglets pour reconfigurer votre interface.\nDéplacez les onglets inutilisés dans le rangement sur la droite";
 
 L["TabSettingsTitle"] = "Paramétrage de l'onglet";
 L["SelectedTab"] = "Onglet sélectionné";
-L["ColorScheme"] = "Palette de couleur";
+L["ColorScheme"] = "Palette de couleurs ";
 L["TempMorale"] = "Moral temporaire";
-L["AutoSelectPlayer"] = "Sélection automatique du joueur";
+L["AutoSelectPlayer"] = "Sélection automatique des détails du joueur";
 
-L["WindowSettingsTitle"] = "Paramétrage de la fenêtre";
-L["SelectedWindow"] = "fenêtre sélectionnée";
+L["WindowSettingsTitle"] = "Paramétrage de ce panneau";
+L["SelectedWindow"] = "panneau sélectionné";
 L["Background"] = "arrière-plan";
 L["XPos"] = "x-pos";
 L["YPos"] = "y-pos";
 L["Width"] = "Largeur";
 L["Height"] = "Hauteur";
 L["Minimized"] = "Réduite";
-L["CenterOnScreen"] = "Centrer sur l'écran";
-L["AutoHideTabs"] = "Cacher au départ de la souris";
+L["CenterOnScreen"] = "Centrer à l'écran";
+L["AutoHideTabs"] = "Masquer les onglets en l'absence de la souris";
 L["ShowBackground"] = "Afficher l'arrière-plan et les bords";
-L["ShowMiniTitleBar"] = "Afficher les mini-titres";
+L["ShowMiniTitleBar"] = "Afficher la mini barre fermer/réduire";
 L["ShowTitleAndDuration"] = "Afficher titre et durée";
 L["ShowEncountersList"] = "Afficher la liste des rencontres";
 L["ShowTargetsList"] = "Afficher la liste des cibles";
-L["ShowExtraButtons"] = "Afficher envoyer vers le Chat et autres boutons";
+L["ShowExtraButtons"] = "Afficher bouton *envoi dans chat* et *i*";
 
 L["StatsWindowsConfigurationTitle"] = "Configuration des statistiques";
-L["StatsWindowsDescription"] = "> Déplacez les panneaux de statistiques pour reconfigurer votre UI\n> Déplacez les panneaux inutiles à droite";
+L["StatsWindowsDescription"] = "> Déplacez les cases pour reconfigurer votre interface\n> Déplacez les éléments inutiles dans le rangement à droite";
 
-L["StatsWindowSettingsTitle"] = "Paramètres de la fenêtre de statistiques";
+L["StatsWindowSettingsTitle"] = "Paramètres du panneau de statistiques";
 L["Visibility"] = "Visibilité";
 L["AlwaysShow"] = "Toujours visible";
-L["ShowOnHover"] = "Afficher au passage de la souris";
-L["ShowOnLock"] = "afficher au verrouillage";
+L["ShowOnHover"] = "Montrer au survol";
+L["ShowOnLock"] = "Sur verrouillage";
 
-L["ReOrder"] = "réorganiser";
-L["InsertTab"] = "Insertion d'un volet";
-L["NewWindow"] = "Nouvelle fenêtre";
-L["CloseWindow"] = "Fermer fenêtre";
+L["ReOrder"] = "Déplacement";
+L["InsertTab"] = "Insérer l'onglet";
+L["NewWindow"] = "Nouveau panneau";
+L["CloseWindow"] = "Fermer panneau";
 
 -- Buffs Menu
 
-L["Debuffs"] = "Debuffs";
-L["CC"] = "CC";
-L["CrowdControl"] = "CC";
+L["Debuffs"] = "Débuffs";
+L["CC"] = "Contrôles";
+L["CrowdControl"] = "Contrôles de foules";
 L["Bubbles"] = "Bulles";
 
 L["TraitConfigurationsTitle"] = "Configurations des Traits";
-L["SelectedConfiguration"] = "Configuration sélectionné";
-L["RemoveTraitConfigurationConfirmation"] = "Êtes vous sûr de supprimer cette configuration ?";
+L["SelectedConfiguration"] = "Configuration sélectionnée";
+L["RemoveTraitConfigurationConfirmation"] = "Êtes vous sûr de vouloir supprimer cette configuration ?";
 
 L["AddConfiguration"] = "Ajout de Configuration";
-L["ConfigurationName"] = "Nom de la Configuration";
-L["CopyDebuffsFrom"] = "Copier Debuffs de";
+L["ConfigurationName"] = "Nom de cette config. ";
+L["CopyDebuffsFrom"] = "Copier les débuffs de ";
 L["None"] = "Aucun";
-L["Add"] = "Ajouter";
-L["Remove"] = "Supprimer";
+L["Add"] = "Ajout";
+L["Remove"] = "Retrait";
 
 L["ConfigurationNameRequired"] = "Un nom de Configuration est obligatoire";
-L["ConfigurationNameAlreadyExists"] = "Ce Nom de Configuration existe déjà";
-L["ColorSchemeRequired"] = "Une palette de couleur est obligatoire";
+L["ConfigurationNameAlreadyExists"] = "Ce nom de configuration existe déjà";
+L["ColorSchemeRequired"] = "Une palette de couleurs est obligatoire";
 
-L["AddBuff"] = "Ajout des Buff";
-L["AddDebuff"] = "Ajout des Debuff";
-L["RemoveBuff"] = "Suppression des Buff";
-L["RemoveDebuff"] = "Suppression des Debuff";
+L["AddBuff"] = "Ajout des buffs";
+L["AddDebuff"] = "Ajout des débuffs";
+L["RemoveBuff"] = "Suppr. buff";
+L["RemoveDebuff"] = "Suppr. débuff";
 L["FilterList"] = "Filtres";
 L["Remov"] = "Suppression"; -- lowercase (for filtering by removal only debuffs/CC)
-L["Class"] = "Classe";
+L["Class"] = "Classe ";
 
 -- { Full Name, Full Name with no spaces, Two Letter Abbreviation}
 L["BuffBars"] = {"BuffBars", "BuffBars", "BB"}
 L["CombatAnalysis"] = {"Combat Analysis", "CombatAnalysis", "CA"}
-L["ConfigureInBuffBars"] = "Configure dans BuffBars";
-L["BuffBarsNotLoadedMessage"] = "BuffBars N'est pas charger ou vous utilisez une version non compatible avec Combat Analysis.";
+L["ConfigureInBuffBars"] = "Config. dans BuffBars";
+L["BuffBarsNotLoadedMessage"] = "BuffBars n'est pas chargé ou vous utilisez une version non compatible avec Combat Analysis.";
 
-L["RemoverPrefix"] = "Remover";-- pas de trad
+L["RemoverPrefix"] = "Préfixe de suppresseur";-- pas de trad
 L["NameRequiredPrefix"] = "Nom Obligatoire";
 
 L["EffectName"] = "Nom de l'Effet";
-L["BuffName"] = "Nom du Buff";
-L["DebuffName"] = "Nom du Debuff";
-L["IconFileName"] = "Nom de l'icône";
-L["RemovalOnly"] = "Suppression seulement";
-L["ToggleSkill"] = "Toggle Skill";-- pas de trad
-L["Removes"] = "Removes";-- pas de trad
-L["ConflictsWith"] = "Conflicts With";-- pas de trad
-L["EffectModifiers"] = "Effect Modifiers";-- pas de trad
-L["IsStance"] = "Is Stance";-- pas de trad
-L["StackingBuffs"] = "Stacking Buffs";-- pas de trad
+L["BuffName"] = "Nom du buff ";
+L["DebuffName"] = "Nom du débuff ";
+L["IconFileName"] = "Nom de l'icône ";
+L["RemovalOnly"] = "Suppresseur ";
+L["ToggleSkill"] = "comp. permutable ";
+L["Removes"] = "Suppression ";
+L["ConflictsWith"] = "Prémunit contre ";
+L["EffectModifiers"] = "Modificateurs d'effets ";
+L["IsStance"] = "Posture ";
+L["StackingBuffs"] = "Buffs empilables ";
 L["LogName"] = "Nom du Log";
-L["AppliedBy"] = "Appliqué Par";
+L["AppliedBy"] = "Appliqué Par ";
 L["CritsOnlyAbbreviation"] = "Crit";
-L["DelayAbbreviation"] = "Del";
-L["DurationAbbreviation"] = "Dur";
+L["DelayAbbreviation"] = "Delai";
+L["DurationAbbreviation"] = "Durée";
 
 -- About Menu
 
 L["AboutTitle"] = "A propos";
 L["VersionNo"] = "Version N°";
 L["RestoreSettings"] = "Restauration de la configuration";
-L["RestoreSettingsConfirmation"] = "Êtes vous sur de mettre tous les paramètres (A l'exclusion des traits) par défaut?";
+L["RestoreSettingsConfirmation"] = "Êtes vous sûr de vouloir restaurer tous les paramètres par défaut, à l'exclusion des traits ?";
 L["RestoreTraits"] = "Restauration des Traits";
-L["RestoreTraitsConfirmation"] = "Êtes vous sur de mettre tous la configuration des traits par défaut?";-- pas de trad
-L["PluginUsageMessage"] = "Pour plus d'information sur l'utilisation de ce plugin, visitez:";
-L["FoundABugMessage"] = "Un Bug? Signalez le en laissant un commentaire a l'adresse ci-dessus.";
+L["RestoreTraitsConfirmation"] = "Êtes vous sûr de vouloir restaurer les paramètres de configuration des traits à leur valeur par défaut ?";
+L["PluginUsageMessage"] = "Pour plus d'informations sur l'utilisation de ce plugin, visitez :";
+L["FoundABugMessage"] = "Un Bug ? Signalez le en laissant un commentaire à l'adresse ci-dessus, ou bien sur sa page Github.";
 
 -- Tooltips
 
-L["AutoSelectTooltip"] = "When Combat Begins, immediately select the new encounter.";
-L["ConfirmOnResetTooltip"] = "Show a confirmation dialog when resetting the totals encounter.";
-L["ShowLogoTooltip"] = "Show or hide the Combat Analysis Logo that is used to Show/Hide all the other windows or to access the menu.";
-L["LockWindowsTooltip"] = "Locks all windows in place so that they cannot be moved, resized, or closed, except through the tab menu or main menu.";
-L["MaxEncountersTooltip"] = "Set the number of encounters that can be stored in history.";
-L["MaxLoadedEncountersTooltip"] = "Set the number of loaded encounters that can be stored in history.";
-L["CombatTimeoutTooltip"] = "Set the grace period after combat ends in which damage is still counted towards this encounter.";
-L["TargetTimeoutTooltip"] = "Set the grace period after a mob or player dies in which damage is still counted towards the target. Note this value must be lower than the combat timeout.";
-L["LogDelayTooltip"] = "Set the maximum period between when a combat log entry is detected and a matching effect application is detected.";
-L["EffectDelayTooltip"] = "Set the maximum period between when an effect application is detected and a matching combat log entry is detected.";
-L["AutoSaveTooltip"] = "Configure how data is automatically saved:\na) Data is not saved automatically\nb) All the data (the Totals Encounter) is saved when you log off (or unload the plugin)\nc) Each Encounter is saved as soon as combat ends";
+L["AutoSelectTooltip"] = "Sélectionner immédiatement la nouvelle rencontre lorsque le combat débute.";
+L["ConfirmOnResetTooltip"] = "Afficher une demande de confirmation lors de la réinitialisation de toutes les rencontres.";
+L["ShowLogoTooltip"] = "Afficher ou masquer le logo de Combat Analysis. \nCelui-ci permet d'afficher/masquer les fenêtres et d'accéder au menu.";
+L["LockWindowsTooltip"] = "Vérrouiller toutes les fenêtres en l'état, de sorte qu'elles ne puissent pas être déplacées, redimensionnées ou fermées, excepté via le menu de l'onglet ou par le menu principal.";
+L["LargeFontTooltip"] = "Agrandit la taille du texte sur les fenêtres de vue d'esemble et de stats. Une fois ceci coché, vous devez fermer puis relancer C A pour voir les textes agrandis. Sinon les changements prendront effet au prochain lancement.";
+L["MaxEncountersTooltip"] = "Définir le nombre de rencontres à conserver dans l'historique.";
+L["MaxLoadedEncountersTooltip"] = "Définir le nombre de rencontres importées à conserver dans l'historique.";
+L["CombatTimeoutTooltip"] = "Définir la période de grace après la fin du combat durant laquelle les dégâts sont encore pris en compte.";
+L["TargetTimeoutTooltip"] = "Définir la période de grace après la mort du joueur ou d'un monstre durant laquelle les dégâts vers la cible demeurent pris en compte. Remarque : Cette valeur doit être inférieure à celle définissant le delai d'expiration du combat.";
+L["LogDelayTooltip"] = "Définir la période maximum entre la détection d'un évènement de combat et la détection qu'un effet correspondant a été appliqué";
+L["EffectDelayTooltip"] = "Définir la période maximum entre la détection qu'un effet a été appliqué et la détection d'un évènement de combat correspondant.";
+L["AutoSaveTooltip"] = "Définir comment les données sont automatiquement sauvegardées:\na) Les données ne sont pas sauvergardées automatiquement\nb) Toutes les données (l'ensemble des rencontres) sont sauvegardées lorsque vous vous déconnectez (ou lorsque vous déchargez le plugin)\nc) Chaque rencontre est sauvegardée aussitôt que le combat prend fin";
 
-L["SelectedTabTooltip"] = "Select a tab to configure.";
-L["ColorSchemeTooltip"] = "Set the color scheme used by this tab.";
-L["TempMoraleTooltip"] = "Set the color scheme used by the temp morale details.";
-L["AutoSelectPlayerTooltip"] = "For this tab, immediately select the players details when a new encounter is selected.";
-L["SelectWindowTooltip"] = "Select a window to configure.";
-L["BackgroundTooltip"] = "Set the background color for this window.";
-L["WindowTabsTooltip"] = "A list of tabs currently contained in this window.";
-L["CenterWindowOnScreenTooltip"] = "Center this window on your screen. This will also maximize the window, and ensure the tabs and background are showing.";
-L["AutoHideTabsTooltip"] = "For this window, only show the tabs when the mouse hovers over the window.";
-L["ShowBackgroundTooltip"] = "For this window, show or hide the background and borders over the main display area.";
-L["ShowMiniTitleBarTooltip"] = "For this window, show or hide the mini title bar (with the menu, minimize, and close icons).";
-L["ShowTitleAndDurationTooltip"] = "For this window, show or hide the colored title that shows the selected target and duration.";
-L["ShowEncountersListTooltip"] = "For this window, show or hide the encounters drop down list.";
-L["ShowTargetsListTooltip"] = "For this window, show or hide the targets drop down list.";
-L["ShowExtraButtonsTooltip"] = "For this window, show or hide the Send to Chat and Info buttons.";
-L["SelectedWindowTooltip"] = "Select a stats window to configure.";
-L["StatsBackgroundTooltip"] = "Set the background color for this stats window.";
-L["StatsWindowTabsTooltip"] = "A list of tabs currently contained in this window.";
-L["CenterStatsWindowOnScreenTooltip"] = "Center this stats window on your screen. This will also ensure the stats window is showing (Always Show).";
-L["VisibilityTooltip"] = "For this stats window, specify whether:\na) the window should always be visible\nb) the window should show when a bar is hovered over or locked in one of the tabs\nc) the window should only show when a bar's details are locked in";
+L["SelectedTabTooltip"] = "Selectionnez un onglet à configurer.";
+L["ColorSchemeTooltip"] = "Définissez le profil de couleur utilisé par cet onglet.";
+L["TempMoraleTooltip"] = "Définissez le profil de couleur utilisé pour les détails se rapportant au moral temporaire.";
+L["AutoSelectPlayerTooltip"] = "Pour cet onglet : Immédiatement sélectionner les détails du joueur lorsque qu'une nouvelle rencontre est sélectionnée.";
+L["SelectWindowTooltip"] = "Selectionner une fenêtre à configurer.";
+L["BackgroundTooltip"] = "Définir la couleur d'arrière-plan pour cette fenêtre.";
+L["WindowTabsTooltip"] = "Une liste des onglets figurant actuellement dans cette fenêtre.";
+L["CenterWindowOnScreenTooltip"] = "Centrer cette fenêtre sur votre écran. Celà maximisera également la fenêtre, assurant ainsi que les onglets et arrière-plans soient visibles";
+L["AutoHideTabsTooltip"] = "Pour cette fenêtre : Afficher les onglets seulement lorque la souris survole la fenêtre.";
+L["ShowBackgroundTooltip"] = "Pour cette fenêtre : Afficher ou masquer l'arrière-plan et les bordures par dessus la surface d'affichage principal.";
+L["ShowMiniTitleBarTooltip"] = "Pour cette fenêtre : Afficher ou masquer la mini barre de titre (avec le menu et les icônes minimiser et fermer).";
+L["ShowTitleAndDurationTooltip"] = "Pour cette fenêtre : Afficher ou masquer le titre coloré qui montre la cible sélectionnée et la durée.";
+L["ShowEncountersListTooltip"] = "Pour cette fenêtre : Afficher ou masquer la liste déroulante des rencontres.";
+L["ShowTargetsListTooltip"] = "Pour cette fenêtre : Afficher ou masquer la liste déroulante des cibles.";
+L["ShowExtraButtonsTooltip"] = "Afficher ou masquer les boutons *Info* et *Envoi dans chat*.";
+L["SelectedWindowTooltip"] = "Sélectionner une fenêtre de statistiques à configurer.";
+L["StatsBackgroundTooltip"] = "Définir la couleur d'arrière-plan pour cette fenêtre de statistiques.";
+L["StatsWindowTabsTooltip"] = "Une liste des onglets figurant actuellement dans cette fenêtre.";
+L["CenterStatsWindowOnScreenTooltip"] = "Centrer cette fenêtre de statistiques sur votre écran. Celà assurera également que la fenêtre de statistiques est affichée(Toujours montrer).";
+L["VisibilityTooltip"] = "Pour cette fenêtre de statistiques, veuillez spécifiez si:\na) la fenêtre sera toujours visible\nb) la fenêtre deviendra visible lorsque qu'une barre est survolée ou bien vérouillée dans l'un des onglets\nc) la fenêtre ne deviendra visible que lorsque les détails d'une barre sont vérouillés";
 
-L["SelectedConfigurationTooltip"] = "Select which trait configuration to use and edit below. This only affects the Debuff and Crowd Control information.";
-L["AddConfigurationTooltip"] = "Add a new trait Configuration.";
-L["RemoveConfigurationTooltip"] = "Remove the selected trait Configuration.";
-L["ConfigurationNameTooltip"] = "Specify a name for the trait configuration. This cannot be changed later.";
-L["CopyDebuffsFromTooltip"] = "Select an existing trait configuration to copy the initial set of debuffs from.";
-L["ConfigurationColorSchemeTooltip"] = "Select a color scheme for the new configuration.";
-L["AddNewBuffTooltip"] = "Add a new Buff.";
-L["AddNewDebuffTooltip"] = "Add a new Debuff.";
-L["RemoveBuffTooltip"] = "Remove this buff/debuff.";
-L["BuffsActiveInCombatAnalysisTooltip"] = "Track Buffs in Combat Analysis.";
-L["DebuffsActiveInCombatAnalysisTooltip"] = "Track Debuffs in Combat Analysis.";
-L["DebuffsActiveInBuffBarsTooltip"] = "Track Debuffs in BuffBars.";
-L["MakeDebuffActiveInCombatAnalysisTooltip"] = "Tick to track this debuff in Combat Analysis.";
-L["MakeDebuffActiveInBuffBarsTooltip"] = "Tick to track this debuff in BuffBars.";
-L["ConfigureInBuffBarsLinkTooltip"] = "Click to go to the BuffBars Menu where you can configure Effect Windows that show debuffs and/or Crowd Control effects that are triggered based on the settings below. Note these correspond to the \"Mob Debuffs\" & \"Mob CC\" trigger types in BuffBars.";
-L["ClassTooltip"] = "Specify the class this buff/debuff belongs to.";
-L["TempMoraleEffectNameTooltip"] = "Specify the effect name for this temporary morale skill. The name must exactly match the name of the effect.";
-L["SkillNameTooltip"] = "Specify a unique name for this buff/debuff. This will appear on the Buff/Debuff tab, and in the effect window in Buffbars if applicable.";
-L["IconFileNameTooltip"] = "Specify the file name (including extension) of the icon to be used by this debuff. The icon must be located in the 'CombatAnalysis/Resources/DebuffIcons' folder and should be 16x16 pixels.";
-L["RemovalOnlyTooltip"] = "A 'Removal Only' debuff is not tracked, and instead is used just to remove other debuffs.";
-L["ToggleSkillTooltip"] = "A 'Toggle Skill' is a skill that is toggled on and lasts indefinitely. These debuffs are assumed to last until the target is killed, combat ends, or a overwriting toggle is reapplied.";
-L["RemovesTooltip"] = "A list of debuffs or crowd control skills that will be removed when this debuff is applied.";
-L["AddRemoveTooltip"] = "Add a new debuff that will be removed when this debuff is applied.";
-L["RemoveRemoveTooltip"] = "Remove the selected debuff from the list of debuffs to be removed when this debuff is applied.";
-L["ConflictsWithTooltip"] = "A list of debuffs or crowd control skills that prevent this debuff from being applied if they are active.";
-L["AddConflictTooltip"] = "Add a new debuff that conflicts with this debuff.";
-L["RemoveConflictTooltip"] = "Remove the selected debuff from the list of conflicting debuffs.";
-L["EffectModifiersTooltip"] = "A list of effects that, if active on the player when the debuff itself is activated, extend (or shorten) the debuff's duration.";
-L["AddEffectModifierTooltip"] = "Add a new effect that alters this debuff's duration.";
-L["RemoveEffectModifierTooltip"] = "Remove the selected effect from the list of effect modifiers.";
-L["EffectModifierDurationTooltip"] = "Set the positive or negative increase/decrease in the duration of the debuff if this effect is active when the debuff is activated.";
-L["IsStanceTooltip"] = "For skills that are stances, the number of applications are not tracked.";
-L["StackingBuffsTooltip"] = "A list of names that will be shown for the buff on successive applications if the buff is still active when reapplied.";
-L["AddStackingBuffTooltip"] = "Add a new stacking effect name.";
-L["RemoveStackingBuffTooltip"] = "Remove the selected name from the list of stacked effect names.";
-L["LogNameTooltip"] = "Specify the name of the combat log entry corresponding to this temporary morale skill that will be used to match a bubble effect with the initiating player. The name must exactly match the name of the skill as it appears in the combat log.";
-L["BuffAppliedByTooltip"] = "A list of effect names that trigger the application of this buff. The names must exactly match the names of the effects.";
-L["DebuffAppliedByTooltip"] = "A list of combat log skill names that trigger the application of this debuff, and the associated details. The names must exactly match the names of the skills as they appear in the combat log.";
-L["AddAppliedByTooltip"] = "Add a new application.";
-L["RemoveAppliedByTooltip"] = "Remove the selected application from the list of applications.";
+L["SelectedConfigurationTooltip"] = "Sélectionner quelle configuration de traits utiliser et éditer ci-dessous. Ceci n'affecte que les informations relatives aux debuff et aux contrôles de foules.";
+L["AddConfigurationTooltip"] = "Ajouter une nouvelle configuration de traits.";
+L["RemoveConfigurationTooltip"] = "Supprimer la configuration de traits sélectionnée.";
+L["ConfigurationNameTooltip"] = "Attribuer un nom à la configuration de traits. Celui-ci ne pourra pas être modifié par la suite.";
+L["CopyDebuffsFromTooltip"] = "Sélectionner une configuration de traits depuis laquelle copier le set initial de debuffs.";
+L["ConfigurationColorSchemeTooltip"] = "Sélectionner un modèle de couleurs pour la nouvelle configuration.";
+L["AddNewBuffTooltip"] = "Ajouter un nouveau buff.";
+L["AddNewDebuffTooltip"] = "Ajouter un nouveau débuff.";
+L["RemoveBuffTooltip"] = "Retirer ce buff/débuff.";
+L["BuffsActiveInCombatAnalysisTooltip"] = "Observer/pister les buffs dans Combat Analysis.";
+L["DebuffsActiveInCombatAnalysisTooltip"] = "Observer/pister les débuffs dans Combat Analysis.";
+L["DebuffsActiveInBuffBarsTooltip"] = "Observer/pister les débuff dans BuffBars.";
+L["MakeDebuffActiveInCombatAnalysisTooltip"] = "Cocher pour observer/pister ce debuff dans Combat Analysis.";
+L["MakeDebuffActiveInBuffBarsTooltip"] = "Cocher pour observer/pister ce debuff dans BuffBars.";
+L["ConfigureInBuffBarsLinkTooltip"] = "Cliquer pour aller dans le menu de BuffBars où se configurent les fenêtre d'effets qui montrent les debuffs et les contrôles de foules qui sont déclenchés en fonction des paramètres ci-dessous. Notez que ceux-ci correspndent aux types de déclencheurs \"Mob Debuffs\" & \"Mob CC\" dans BuffBars.";
+L["ClassTooltip"] = "Spécifier à quelle classe ce buff/débuff appartient.";
+L["TempMoraleEffectNameTooltip"] = "Spécifier le nom de l'effet correspondant à cette compétence de moral temporaire. Ce nom doit être parfaitement similaire au nom de l'effet.";
+L["SkillNameTooltip"] = "Spécifier un nom unique pour ce buff/debuff. Celui-ci apparaitra sur l'onglet Buffs/Débuffs, ainsi que dans la fenêtre de'effets de Buffbars si applicable.";
+L["IconFileNameTooltip"] = "Spécifier le mon de fichier (y compris son extension) de l'icône à associer à ce debuff. L'icône doit être placée dans le dossier 'CombatAnalysis/Resources/DebuffIcons' et doit mesurer 16x16 pixels.";
+L["RemovalOnlyTooltip"] = "Un debuff 'Suppresseur' n'est pas observé/pisté, à la place il est utilisé pour retirer d'autres débuffs.";
+L["ToggleSkillTooltip"] = "Une 'compétence permutable' est une compétence désactivable/activable qui dure indéfiniment. Ces debuffs predurent jusqu'à la mort de la cible, la fin du combat, ou leur désactivation manuelle.";
+L["RemovesTooltip"] = "Une liste de debuffs ou de contrôles de foules qui seront supprimés quand ce debuff est appliqué.";
+L["AddRemoveTooltip"] = "Ajouter un nouveau débuff qui sera supprimé quand ce débuff est appliqué.";
+L["RemoveRemoveTooltip"] = "Retirer le débuff sélectionné de liste des debuffs à supprimer quand ce débuff est appliqué.";
+L["ConflictsWithTooltip"] = "Une liste de compétences de débuff et de contrôle de foules qui prémunissent contre ce débuff si elles sont actives.";
+L["AddConflictTooltip"] = "Ajouter un nouveau débuff qui prémunit contre ce débuff.";
+L["RemoveConflictTooltip"] = "Supprimer le débuff sélectionné de la liste des débuffs qui prémunissent contre cet effet.";
+L["EffectModifiersTooltip"] = "Une liste d'effets, qui, s'ils sont actifs sur le joueur lorsque le débuff est lui est lancé, allongent ou raccourcicent la durée de l'effet.";
+L["AddEffectModifierTooltip"] = "Ajouter un nouvel effet qui modifie la durée de ce débuff.";
+L["RemoveEffectModifierTooltip"] = "Supprimer l'effet sélectionné de la liste des modificateurs d'effets..";
+L["EffectModifierDurationTooltip"] = "Définissez, en posifif ou négatif, le rallongement ou le raccourcissement de la durée du débuff si cet effet est actif quand le debuff est activé.";
+L["IsStanceTooltip"] = "For skills that are stances, the number of applications are not tracked."; -- need trad
+L["StackingBuffsTooltip"] = "Une liste de noms qui seront affichés pour le buff lors des applications succéssives lorsque celui-ci est encore actif au moment de sa réactivation.";
+L["AddStackingBuffTooltip"] = "Ajouter un nouvau nom d'effet empilable.";
+L["RemoveStackingBuffTooltip"] = "Supprimer le nom sélectionné de la liste des noms d'effets empilables.";
+L["LogNameTooltip"] = "Specify the name of the combat log entry corresponding to this temporary morale skill that will be used to match a bubble effect with the initiating player. The name must exactly match the name of the skill as it appears in the combat log."; -- need trad
+L["BuffAppliedByTooltip"] = "Une liste de noms d'effets qui déclenchent l'application de ce buff. Les noms doivent être parfaitement similaires aux noms des effets.";
+L["DebuffAppliedByTooltip"] = "Une liste de noms de compétence du log combat qui déclenchent l'application de ce débuff, et les détails associés. Les noms doivent être parfaitement similaires aux noms des compétences telles qu'elles apparaissent dans le log combat.";
+L["AddAppliedByTooltip"] = "Add a new application."; -- need trad
+L["RemoveAppliedByTooltip"] = "Remove the selected application from the list of applications."; -- need trad
 L["CritsOnlyTooltip"] = "When checked, the debuff will only be applied if the skill achieves a Critical or Devastating hit.";
 L["DelayTooltip"] = "Set the delay after the application occurs until the skill activates. Note this can be a small negative value to offset a delay before the combat log entry occurs.";
-L["DurationTooltip"] = "Set the duration for which the debuff lasts.";
+L["DurationTooltip"] = "Définir la durée du débuff.";
 
 -- Tutorials
 
-L["DoNotShowHintInFuture"] = " Do not show this\n  hint in the future"; -- be sure to include line break and spaces
-L["LogoTitle"] = "Utilisation du Logo Combat Analysis";
-L["LogoMessage"] = " Clic Gauche sur le logo pour Afficher/Masquer les fenêtres de Combat Analysis. Clic droit pour faire apparaitre l'option de sauvegarde/restauration ou le menu principal.\n\nDéplacez le Logo en pressant 'Control-\\', ou vous pouvez le dévalider a partir du menu.";
+L["DoNotShowHintInFuture"] = " Ne plus afficher cette\n  astuce à l'avenir"; -- be sure to include line break and spaces
+L["LogoTitle"] = "Utiliser le Logo Combat Analysis";
+L["LogoMessage"] = "Clic Gauche sur le logo pour Afficher/Masquer l'ensemble des fenêtres de Combat Analysis.\n\Clic droit quand le logo est activé (orange) pour faire apparaitre l'option de sauvegarde/importation ou le menu principal.\n\nDéplacez le Logo en appuyant simultanément sur 'Control' et '*'. Vous pouvez également le désactiver à partir du menu principal.";
 
 -- Colors by { FullName, Single Letter Abbreviation }
 L["Yellow"] = {"Jaune", "J"};
@@ -270,10 +272,11 @@ L["SaveCommand"] = "sauver";
 L["LoadCommand"] = "charger";
 L["LockCommand"] = "verrouiller";
 L["UnlockCommand"] = "déverrouiller";
-L["ResetCommand"] = "RAZ";
-L["LockToggleCommand"] = "lock toggle";
+L["ResetCommand"] = "Réinitialiser";
+L["LockToggleCommand"] = "verrou";
+L["CleanUpCommand"] = "nettoyer";
 
-L["CommandUsage"] = "utilisation: /ca "..L.Options.." | "..L.SaveCommand.." | "..L.LoadCommand.." | "..L.ToggleCommand.." | "..L.ShowCommand.." | "..L.HideCommand.." | "..L.LockToggleCommand.." | "..L.LockCommand.." | "..L.UnlockCommand.." | "..L.ResetCommand;
+L["CommandUsage"] = "usage: /ca "..L.Options.." | "..L.SaveCommand.." | "..L.LoadCommand.." | "..L.ToggleCommand.." | "..L.ShowCommand.." | "..L.HideCommand.." | "..L.LockToggleCommand.." | "..L.LockCommand.." | "..L.UnlockCommand.." | "..L.ResetCommand.." | "..L.ResetTotalsCommand.." | "..L.CleanUpCommand;
 
 -- Value/Date Formatting
 
@@ -392,14 +395,15 @@ L["RestoreTab"] = "Restaurer l'onglet";
 L["CloseTab"] = "Fermer l'onglet";
 
 L["ResetTotals"] = "Réinitialiser le cumulatif";
+L["CleanUp"] = "Vider les poubelles";
 
 -- Chat Menu (indexed by {command, channel name})
 
 L["Say"] = {"parler","Parler"};
-L["Fellowship"] = {"comm","Communauté"};
+L["Fellowship"] = {"f","Communauté"};
 L["Raid"] = {"ra","Raid"};
 L["Kinship"] = {"k","Confrérie"};
-L["Tribe"] = {"conf","Tribu"};
+L["Tribe"] = {"k","Tribu"};
 L["Gap"] = "------------------";
 
 -- Other
@@ -407,7 +411,7 @@ L["Gap"] = "------------------";
 L["AllPlayers"] = "Tous les joueurs";
 L["AllSkills"] = "Compétences (tous)";
 L["Duration"] = "Durée";
-L["SendToChat"] = "Envoi vers le Chat";
+L["SendToChat"] = "Envoi dans chat";
 L["CombatAnalysisSummary"] = "Résumé de Combat Analysis";
 
 L["DirectDamage"] = "Dégât direct";
@@ -423,12 +427,12 @@ L["Knockdown"] = "renversé";
 
 -- Statistics Headings
 
-L["AllData"] = "Données (Tous)";
-L["NonCrits"] = "on critique";
-L["Criticals"] = "Critique";
-L["Devastates"] = "Dévastateur";
+L["AllData"] = "Toutes les infos";
+L["NonCrits"] = "Non critiques";
+L["Criticals"] = "Critiques";
+L["Devastates"] = "Dévastateurs";
 L["CritsAndDevs"] = "Crit & Dévast";
-L["Partials"] = "Evite partiel";
+L["Partials"] = "Evitements partiels";
 
 L["Total"] = "Total";
 L["Average"] = "Moyenne";
@@ -436,25 +440,25 @@ L["Maximum"] = "Maximum";
 L["Minimum"] = "Minimum";
 
 --- Added in v4.4.7 to support Normal Hits
-L["NormalHits"] = "Coup Ordinaire";
-L["NormalHitChance"] = "Coup de Chance";
-L["NormalHitAvg"] = "Coup Moyenne";
-L["NormalHitMax"] = "Max Hit"
-L["NormalHitMin"] = "Min Hit"
+L["NormalHits"] = "Coups non critiques";
+L["NormalHitChance"] = "fréquence";
+L["NormalHitAvg"] = "Montant moyen";
+L["NormalHitMax"] = "Montant maximal"
+L["NormalHitMin"] = "Montant minimmal"
 
 --- Added in v4.4.7 to support Critical Hits
-L["CriticalHits"] = "Coup Critique";
-L["CriticalHitChance"] = "Coup de Chance";
-L["CriticalHitAvg"] = "Coup Moyenne";
-L["CriticalHitMax"] = "Max Hit"
-L["CriticalHitMin"] = "Min Hit"
+L["CriticalHits"] = "Coups Critiques";
+L["CriticalHitChance"] = "fréquence";
+L["CriticalHitAvg"] = "Montant moyen";
+L["CriticalHitMax"] = "Montant maximal"
+L["CriticalHitMin"] = "Montant minimmal"
 
 --- Added in v4.4.7 to support Devastate Hits
-L["DevastateHits"] = "Coup D�vaster";    
-L["DevastateHitChance"] = "Coup de Chance";
-L["DevastateHitAvg"] = "Coup Moyenne";
-L["DevastateHitMax"] = "Max Hit"       
-L["DevastateHitMin"] = "Min Hit"
+L["DevastateHits"] = "Coups crit. dévastateurs";    
+L["DevastateHitChance"] = "fréquence";
+L["DevastateHitAvg"] = "Montant moyen";
+L["DevastateHitMax"] = "Montant maximal"       
+L["DevastateHitMin"] = "Montant minimmal"
 
 L["Avoidance"] = "Évitement";
 L["Attacks"] = "Attaque";
@@ -510,20 +514,9 @@ L["AvoidanceEnum"] = {{"Aucun","Aucun"},{"Raté","Raté"},{"Immunisé","Immunis�
 
 L["CriticalEnum"] = {{"Aucun","Aucun"},{"Critique","Coups Critique"},{"Dévastateur","Coups Dévastateur"}}
 
-L["DmgTypeEnum"] = {
-	{"Commun", "Commun"},
-	{"Feu", "Feu"},
-	{"Foudre", "Foudre"},
-	{"Froid", "Froid"},
-	{"Acide", "Acide"},
-	{"Ombre", "Ombre"},
-	{"Lumiére", "Lumiére"},
-	{"Bele", "Beleriand"},
-	{"Ouist", "Ouistrenesse"},
-	{"Nain", "Nain d\'antan"},
-	{"FW","Fell-wrought"},
-	{"Aucun", "Aucun"}
-};
+L["DmgTypeEnum"] = {{"Commun","Commun"},{"Feu","Feu"},{"Foudre","Foudre"},{"Froid","Froid"},{"Acide","Acide"},{"Ombre","Ombre"},{"Lumière","Lumière"},
+					{"Bele","Beleriand"},{"Ouist","Ouistrenesse"},{"Nain","Nain d'antan"},{"Orque","Orque"},{"Mal","Maléfique"},{"Aucun", "Aucun"}}
+
 					
 L["MoralePower"] = {{"Moral","Moral"},{"Puissance","Puissance"},{"Aucun","Aucun"}}
 
@@ -553,18 +546,21 @@ local function trim_articles(name)
 		return nil;
 	end
 
-	-- Articles possibles: Mayara, LeMayara, Le Mayara, LaMayara, La Mayara, L' Mayara, L’Mayara, et peut être d'autres?
+	-- Articles possibles: Mayara, LeMayara, Le Mayara, LaMayara, La Mayara, L' Mayara, La Mayara, et peut être d'autres ?
 	return string.gsub(name, "^[Ll].-(%u)", "%1");
 end
 
 
 L["Parse"] = function(line)
 
-	-- 1) Damage line ---
+	-- 1) ligne de dégâts ---
 	
 	local initiatorName,avoidAndCrit,skillName,targetName,amount,dmgType,moralePower = string.match(line,"^(.*) a infligé un coup (.*)avec (.*) sur (.*) pour ([%d,]*) points de type (.*) à l'entité ?(.*)%.$"); -- (updated in v4.1.0)
 	
 	if (initiatorName ~= nil) then
+	
+  
+--		initiatorName = string.gsub(initiatorName,"^[Ll]e ","");
 		
 		local avoidType =
 			string.match(avoidAndCrit,"partiellement bloqué") and 8 or
@@ -575,19 +571,23 @@ L["Parse"] = function(line)
 			string.match(avoidAndCrit,"critique") and 2 or
 			string.match(avoidAndCrit,"dévastateur") and 3 or 1;
 			
-		-- skillName = string.match(skillName,"^ avec (.*)$") or L.DirectDamage; -- (as of v4.1.0)
+--		skillName = string.match(skillName,"^ avec (.*)$") or L.DirectDamage; -- (as of v4.1.0)
 
+--		local targetName,amount,dmgType,moralePower = string.match(targetNameAmountAndType,"^(.*) for ([%d,]*) (.*)damage to (.*)$");
+	
     if (printDebug) then
        Turbine.Shell.WriteLine( "damage by "..initiatorName.." skill "..skillName );
-    end		
+    end	
+
 		-- damage was absorbed
 		if targetName == nil then
-			targetName = string.gsub(targetNameAmountAndType,"^[Tt]he ","");
+			targetName = string.gsub(targetNameAmountAndType,"^[Ll]e ","");
 			amount = 0;
 			dmgType = 12;
 			moralePower = 3;
 		-- some damage was dealt
 		else
+--			targetName = string.gsub(targetName,"^[Ll]e ","");
 			amount = string.gsub(amount,",","")+0;
       
 ---			dmgType = string.match(dmgType, "^%(.*%) (.*)$") or dmgType; -- 4.2.3 adjust for mounted combat
@@ -599,13 +599,13 @@ L["Parse"] = function(line)
 				dmgType == "Froid" and 4 or
 				dmgType == "Acide" and 5 or
 				dmgType == "Ombre" and 6 or
-				dmgType == "Lumière" and 7 or
+				dmgType == "Légère" and 7 or
 				dmgType == "Beleriand" and 8 or
 				dmgType == "Ouistrenesse" and 9 or
 				dmgType == "de nain d'antan" and 10 or 
-				dmgType == "Orc" and 11 or
-				dmgType == "Fell-wrought" and 12 or 13;
-			moralePower = (moralePower == "Morale" and 1 or moralePower == "Puissance" and 2 or 3);
+				dmgType == "Orque" and 11 or
+				dmgType == "Maléfique" and 12 or 13;
+			moralePower = (moralePower == "Moral" and 1 or moralePower == "Puissance" and 2 or 3);
 		end
 		
 		-- Currently ignores damage to power
@@ -615,49 +615,50 @@ L["Parse"] = function(line)
 		return event_type.DMG_DEALT,trim_articles(initiatorName),trim_articles(targetName),skillName,amount,avoidType,critType,dmgType;
 	end
 	
-	-- 2) Heal line --
+	-- 2) Line de soins --
 	--     (note the distinction with which self heals are now handled)
 	--     (note we consider the case of heals of zero magnitude, even though they presumably never occur)
 	
 	--	[slfHeal] Arc du Juste a appliqué un soin critique à Ardichas, redonnant 52 points à l'entité Puissance.
 	--  [slfHeal] Esprit de soliloque a appliqué un soin critique à Yogimen, redonnant 228 points à l'entité Moral.
 	--  [Heal]    Eleria a appliqué un soin avec Paroles de guérison Ardicapde, redonnant 227 points à Moral.
-	initiator_name, match = string.match(line, '^(.*) a appliqu\195\169 un soin (.*)%.$');
+	initiator_name, match = string.match(line, '^(.*) a appliqué un soin (.*)%.$');
 
 	if (initiator_name ~= nil) then
 			crit_type =
 				string.match(match, 'critique') and 2 or
-				string.match(match, 'dévastateur') and 3 or
+				string.match(match, 'dévastateur') and 3 or 
 				1;
 			match = string.gsub(match, '^critique ', '');
 			match = string.gsub(match, '^dévastateur ', '');
 
-		local self_heal = (string.match(match, '^\195\160 ') and true or false);
+		local self_heal = (string.match(match, '^à ') and true or false);
 
 		-- Soins personnels (Self heal)
 		if (self_heal) then
 			skill_name = initiator_name;
-			target_name, dmg_amount, morale_power = string.match(match, '^\195\160 (.*), redonnant ([%d,]*) points? \195\160 l\'entit\195\169 ?(.*)$');
+			target_name, dmg_amount, morale_power = string.match(match, '^à (.*), redonnant ([%d,]*) points? à l\'entité ?(.*)$');
 			initiator_name = target_name;
 
 		-- Soins sur une cible (Heal applied)
 		else
-			skill_name, target_name, dmg_amount, morale_power = string.match(match, '^avec (.*) ([^%s]+), redonnant ([%d,]*) points? \195\160 ?(.*)$');
+			skill_name, target_name, dmg_amount, morale_power = string.match(match, '^avec (.*) ([^%s]+), redonnant ([%d,]*) points? à ?(.*)$');
 		end
 
 		morale_power = (morale_power == 'Moral' and 1 or (morale_power == 'Puissance' and 2 or 3));
 		dmg_amount = (morale_power == 3 and 0 or string.gsub(dmg_amount, ',', '') + 0);
 
-		return (morale_power == 2 and event_type.POWER_RESTORE or event_type.HEAL), trim_articles(initiator_name), trim_articles(target_name), skill_name, dmg_amount, crit_type;
+		return (morale_power == 2 and 4 or 3), trim_articles(initiator_name), trim_articles(target_name), skill_name, dmg_amount, crit_type;
 	end
 	
-	-- 3) Buff line --
+	-- 3) Ligne de buff --
 	-- MarieChantal a appliqué un bénéfice avec Paroles de guérison Eleria.
 
 	local initiatorName,skillName,targetName = string.match(line,"^(.*) a appliqué un bénéfice avec (.*) (.*)%.$");
 	
 	if (initiatorName ~= nil) then
-		
+--		initiatorName = string.gsub(initiatorName,"^[Ll]e ","");
+--		targetName = string.gsub(targetName,"^[Ll]e ","");		
 		-- Update
 		return event_type.BENEFIT,trim_articles(initiatorName),trim_articles(targetName),skillName;
 	end
@@ -668,7 +669,7 @@ L["Parse"] = function(line)
 	-- L' Archer corsaire a essayé d'utiliser une attaque au corps à corps faible sur Cashel mais il a paré la tentative.
 	-- Ardichas a essayé d'utiliser Tir pénétrant amélioré : Brûlure sur le Trompeur immonde vigoureux mais il a esquivé la tentative.
 
-	-- 4a) Évitements complets (Full avoids)
+	-- Évitements standards (complets)
 	local initiator_name, skill_name, target_name, avoidType = string.match(line, "^(.*) a essayé d'utiliser (.*) sur (.*) mais (.*) la tentative%.$");
 
 	if (initiator_name ~= nil) then
@@ -678,21 +679,22 @@ L["Parse"] = function(line)
 			string.match(avoidType,"esquivé") and 7 or
 			string.match(avoidType,"résisté") and 4 or
 			string.match(avoidType,"immunisé contre") and 3 or 1;
+			
+	-- miss or deflect (deflect added in v4.2.2)
+	-- La Berserker hante-jours n'a pas réussi à utiliser une frappe de taille faible sur la Eleria.
 
 		if (avoid_type == 1) then
 			return nil;
 		end
-		return event_type.DMG_DEALT, trim_articles(initiator_name), trim_articles(target_name), skill_name, 0, avoid_Type, 1, 10;
+		return 1, trim_articles(initiator_name), trim_articles(target_name), skill_name, 0, avoid_Type, 1, 10;
 	end
 	
-	-- 4b) miss or deflect (deflect added in v4.2.2)
-	-- La Berserker hante-jours n'a pas réussi à utiliser une frappe de taille faible sur la Eleria.
 	local initiator_name, skill_name, target_name = string.match(line, "^(.*) n'a pas réussi à utiliser (.*) sur (.*)%.$");
 
 	if (initiator_name ~= nil) then
 		avoid_type = 2;
 
-		return event_type.DMG_DEALT, trim_articles(initiator_name), trim_articles(target_name), skill_name, 0, avoid_type, 1, 10;
+		return 1, trim_articles(initiator_name), trim_articles(target_name), skill_name, 0, avoid_type, 1, 10;
 	end
 	
 	-- 5) Reflect line --
@@ -717,14 +719,15 @@ L["Parse"] = function(line)
 				dmgType == "Lumière" and 7 or
 				dmgType == "Beleriand" and 8 or
 				dmgType == "Ouistrenesse" and 9 or
-				dmgType == "Nain d'antan" and 10 or 11;
-						
+				dmgType == "de nain d'antan" and 10 or
+				dmgType == "Orc" and 11 or
+				dmgType == "Maléfique" and 12 or 13;						
 			-- Update
-			return event_type.DMG_DEALT,trim_articles(initiatorName),trim_articles(targetName),skillName,amount,1,1,dmgType;
+			return 1,trim_articles(initiatorName),trim_articles(targetName),skillName,amount,1,1,dmgType;
 		-- a heal reflect
 		else
 			-- Update
-			return event_type.HEAL,trim_articles(initiatorName),trim_articles(targetName),skillName,amount,1;
+			return 3,trim_articles(initiatorName),trim_articles(targetName),skillName,amount,1;
 		end
 	end
 	
@@ -734,7 +737,7 @@ L["Parse"] = function(line)
 		amount = string.gsub(amount,",","")+0;
 		
 		-- the only information we can extract directly is the target and amount
-		return event_type.TEMP_MORALE_LOST,nil,trim_articles(player.name),nil,amount;
+		return 14,nil,trim_articles(player.name),nil,amount;
 	end
 	
 	-- 7) Combat State Break notice (as of 4.1.0)
@@ -750,7 +753,7 @@ L["Parse"] = function(line)
 		target_name = (target_name == "" and player.name or target_name);
 
 		if (printDebug) then
-  			Turbine.Shell.WriteLine("root_broken", line, "ini_name: " .. initiator_name .. " tgt_name: " .. target_name);
+  		Turbine.Shell.WriteLine("root_broken", line, "ini_name: " .. initiator_name .. " tgt_name: " .. target_name);
 		end
 
 		return event_type.CC_BROKEN, nil, trim_articles(target_name), nil;
@@ -879,7 +882,7 @@ L["Parse"] = function(line)
 	end
 	
 	-- 11d) Revive line 4 (you succumbed)
-	local match = string.match(line,"^You succumb to your wounds%.$");
+	local match = string.match(line,"^Vous avez succombé à vos blessures%.$");
 	
 	if (match ~= nil) then
 	  initiatorName = player.name;
@@ -906,7 +909,7 @@ end
 	
 --]]
 
-L["Default"] = "Default";
+L["Default"] = "Par défaut";
 
 -- 0) Temporary Morale Skills {combat log name, effect name}
 
@@ -923,10 +926,10 @@ L["SongOfTheHammerhandLog"] = "Chant du Poing de Marteau";
 L["GiftOfTheHammerhandEffect"] = "Don du Poing de Marteau";
 L["GiftOfTheHammerhandLog"] = "Don du Poing de Marteau";
 -- Rune-Keeper
-L["WordOfExaltationEffect"] = "Word of Exaltation";
-L["WordOfExaltationLog"] = "Word of Exaltation";
-L["EssayOfExaltationEffect"] = "Essay of Exaltation";
-L["EssayOfExaltationLog"] = "Word of Exaltation";
+L["WordOfExaltationEffect"] = "Mot d'exaltation";
+L["WordOfExaltationLog"] = "Mot d'exaltation";
+L["EssayOfExaltationEffect"] = "Essai d'exaltation";
+L["EssayOfExaltationLog"] = "Mot d'exaltation";
 -- Other
 L["MartyrsFortitudeEffect"] = "Martyr's Fortitude";
 L["MartyrsFortitudeLog"] = "Martyr's Fortitude";
@@ -990,7 +993,7 @@ L["WarCry"] = "War-cry";
 L["BladeOfElendil"] = "Lame d'Elendil";
 L["Motivated"] = "Motivation";
 L["OnGuard"] = "En garde";
-L["RelentlessAttack"] = "Relentless Attack";
+L["RelentlessAttack"] = "Attaque acharnée";
 L["Focus"] = "Focus";
 L["ShieldBrother"] = "Frère de bouclier";
 L["WatchfulShieldBrother"] = "Frère de bouclier vigilant";
@@ -1006,13 +1009,13 @@ L["ToArmsFellowshipBladeBrother"] = "Aux armes! (Frère d'armes communauté)";
 L["StrengthOfWillShieldBrother"] = "Inspiration (Frère de bouclier)";
 L["StrengthOfWillFellowshipShieldBrother"] = "Inspiration (Frère de bouclier communauté)";
 L["StrengthOfWillSongBrother"] = "Inspiration (Frère de chants)";
-L["StrengthOfWillFellowshipSongBrother"] = "Inspiration (FFrère de chants communauté)";
+L["StrengthOfWillFellowshipSongBrother"] = "Inspiration (Frère de chants communauté)";
 L["StrengthOfWillBladeBrother"] = "Inspiration (Frère d'armes)";
 L["StrengthOfWillFellowshipBladeBrother"] = "Inspiration (Frère d'armes communauté)";
 L["RallyingCry"] = "Cri de ralliement";
 L["InDefenceOfMiddleEarth"] = "A la défense de la Terre du Milieu";
-L["DefensiveStrike"] = "Defensive Strike";
-L["ImprovedDefensiveStrike"] = "Improved Defensive Strike";
+L["DefensiveStrike"] = "Frappe certaine";
+L["ImprovedDefensiveStrike"] = "Frappe certaine améliorée";
 L["LastStand"] = "Dernier combat";
 -- Debuffs (log name)
 L["NobleMark"] = "Marque de noblesse";
@@ -1022,21 +1025,21 @@ L["RevealingMark"] = "Marque révélatrice";
 -- 3) Champion Skills
 
 -- Trait Lines
-L["TheBerserker"] = "The Berserker";
-L["TheDeadlyStorm"] = "The Deadly Storm";
-L["TheMartialChampion"] = "The Martial Champion";
+L["TheBerserker"] = "Berserker";
+L["TheDeadlyStorm"] = "Tempête mortelle";
+L["TheMartialChampion"] = "Champion du combat";
 -- Buffs (effect name)
-L["Fervour"] = "Ferveur";
-L["Glory"] = "Gloire";
-L["Ardour"] = "Ardeur";
-L["ControlledBurn"] = "Controlled Burn";
+L["Fervour"] = "Ferveur"; -- obsolete since U12
+L["Glory"] = "Gloire"; -- obsolete since U12
+L["Ardour"] = "Ardeur"; -- obsolete since U12
+L["ControlledBurn"] = "Brûlure contrôlée";
 L["Flurry"] = "Flurry";
-L["SuddenDefence"] = "Sudden Defence";
+L["SuddenDefence"] = "Défense soudaine";
 L["SeekingBlades"] = "Seeking Blades";
-L["Adamant"] = "Adamant";
+L["Adamant"] = "Adamantite";
 L["Invincible"] = "Invincible";
 -- Hamstring (log name)
-L["Hamstring"] = "Hamstring";
+L["Hamstring"] = "Coup aux jarrets";
 -- Crowd Control (log name)
 L["HornOfGondor"] = "Cor du Gondor";
 L["Horn"] = "cor";
@@ -1190,31 +1193,31 @@ L["InvocationOfElbereth"] = "Invocation d'Elbereth";
 -- 8) Rune-Keeper Skills
 
 -- Trait lines
-L["CleansingFires"] = "Cleansing Fires";
-L["SolitaryThunder"] = "Solitary Thunder";
-L["BenedictionsOfPeace"] = "Benedictions of Peace";
+L["CleansingFires"] = "Flamme purificatrice";
+L["SolitaryThunder"] = "Tonnerre solitaire";
+L["BenedictionsOfPeace"] = "Bénédiction de la paix";
 -- Buffs (effect name)
-L["DoNotFallToStorm"] = "Do Not Fall to Storm";
-L["DoNotFallToFlame"] = "Do Not Fall to Flame";
-L["DoNotFallToWinter"] = "Do Not Fall to Winter";
-L["DoNotFallThisDay"] = "Do Not Fall This Day";
+L["DoNotFallToStorm"] = "Do Not Fall to Storm"; -- obsolete ?
+L["DoNotFallToFlame"] = "Do Not Fall to Flame"; -- obsolete ?
+L["DoNotFallToWinter"] = "Do Not Fall to Winter"; -- obsolete ?
+L["DoNotFallThisDay"] = "Tu ne succomberas pas aujourd'hui";
 L["ShallNotFallThisDay"] = "Shall Not Fall This Day";
-L["PreludeToHope"] = "Prelude to Hope";
-L["RuneOfRestoration"] = "Rune of Restoration";
-L["WritOfHealthTier1"] = "Writ of Health - Tier 1";
-L["WritOfHealthTier2"] = "Writ of Health - Tier 2";
-L["WritOfHealthTier3"] = "Writ of Health - Tier 3";
-L["OurFatesEntwined"] = "Our Fates Entwined";
-L["AllFatesEntwined"] = "All Fates Entwined";
-L["GloriousForeshadowing"] = "Glorious Foreshadowing";
-L["WondrousForeshadowing"] = "Wondrous Foreshadowing";
+L["PreludeToHope"] = "Prelude à l'espoir";
+L["RuneOfRestoration"] = "Rune de restauration";
+L["WritOfHealthTier1"] = "Allégorie de la santé - Niveau 1";
+L["WritOfHealthTier2"] = "Allégorie de la santé - Niveau 2";
+L["WritOfHealthTier3"] = "Allégorie de la santé - Niveau 3";
+L["OurFatesEntwined"] = "Nos destins entrelacés";
+L["AllFatesEntwined"] = "Nos destins entrelacés"; -- obsolete ?
+L["GloriousForeshadowing"] = "Présage glorieux";
+L["WondrousForeshadowing"] = "Wondrous Foreshadowing"; -- obsolete ?
 
 -- 9) Warden Skills
 
 -- Trait lines
-L["WayOfTheSpear"] = "Way of the Spear";
-L["WayOfTheFist"] = "Way of the Fist";
-L["WayOfTheShield"] = "Way of the Shield";
+L["WayOfTheSpear"] = "La voie de la lance";
+L["WayOfTheFist"] = "La voie du poing";
+L["WayOfTheShield"] = "La voie du bouclier";
 -- Buffs (effect name)
 L["Conviction"] = "Conviction";
 L["DeterminationStance"] = "Determination Stance";
@@ -1272,4 +1275,4 @@ L["GrislyCry"] = "Grisly Cry";
 
 -- Other
 L["VagabondsCraft"] = "Vagabond's Craft";
-L["StunImmunity"] = "Stun Immunity";
+L["StunImmunity"] = "Immunité contre les états temporaires";
