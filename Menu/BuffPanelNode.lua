@@ -60,6 +60,7 @@ function BuffPanelNode:Constructor(nodePadding,buffType,title,panel)
     self.classNameDropDown:AddItem(L.Weaver[1],"Weaver");
   else
     self.classNameDropDown:AddItem(L.Burglar[1],"Burglar");
+    self.classNameDropDown:AddItem(L.Brawler[1],"Brawler");
     self.classNameDropDown:AddItem(L.Captain[1],"Captain");
     self.classNameDropDown:AddItem(L.Champion[1],"Champion");
     self.classNameDropDown:AddItem(L.Guardian[1],"Guardian");

@@ -189,6 +189,7 @@ function Misc.ClassToIcon(class)
   if (class == "WarLeader") then return 0x41007df0 end
   if (class == "Weaver") then return 0x41007dee end
   if (class == "Beorning")then return "CombatAnalysis/Resources/beorning_icon_20.tga" end
+  if (class == "Brawler")then return "CombatAnalysis/Resources/Brawler_icon_20.tga" end
 end
 
 

@@ -10,15 +10,15 @@ Non coder type people can easily download this plugin at http://www.lotrointerfa
 
 All coders, LUA enthusists and LoTRO Peeps are encouraged to fork this repository and particiapte!
 
-Update 4.8.5 (28 Sep 2020)
-argonui Add ability for Benefits to be sent to BuffBars & added internal enhancements
-Thanks!
-
-Thanks!
+Update 4.8.8 Correct percent buf calculations add brawler class & some brawler buffs
 
 Update 4.8.7 Adra's complete french translation update, Merci Adra
 
 Update 4.8.6 Simple; update the french chat to kin command
+
+Update 4.8.5 (28 Sep 2020)
+argonui Add ability for Benefits to be sent to BuffBars & added internal enhancements
+Thanks!
 
 Update 4.8.4 (7 Aug 2020)
 Revert to the 4.8.0 French language module

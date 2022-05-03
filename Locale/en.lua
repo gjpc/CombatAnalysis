@@ -314,6 +314,7 @@ L["Minstrel"] = {"Minstrel","MNS"};
 L["RuneKeeper"] = {"Rune Keeper","RNK"};
 L["Warden"] = {"Warden","WDN"};
 L["Beorning"] = {"Beorning","BRN"};
+L["Brawler"] = {"Brawler", "BRW"};
 
 L["BlackArrow"] = {"Black Arrow","BLA"};
 L["Defiler"] = {"Defiler","DEF"};
@@ -1266,6 +1267,21 @@ L["CallToWild"] = "Call To Wild";
 
 -- Crowd control
 L["GrislyCry"] = "Grisly Cry";
+
+-- 12 Brawler
+L["TheFulcrum"] = "The Fulcrum";
+L["TheMaelstrom"] = "The Maelstrom";
+L["TheFundament"] = "The Fundament";
+
+-- Buffs
+L["GetSerious"] = "Get Serious";
+L["WeatherBlows"] = "Weather Blows";
+L["SkipFree"] = "Skip Free";
+L["IgnorePain"] = "Ignore Pain";
+L["FollowMe"] = "Follow Me!";
+L["QuickFeint"] = "Quick Feint";
+L["OneforAll"] = "One for All";
+L["SkipFree"] = "Skip Free";
 
 -- Other
 L["VagabondsCraft"] = "Vagabond's Craft";

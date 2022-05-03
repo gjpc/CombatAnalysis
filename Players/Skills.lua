@@ -115,7 +115,10 @@ local restoreV420Traits = function()
     {class = "Warden", skillName = L.EncouragingRoar, appliedBy = {L.EncouragingRoar}},
     
     {class = "Beorning", skillName = L.Conviction, appliedBy = {L.Conviction}},    
-    {class = "Beorning", skillName = L.RejuvenatingBellow, appliedBy = {L.RejuvenatingBellow}},    
+    {class = "Beorning", skillName = L.RejuvenatingBellow, appliedBy = {L.RejuvenatingBellow}},
+
+    {class = "Brawler", skillName = L.FollowMe, appliedBy = {L.FollowMe} },
+    {class = "Brawler", skillName = L.OneforAll, appliedBy = {L.OneforAll} },
     
     {class = "Racial", skillName = L.DutyBound, appliedBy = {L.DutyBound}},
     {class = "Racial", skillName = L.DwarfEndurance, appliedBy = {L.DwarfEndurance}}
@@ -220,6 +223,14 @@ local restoreV420Traits = function()
     table.insert(traits.buffs, {class = "Beorning", skillName = L.Counter, appliedBy = {L.Counter}});
     table.insert(traits.buffs, {class = "Beorning", skillName = L.CallToWild, appliedBy = {L.CallToWild}});
     
+  elseif (player.class == "Brawler" ) then
+    table.insert(traits.buffs, {class = "Brawler", skillName = L.GetSerious, appliedBy = {L.GetSerious}});
+    table.insert(traits.buffs, {class = "Brawler", skillName = L.WeatherBlows, appliedBy = {L.WeatherBlows}});
+    table.insert(traits.buffs, {class = "Brawler", skillName = L.SkipFree, appliedBy = {L.SkipFree}});
+    table.insert(traits.buffs, {class = "Brawler", skillName = L.IgnorePain, appliedBy = {L.IgnorePain}});
+    table.insert(traits.buffs, {class = "Brawler", skillName = L.QuickFeint, appliedBy = {L.QuickFeint}});
+
+
   end
   
   -- Debuffs
@@ -449,6 +460,16 @@ local restoreV420Traits = function()
     table.insert(traits.configurations[L.WayofTheRoar].debuffs, {ca = true, bb = true, class = "Beorning", skillName = L.EncouragingStrike, iconName = "encouraging_strike.tga", overwrites = {L.EncouragingStrike}, appliedBy = {{skillName = L.EncouragingStrike, duration = 20}}});
     table.insert(traits.configurations[L.WayofTheRoar].debuffs, {ca = true, bb = true, class = "Beorning", skillName = L.CripplingStings, iconName = "crippling_stings.tga", overwrites = {L.CripplingStings}, appliedBy = {{skillName = L.CripplingStings, duration = 8}}});
     table.insert(traits.configurations[L.WayofTheRoar].debuffs, {ca = true, bb = true, class = "Beorning", skillName = L.CripplingRoar, iconName = "crippling_roar.tga", overwrites = {L.CripplingRoar}, appliedBy = {{skillName = L.CripplingRoar, duration = 20}}});
+
+  elseif (player.class == "Brawler") then
+    traits.configurations[L.TheMaelstrom] = { color = "Red" }
+    traits.configurations[L.TheFundament] = { color = "Yellow" }
+    traits.configurations[L.TheFulcrum] = { color = "Blue" }
+    traits.selected = L.TheMaelstrom;
+    
+    traits.configurations[L.TheMaelstrom].debuffs = {}
+    traits.configurations[L.TheFundament].debuffs = {}
+    traits.configurations[L.TheFulcrum].debuffs = {}
 
   else
     traits.configurations[L.Default] = { color = "Red" }
@@ -1050,6 +1071,15 @@ local restoreV420Traits = function()
     
     table.insert(fear.appliedBy, {skillName = L.GrislyCry, duration = 8});
     
+  elseif (player.class == "Brawler") then
+    traits.configurations[L.TheMaelstrom].crowdControl = {}
+    traits.configurations[L.TheFundament].crowdControl = {}
+    traits.configurations[L.TheFulcrum].crowdControl = {}
+    
+    daze = Misc.TableCopy(baseDaze);
+    fear = Misc.TableCopy(baseFear);
+    root = Misc.TableCopy(baseRoot);
+    stun = Misc.TableCopy(baseStun);
         
   else
     traits.configurations[L.Default].crowdControl = {}
