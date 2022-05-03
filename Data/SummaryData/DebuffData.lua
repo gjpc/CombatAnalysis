@@ -49,7 +49,7 @@ function DebuffData:Update(timestamp,mobIsAlive,skillName,targetName,debuffDurat
 		if (self.debuffInfo[targetName] == nil) then self.debuffInfo[targetName] = {} end
 		
 		self.debuffInfo[targetName][skillName] = {timestamp,debuffDuration};
-		if ((not self.terminated and self.durStart == nil) or (self.terminated and self.oldDurStart == nil)) then
+		if ((not self.terminated and self.durStart == 0) or (self.terminated and self.oldDurStart == 0)) then
 			if (self.terminated) then
         self.oldDurStart = math.max(timestamp,self.terminatedTime);
       else
@@ -75,18 +75,18 @@ function DebuffData:TerminateDebuff(timestamp,skillName,targetName)
 	for t,targetInfo in pairs(self.debuffInfo) do
 		for s,debuffInfo in pairs(targetInfo) do
 			if (debuffInfo[2] == nil or (debuffInfo[1]+debuffInfo[2] > maxTimestamp)) then
-				maxTimestamp = nil;
+				maxTimestamp = 0;
 				break;
 			else
 				table.insert(timedOutDebuffs,{t,s});
 			end
 		end
 		
-		if (maxTimestamp == nil) then break end
+		if (maxTimestamp == 0) then break end
 	end
 	
 	-- if all other debuffs have timed out (or there are none), set the debuff duration accordingly, and clear the debuff table
-	if (maxTimestamp ~= nil) then
+	if (maxTimestamp ~= 0) then
     if (self.terminated) then
       self.oldDuration = self.oldDuration + math.max(0,(maxTimestamp-self.oldDurStart));
 			self.oldDurStart = 0;
@@ -126,18 +126,18 @@ function DebuffData:TerminateAll(timestamp,targetName)
 	for t,targetInfo in pairs(self.debuffInfo) do
 		for s,debuffInfo in pairs(targetInfo) do
 			if (debuffInfo[2] == nil or (debuffInfo[1]+debuffInfo[2] > maxTimestamp)) then
-				maxTimestamp = nil;
+				maxTimestamp = 0;
 				break;
 			else
 				table.insert(timedOutDebuffs,{t,s});
 			end
 		end
 		
-		if (maxTimestamp == nil) then break end
+		if (maxTimestamp == 0) then break end
 	end
 	
 	-- if all other debuffs have timed out (or there are none), set the debuff duration accordingly, and clear the debuff table
-	if (maxTimestamp ~= nil) then
+	if (maxTimestamp ~= 0) then
 		if (self.terminated) then
       self.oldDuration = self.oldDuration + math.max(0,(maxTimestamp-self.oldDurStart));
 			self.oldDurStart = 0;
@@ -162,7 +162,7 @@ function DebuffData:CurrentDuration(timestamp)
 	if (self.terminated and self.oldDurStart == 0) then return self.duration end
   if (not self.terminated and self.durStart == 0) then return self.duration end
 	
-	local maxTimestamp = nil;
+	local maxTimestamp = 0;
 	
 	local timedOutDebuffs = {}
 	-- determine if any debuffs are still running
@@ -170,20 +170,20 @@ function DebuffData:CurrentDuration(timestamp)
 		for s,debuffInfo in pairs(targetInfo) do
 			-- debuff still running on target
 			if (debuffInfo[2] == nil or (debuffInfo[1] + debuffInfo[2] > timestamp)) then
-				maxTimestamp = nil;
+				maxTimestamp = 0;
 				break;
 			-- debuff has timed out
 			else
 				table.insert(timedOutDebuffs,{t,s});
-				maxTimestamp = (maxTimestamp == nil and (debuffInfo[1]+debuffInfo[2]) or math.max(maxTimestamp,debuffInfo[1]+debuffInfo[2]));
+				maxTimestamp = (maxTimestamp == 0 and (debuffInfo[1]+debuffInfo[2]) or math.max(maxTimestamp,debuffInfo[1]+debuffInfo[2]));
 			end
 		end
 		
-		if (maxTimestamp == nil) then break end -- to ensure this function is O(1)
+		if (maxTimestamp == 0) then break end -- to ensure this function is O(1)
 	end
 	
 	-- if all debuffs have timed out, set the debuff duration accordingly, and clear the debuff tables
-	if (maxTimestamp ~= nil) then
+	if (maxTimestamp ~= 0) then
 		if (self.terminated) then
       self.oldDuration = self.oldDuration + math.max(0,(maxTimestamp-self.oldDurStart));
 			self.oldDurStart = 0;
@@ -202,7 +202,7 @@ function DebuffData:CurrentDuration(timestamp)
 			if (next(self.debuffInfo[debuffInfo[1]]) == nil) then self.debuffInfo[debuffInfo[1]] = nil end
 		end
 	
-		return self.duration+(self.durStart == nil and 0 or (timestamp-self.durStart));
+		return self.duration+(self.durStart == 0 and 0 or (timestamp-self.durStart));
 	end
 end
 

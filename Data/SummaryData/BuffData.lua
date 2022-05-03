@@ -64,11 +64,11 @@ function BuffData:TerminateBuff(timestamp,effect)
 	
 	-- determine if any buffs other than this are still running
 	if (next(self.buffInfo) ~= nil) then
-		timestamp = nil;
+		timestamp = 0;
 	end
 	
 	-- if there are no other buffs on the restore, set the buff duration accordingly, and clear the buff table
-	if (timestamp ~= nil) then
+	if (timestamp ~= 0) then
 		self.buffInfo[effect] = nil;
 		
 		if self.terminated then
@@ -111,7 +111,7 @@ function BuffData:TerminateAll()
 end
 
 function BuffData:CurrentDuration(timestamp)
-	return self.duration+(self.durStart == nil and 0 or (timestamp-self.durStart));
+	return self.duration+(self.durStart == 0 and 0 or (timestamp-self.durStart));
 end
 
 -- Note that when saving the state of buff data, currently running buffs are ignored (we only care about total current duration)
