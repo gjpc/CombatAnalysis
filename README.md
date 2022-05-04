@@ -10,6 +10,8 @@ Non coder type people can easily download this plugin at http://www.lotrointerfa
 
 All coders, LUA enthusists and LoTRO Peeps are encouraged to fork this repository and particiapte!
 
+Update 4.8.9 Add Brawler to German and French files
+
 Update 4.8.8 Correct percent buf calculations add brawler class & some brawler buffs
 
 Update 4.8.7 Adra's complete french translation update, Merci Adra

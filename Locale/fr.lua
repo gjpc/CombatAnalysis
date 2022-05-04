@@ -317,6 +317,7 @@ L["Minstrel"] = {"Ménestrel","MNS"};
 L["RuneKeeper"] = {"Gardien des Runes","GDR"};
 L["Warden"] = {"Sentinelle","SEN"};
 L["Beorning"] = {"Béornide","BRN"};
+L["Brawler"] = {"Brawler", "BRW"};
 
 L["BlackArrow"] = {"Black Arrow","BLA"};
 L["Defiler"] = {"Defiler","DEF"};
@@ -1249,6 +1250,11 @@ L["DwarfEndurance"] = "Dwarf Endurance";
 L["WayofTheHide"] = "Way of the Hide"
 L["WayofTheClaw"] = "Way of the Claw"
 L["WayofTheRoar"] = "Way of the Roar"
+
+-- 12 Brawler
+L["TheFulcrum"] = "The Fulcrum";
+L["TheMaelstrom"] = "The Maelstrom";
+L["TheFundament"] = "The Fundament";
 
 -- Buffs
 L["EncouragingRoar"] = "Encouraging Roar";
