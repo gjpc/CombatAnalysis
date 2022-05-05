@@ -1255,6 +1255,14 @@ L["WayofTheRoar"] = "Way of the Roar"
 L["TheFulcrum"] = "The Fulcrum";
 L["TheMaelstrom"] = "The Maelstrom";
 L["TheFundament"] = "The Fundament";
+L["GetSerious"] = "Get Serious";
+L["WeatherBlows"] = "Weather Blows";
+L["SkipFree"] = "Skip Free";
+L["IgnorePain"] = "Ignore Pain";
+L["FollowMe"] = "Follow Me!";
+L["QuickFeint"] = "Quick Feint";
+L["OneforAll"] = "One for All";
+L["SkipFree"] = "Skip Free";
 
 -- Buffs
 L["EncouragingRoar"] = "Encouraging Roar";
