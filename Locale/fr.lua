@@ -1,6 +1,6 @@
 -- Database for Combat Analysis (Français)
--- Encodage: UTF8
--- Version du 11 mars 2016
+-- Encodage: UTF-8 (sans BOM) afin de conserver les accents
+-- Version du 06 mai 2022
 
 L["DevelopedBy"] = "Developpé par Evendale, amélioré par Landal.";
 L["TranslatedBy"] = "Traduction : Mayara@Sirannon Ardi@Estel Adra@Sirannon";
@@ -33,22 +33,22 @@ L["About"] = "À propos";
 L["GeneralSettingsTitle"] = "Réglages généraux";
 L["AutoSelectNewEncounters"] = "Sélection automatique des nouvelles rencontres";
 L["ConfirmDialogOnReset"] = "Dialogue de confirmation pour la remise à zéro";
-L["largeFont"] = "Agrandir texte des stats (redémarrage requis)";
+L["largeFont"] = "Agrandir le texte des stats (redémarrage requis)";
 
 L["ShowLogo"] = "Afficher le logo de Combat Analysis";
 
 L["MaxStandardEncounters"] = "Nombre max de rencontres";
 L["MaxLoadedEncounters"] = "Nombre max de rencontres importées";
 
-L["TimerConfigurationsTitle"] = "Calibrages temporels";
+L["TimerConfigurationsTitle"] = "Réglages temporels";
 L["CombatTimeout"] = "Délai d'expiration du combat";
 L["TargetTimeout"] = "Délai d'expiration de la cible";
-L["LogDelay"] = "Délais d'enregistrement";
-L["EffectDelay"] = "Délais pour les effets";
+L["LogDelay"] = "Délai d'enregistrement";
+L["EffectDelay"] = "Délai pour les effets";
 
 L["SaveLoadTitle"] = "Sauvegarde/Importation";
-L["AutoSaveData"] = "Sauvegarde auto. des données";
-L["Off"] = "Désactivée";
+L["AutoSaveData"] = "Enregistrement auto. des données";
+L["Off"] = "Pas d'enregistrement";
 L["SaveOnExit"] = "Enregistre en quittant";
 L["SaveEncounters"] = "Enreg. les rencontres";
 
@@ -84,7 +84,7 @@ L["ShowMiniTitleBar"] = "Afficher la mini barre fermer/réduire";
 L["ShowTitleAndDuration"] = "Afficher titre et durée";
 L["ShowEncountersList"] = "Afficher la liste des rencontres";
 L["ShowTargetsList"] = "Afficher la liste des cibles";
-L["ShowExtraButtons"] = "Afficher bouton *envoi dans chat* et *i*";
+L["ShowExtraButtons"] = "Afficher bouton *envoi dans canal* et *i*";
 
 L["StatsWindowsConfigurationTitle"] = "Configuration des statistiques";
 L["StatsWindowsDescription"] = "> Déplacez les cases pour reconfigurer votre interface\n> Déplacez les éléments inutiles dans le rangement à droite";
@@ -160,9 +160,9 @@ L["DurationAbbreviation"] = "Durée";
 
 L["AboutTitle"] = "A propos";
 L["VersionNo"] = "Version N°";
-L["RestoreSettings"] = "Restauration de la configuration";
+L["RestoreSettings"] = "Restaurer la config.";
 L["RestoreSettingsConfirmation"] = "Êtes vous sûr de vouloir restaurer tous les paramètres par défaut, à l'exclusion des traits ?";
-L["RestoreTraits"] = "Restauration des Traits";
+L["RestoreTraits"] = "Restaurer les traits";
 L["RestoreTraitsConfirmation"] = "Êtes vous sûr de vouloir restaurer les paramètres de configuration des traits à leur valeur par défaut ?";
 L["PluginUsageMessage"] = "Pour plus d'informations sur l'utilisation de ce plugin, visitez :";
 L["FoundABugMessage"] = "Un Bug ? Signalez le en laissant un commentaire à l'adresse ci-dessus, ou bien sur sa page Github.";
@@ -189,7 +189,7 @@ L["AutoSelectPlayerTooltip"] = "Pour cet onglet : Immédiatement sélectionner l
 L["SelectWindowTooltip"] = "Selectionner une fenêtre à configurer.";
 L["BackgroundTooltip"] = "Définir la couleur d'arrière-plan pour cette fenêtre.";
 L["WindowTabsTooltip"] = "Une liste des onglets figurant actuellement dans cette fenêtre.";
-L["CenterWindowOnScreenTooltip"] = "Centrer cette fenêtre sur votre écran. Celà maximisera également la fenêtre, assurant ainsi que les onglets et arrière-plans soient visibles";
+L["CenterWindowOnScreenTooltip"] = "Centrer cette fenêtre sur votre écran. Cela maximisera également la fenêtre, assurant ainsi que les onglets et arrière-plans soient visibles";
 L["AutoHideTabsTooltip"] = "Pour cette fenêtre : Afficher les onglets seulement lorque la souris survole la fenêtre.";
 L["ShowBackgroundTooltip"] = "Pour cette fenêtre : Afficher ou masquer l'arrière-plan et les bordures par dessus la surface d'affichage principal.";
 L["ShowMiniTitleBarTooltip"] = "Pour cette fenêtre : Afficher ou masquer la mini barre de titre (avec le menu et les icônes minimiser et fermer).";
@@ -200,7 +200,7 @@ L["ShowExtraButtonsTooltip"] = "Afficher ou masquer les boutons *Info* et *Envoi
 L["SelectedWindowTooltip"] = "Sélectionner une fenêtre de statistiques à configurer.";
 L["StatsBackgroundTooltip"] = "Définir la couleur d'arrière-plan pour cette fenêtre de statistiques.";
 L["StatsWindowTabsTooltip"] = "Une liste des onglets figurant actuellement dans cette fenêtre.";
-L["CenterStatsWindowOnScreenTooltip"] = "Centrer cette fenêtre de statistiques sur votre écran. Celà assurera également que la fenêtre de statistiques est affichée(Toujours montrer).";
+L["CenterStatsWindowOnScreenTooltip"] = "Centrer cette fenêtre de statistiques sur votre écran. Cela assurera également que la fenêtre de statistiques est affichée (Toujours montrer).";
 L["VisibilityTooltip"] = "Pour cette fenêtre de statistiques, veuillez spécifiez si:\na) la fenêtre sera toujours visible\nb) la fenêtre deviendra visible lorsque qu'une barre est survolée ou bien vérouillée dans l'un des onglets\nc) la fenêtre ne deviendra visible que lorsque les détails d'une barre sont vérouillés";
 
 L["SelectedConfigurationTooltip"] = "Sélectionner quelle configuration de traits utiliser et éditer ci-dessous. Ceci n'affecte que les informations relatives aux debuff et aux contrôles de foules.";
@@ -256,7 +256,7 @@ L["LogoMessage"] = "Clic Gauche sur le logo pour Afficher/Masquer l'ensemble des
 -- Colors by { FullName, Single Letter Abbreviation }
 L["Yellow"] = {"Jaune", "J"};
 L["Red"] = {"Rouge", "R"};
-L["Green"] = {"Vert", "v"};
+L["Green"] = {"Vert", "V"};
 L["Blue"] = {"Bleu", "B"};
 L["Alpha"] = {"Alpha", "A"};
 
@@ -272,12 +272,11 @@ L["SaveCommand"] = "sauver";
 L["LoadCommand"] = "charger";
 L["LockCommand"] = "verrouiller";
 L["UnlockCommand"] = "déverrouiller";
-L["ResetCommand"] = "Réinitialiser";
+L["ResetCommand"] = "réinitialiser";
 L["LockToggleCommand"] = "verrou";
 L["CleanUpCommand"] = "nettoyer";
 
 L["CommandUsage"] = "usage: /ca "..L.Options.." | "..L.SaveCommand.." | "..L.LoadCommand.." | "..L.ToggleCommand.." | "..L.ShowCommand.." | "..L.HideCommand.." | "..L.LockToggleCommand.." | "..L.LockCommand.." | "..L.UnlockCommand.." | "..L.ResetCommand.." | "..L.ResetTotalsCommand.." | "..L.CleanUpCommand;
-
 -- Value/Date Formatting
 
 L["Thousand"] = "K";
@@ -300,35 +299,35 @@ L["Dec"] = {"Déc","Décembre"};
 
 -- Options
 
-L["ResetTotalsMessage"] = "Êtes vous sûr de vouloir réinitialiser le cumulatif?";
+L["ResetTotalsMessage"] = "Êtes vous sûr de vouloir réinitialiser le cumulatif ?";
 L["Yes"] = "Oui";
 L["No"] = "Non";
-L["OK"] = "OK";
+L["OK"] = "Compris";
 
 -- Classes
 
 L["Burglar"] = {"Cambrioleur","CAM"};
 L["Captain"] = {"Capitaine","CAP"};
-L["Champion"] = {"Champion","CHN"};
+L["Champion"] = {"Champion","CHP"};
 L["Guardian"] = {"Gardien","GRD"};
 L["Hunter"] = {"Chasseur","CHS"};
-L["LoreMaster"] = {"Maitre de Savoir","MDS"};
-L["Minstrel"] = {"Ménestrel","MNS"};
+L["LoreMaster"] = {"Maitre du Savoir","MDS"};
+L["Minstrel"] = {"Ménestrel","MEN"};
 L["RuneKeeper"] = {"Gardien des Runes","GDR"};
 L["Warden"] = {"Sentinelle","SEN"};
-L["Beorning"] = {"Béornide","BRN"};
-L["Brawler"] = {"Brawler", "BRW"};
+L["Beorning"] = {"Béornide","BEO"};
+L["Brawler"] = {"Bagarreur", "BAG"};
 
-L["BlackArrow"] = {"Black Arrow","BLA"};
-L["Defiler"] = {"Defiler","DEF"};
-L["Reaver"] = {"Reaver","RVR"};
-L["Stalker"] = {"Stalker","STK"};
-L["WarLeader"] = {"WarLeader","WAR"};
-L["Weaver"] = {"Weaver","WVR"};
+L["BlackArrow"] = {"Flèche noire","FN"};
+L["Defiler"] = {"Profanateur","PRO"};
+L["Reaver"] = {"Faucheur","FAU"};
+L["Stalker"] = {"Ouargue","WAR"};
+L["WarLeader"] = {"Chef de guerre","CDG"};
+L["Weaver"] = {"Araignée","GNE"};
 
-L["Racial"] = {"Race","RCL"};
+L["Racial"] = {"Race","RAC"};
 L["Item"] = {"Objet","OBJ"};
-L["OtherClass"] = {"Autre","UNK"};
+L["OtherClass"] = {"Autre","INC"};
 
 -- Select File Dialog
 
@@ -336,13 +335,13 @@ L["Select"] = "Sélectionner";
 L["Save"] = "Sauvegarder";
 L["Saves"] = "Sauvegardes";
 L["Load"] = "Charger";
-L["Loads"] = "Loads"; -- ?
+L["Loads"] = "Chargés"; -- A vérifier
 L["Cancel"] = "Annuler";
 
-L["FileName"] = "Nom du ficher";
+L["FileName"] = "Nom du ficher ";
 
-L["SelectAll"] = "Sélectionner tout";
-L["ClearAll"] = "Dé-sélectionner tout";
+L["SelectAll"] = "Tout sélec.";
+L["ClearAll"] = "Tout dé-sélec. ";
 
 L["Delete"] = "Effacer";
 
@@ -353,7 +352,7 @@ L["Items"] = "Objets";
 L["CombineWith"] = "Combiner Avec";
 L["CombineInto"] = "Combiner Dans";
 
-L["SelectCurrentDataToCombineWith"] = "Combiner les données chargées avec les données actuelles";
+L["SelectCurrentDataToCombineWith"] = "Combiner les données chargées avec les données actuelles ";
 L["LoadDataAsTotalsEncounter"] = "Remplacer le cumulatif avec les données chargées";
 
 L["SelectSaveFile"] = "Choisir une sauvegarde";
@@ -364,17 +363,17 @@ L["SelectDataToCombineWith"] = "Combiner avec";
 L["TooLong"] = "Vous ne pouvez entrer qu'un maximum de 64 caractères.";
 L["IllegalCharacters"] = "Vous ne pouvez entrer que des lettres, des chiffres, des espaces et des soulignés.";
 
-L["NoDataMessage"] = "Il n\'y a actuellement aucune données à enregistrer.";
+L["NoDataMessage"] = "Il n'y a actuellement aucune donnée à enregistrer.";
 L["NoFileMessage"] = "Pas de fichier spécifié.";
 L["NoDataSelectedMessage"] = "Aucune donnée n'a été sélectionnée.";
-L["OverwriteFileMessage"] = "Le fichier existe déjà. Voulez-vous combiner les données enregistrées avec ce fichier ou les remplacer?";
-L["CombineOrSeparateMessage"] = "Vous avez sélectionné plusieurs fichiers. Voulez-vous combiner les données ou les charger séparément?";
-L["TooManyCharactersMessage"] = "Le nom de fichier spécifié est trop long(longueur maximale = 64 caractères)";
+L["OverwriteFileMessage"] = "Le fichier existe déjà. Voulez-vous combiner les données enregistrées avec ce fichier ou les remplacer ?";
+L["CombineOrSeparateMessage"] = "Vous avez sélectionné plusieurs fichiers. Voulez-vous combiner les données ou les charger séparément ?";
+L["TooManyCharactersMessage"] = "Le nom de fichier spécifié est trop long (longueur maximale = 64 caractères)";
 L["InvalidCharactersMessage"] = "Le nom de fichier spécifié contient des caractères non valides..";
-L["FileNotFoundMessage"] = "L'un des fichiers spécifié n'a pu être trouvée.";
+L["FileNotFoundMessage"] = "L'un des fichiers spécifiés n'a pu être trouvé.";
 L["SaveFailedMessage"] = "Échec de la sauvegarde: ";
 L["LoadFailedMessage"] = "Échec du chargement: ";
-L["CombineMessage"] = "Êtes-vous sûr de vouloir combiner les fichiers sélectionnés?";
+L["CombineMessage"] = "Êtes-vous sûr de vouloir combiner les fichiers sélectionnés ?";
 L["LoadBeforeSaveMessage"] = "L'un des fichiers sélectionné est actuellement utilisé et ne peut donc pas être encore chargé. Essayez à nouveau dans environ 10-15 secondes."
 
 L["Combine"] = "Combiner";
@@ -396,7 +395,7 @@ L["RestoreTab"] = "Restaurer l'onglet";
 L["CloseTab"] = "Fermer l'onglet";
 
 L["ResetTotals"] = "Réinitialiser le cumulatif";
-L["CleanUp"] = "Vider les poubelles";
+L["CleanUp"] = "Vider la poubelle";
 
 -- Chat Menu (indexed by {command, channel name})
 
@@ -412,7 +411,7 @@ L["Gap"] = "------------------";
 L["AllPlayers"] = "Tous les joueurs";
 L["AllSkills"] = "Compétences (tous)";
 L["Duration"] = "Durée";
-L["SendToChat"] = "Envoi dans chat";
+L["SendToChat"] = "Envoi dans canal";
 L["CombatAnalysisSummary"] = "Résumé de Combat Analysis";
 
 L["DirectDamage"] = "Dégât direct";
@@ -424,67 +423,66 @@ L["Daze"] = "Hébété";
 L["Root"] = "Enraciné";
 L["Fear"] = "Peur";
 L["Stun"] = "Assommé";
-L["Knockdown"] = "renversé";
+L["Knockdown"] = "Renversé";
 
 -- Statistics Headings
 
 L["AllData"] = "Toutes les infos";
-L["NonCrits"] = "Non critiques";
-L["Criticals"] = "Critiques";
-L["Devastates"] = "Dévastateurs";
+L["NonCrits"] = "Non-critiques";
 L["CritsAndDevs"] = "Crit & Dévast";
-L["Partials"] = "Evitements partiels";
+L["Partials"] = "Évitements partiels";
 
 L["Total"] = "Total";
-L["Average"] = "Moyenne";
-L["Maximum"] = "Maximum";
-L["Minimum"] = "Minimum";
+L["Average"] = "Montant moy.";
+L["Maximum"] = "Montant max.";
+L["Minimum"] = "Montant min.";
 
 --- Added in v4.4.7 to support Normal Hits
-L["NormalHits"] = "Coups non critiques";
-L["NormalHitChance"] = "fréquence";
-L["NormalHitAvg"] = "Montant moyen";
-L["NormalHitMax"] = "Montant maximal"
-L["NormalHitMin"] = "Montant minimmal"
+L["NormalHits"] = "Coups non-critiques";
+L["NormalHitChance"] = "Fréquence";
+L["NormalHitAvg"] = "Montant moy.";
+L["NormalHitMax"] = "Montant max."
+L["NormalHitMin"] = "Montant min."
 
 --- Added in v4.4.7 to support Critical Hits
-L["CriticalHits"] = "Coups Critiques";
-L["CriticalHitChance"] = "fréquence";
-L["CriticalHitAvg"] = "Montant moyen";
-L["CriticalHitMax"] = "Montant maximal"
-L["CriticalHitMin"] = "Montant minimmal"
+L["CriticalHits"] = "Coups critiques";
+L["CriticalHitChance"] = "Fréquence";
+L["CriticalHitAvg"] = "Montant moy.";
+L["CriticalHitMax"] = "Montant max."
+L["CriticalHitMin"] = "Montant min."
 
 --- Added in v4.4.7 to support Devastate Hits
 L["DevastateHits"] = "Coups crit. dévastateurs";    
-L["DevastateHitChance"] = "fréquence";
-L["DevastateHitAvg"] = "Montant moyen";
-L["DevastateHitMax"] = "Montant maximal"       
-L["DevastateHitMin"] = "Montant minimmal"
+L["DevastateHitChance"] = "Fréquence";
+L["DevastateHitAvg"] = "Montant moy.";
+L["DevastateHitMax"] = "Montant max."       
+L["DevastateHitMin"] = "Montant min."
 
-L["Avoidance"] = "Évitement";
-L["Attacks"] = "Attaque";
-L["Hits"] = "Coups Réussis";
-L["Absorbs"] = "Coups Absorbés";
-L["Misses"] = "Coups Ratés";
-L["Deflects"] = "Coups Reflétés";
-L["Immune"] = "Immunisé";
-L["Resists"] = "Résisté";
-L["PhysicalAvoids"] = "Évitement Physique";
-L["FullAvoids"] = "Évitement Complet";
-L["PartialAvoids"] = "Évitement Partiel";
-L["Avoids"] = "Évité";
-L["Blocks"] = "Bloqué";
-L["Parrys"] = "Parré";
-L["Evades"] = "Esquivé";
-L["PartialBlocks"] = "Blocage Partiel";
-L["PartialParrys"] = "Parade Partielle";
-L["PartialEvades"] = "Esquive Partielle";
+L["Avoidance"] = "Évitements";
+L["Attacks"] = "Actions";
+L["AttacksPS"] = "Actions/s";
+L["Hits"] = "Coups réussis";
+L["Absorbs"] = "Coups absorbés";
+L["Misses"] = "Coups ratés";
+L["Deflects"] = "Coups reflétés";  -- ou bien "déviés" ?
+L["Immune"] = "Immunisés";
+L["Resists"] = "Résistés";
+L["PhysicalAvoids"] = "Évitements physiques";
+L["FullAvoids"] = "Évitements complets";
+L["PartialAvoids"] = "Évitements partiels";
+L["Avoids"] = "Évitements complets";
+L["Blocks"] = "Bloqués";
+L["Parrys"] = "Parrés";
+L["Evades"] = "Esquivés";
+L["PartialBlocks"] = "Blocages Partiels";
+L["PartialParrys"] = "Parades Partielles";
+L["PartialEvades"] = "Esquives Partielles";
 
 L["Other"] = "Autre";
-L["Interrupts"] = "Interruption";
+L["Interrupts"] = "Interruptions";
 L["CorruptionsRemoved"] = "Corruptions";
 
-L["DmgTypes"] = "Type des dégâts";
+L["DmgTypes"] = "Types de dégâts";
 
 L["TempMorale"] = "Moral temporaire";
 L["RegularHeals"] = "Soins normaux";
@@ -493,10 +491,10 @@ L["WastedTempHeals"] = "Soins perdus";
 
 -- Note the following elements are indexed by: {Short Name, Full Name, Per Second Abbreviation, Tab Title, Tab Tooltip}
 
-L["Dmg"] = {"Off","Dégâts Infligés","DPS","Dégâts Infligés","Onglet des Dégâts Infligés"}
-L["Taken"] = {"Def","Dégâts Reçus","TPS","Dégâts Reçus","Onglet des Dégâts Reçus"}
-L["Heal"] = {"Soin","Soin","HPS","Soins","Onglet des Soins Reçus et Prodigués"}
-L["Power"] = {"Puis","Puissance","PPS","Puissance","Onglet sur la Puissance Reçue et Absorbée"}
+L["Dmg"] = {"Infligé ","Dégâts infligés ","Infligé/s ","Dégâts Infligés","Onglet dégâts infligés"}
+L["Taken"] = {"Subi ","Dégâts subis","Subi/s ","Dégâts subis","Onglet dégâts subis"}
+L["Heal"] = {"Soigné ","Soins reçus et prodigués","Soin/s ","Soins","Onglet soins reçus et prodigués"}
+L["Power"] = {"Puiss ","Puissance reçue et envoyée","Puiss/s ","Puissance","Onglet puissance reçue et absorbée"}
 
 L["Debuff"] = {"Debuff","Debuff","Debuff","Onglet des Debuffs","Onglet sur la durée des Debuffs"}
 L["Buff"] = {"Buff","Buff","Buff","Onglet des Buffs","Onglet sur la durée des Buffs"}
@@ -504,14 +502,14 @@ L["Buff"] = {"Buff","Buff","Buff","Onglet des Buffs","Onglet sur la durée des B
 L["Death"] = {"Mort","Mort"}
 L["Corruption"] = {"Corruption","Corruption Retirée"}
 L["Interrupt"] = {"Interruption","Interruption"}
-L["CombatEntered"] = {"Début Combat","Début du Combat"}
-L["CombatExited"] = {"Fin Combat","Fin du Combat"}
+L["CombatEntered"] = {"Début combat","Début du combat"}
+L["CombatExited"] = {"Fin combat","Fin du combat"}
 
 
-L["AvoidanceEnum"] = {{"Aucun","Aucun"},{"Raté","Raté"},{"Immunisé","Immunisé"},{"Résiste","Résiste"},
+L["AvoidanceEnum"] = {{"Aucun","Aucun"},{"Raté","Raté"},{"Immunisé","Immunisé"},{"Résisté","Résisté"},
                       {"Bloqué","Bloqué"},{"Paré","Paré"},{"Esquivé","Esquivé"},
                       {"Bloqué-P","Bloqué partiellement"},{"Paré-P","Paré partiellement"},{"Esquivé-P","Esquivé partiellement"},
-                      {"Deflect", "Deflect"}}
+                      {"Reflété", "Reflété"}}
 
 L["CriticalEnum"] = {{"Aucun","Aucun"},{"Critique","Coups Critique"},{"Dévastateur","Coups Dévastateur"}}
 
@@ -542,7 +540,7 @@ section. See http://www.lua.org/pil/20.2.html for more details.
 ]]--
 
 -- Renvoie un nom sans les articles
-local function trim_articles(name)
+local function TrimArticles(name)
 	if (name == nil) then
 		return nil;
 	end
@@ -554,44 +552,42 @@ end
 
 L["Parse"] = function(line)
 
-	-- 1) ligne de dégâts ---
+	-- 1) ligne de dégâts, incluant les attaque partiellement évitées ---
+	-- La Cible DPS factice a infligé un coup partiellement esquivé avec Attaque à distance sur Adragor pour 6,538 points de type Commun à l'entité Moral.
+	-- Adragor a infligé un coup critique avec Rhétorique glaciale sur la Cible DPS factice pour 51,642 points de type Froid à l'entité Moral.
 	
 	local initiatorName,avoidAndCrit,skillName,targetName,amount,dmgType,moralePower = string.match(line,"^(.*) a infligé un coup (.*)avec (.*) sur (.*) pour ([%d,]*) points de type (.*) à l'entité ?(.*)%.$"); -- (updated in v4.1.0)
-	
+		
 	if (initiatorName ~= nil) then
 	
-  
---		initiatorName = string.gsub(initiatorName,"^[Ll]e ","");
-		
 		local avoidType =
 			string.match(avoidAndCrit,"partiellement bloqué") and 8 or
 			string.match(avoidAndCrit,"partiellement paré") and 9 or
-			string.match(avoidAndCrit,"partiellement esquivé ") and 10 or 
-			1;
+			string.match(avoidAndCrit,"partiellement esquivé ") and 10 or 1;			
 		local critType =
 			string.match(avoidAndCrit,"critique") and 2 or
 			string.match(avoidAndCrit,"dévastateur") and 3 or 1;
 			
 --		skillName = string.match(skillName,"^ avec (.*)$") or L.DirectDamage; -- (as of v4.1.0)
 
---		local targetName,amount,dmgType,moralePower = string.match(targetNameAmountAndType,"^(.*) for ([%d,]*) (.*)damage to (.*)$");
-	
-    if (printDebug) then
-       Turbine.Shell.WriteLine( "damage by "..initiatorName.." skill "..skillName );
-    end	
+-- 		variables déja incluses plus haut 
+--		local targetName,amount,dmgType,moralePower = string.match(targetNameAmountAndType,"^(.*) pour ([%d,]*) (.*)points de type \"(.*)\" à (.*)$");
 
+-- Pas sûr que les 3 lignes en dessous soit utiles
+--   if (printDebug) then
+--      Turbine.Shell.WriteLine( "damage by "..initiatorName.." skill "..skillName );
+--  end	
+	
 		-- damage was absorbed
 		if targetName == nil then
-			targetName = string.gsub(targetNameAmountAndType,"^[Ll]e ","");
 			amount = 0;
-			dmgType = 12;
+			dmgType = 13;
 			moralePower = 3;
 		-- some damage was dealt
 		else
---			targetName = string.gsub(targetName,"^[Ll]e ","");
 			amount = string.gsub(amount,",","")+0;
       
----			dmgType = string.match(dmgType, "^%(.*%) (.*)$") or dmgType; -- 4.2.3 adjust for mounted combat
+			dmgType = string.match(dmgType, "^%(.*%) (.*)$") or dmgType; -- 4.2.3 adjust for mounted combat
 			-- note there may be no damage type
 			dmgType = 
 				dmgType == "Commun" and 1 or
@@ -613,101 +609,116 @@ L["Parse"] = function(line)
 		if (moralePower == 2) then return nil end
 		
 		-- Update
-		return event_type.DMG_DEALT,trim_articles(initiatorName),trim_articles(targetName),skillName,amount,avoidType,critType,dmgType;
+		return event_type.DMG_DEALT,TrimArticles(initiatorName),TrimArticles(targetName),skillName,amount,avoidType,critType,dmgType;
 	end
-	
-	-- 2) Line de soins --
+
+	-- 2) Ligne de soins --
 	--     (note the distinction with which self heals are now handled)
 	--     (note we consider the case of heals of zero magnitude, even though they presumably never occur)
-	
+
 	--	[slfHeal] Arc du Juste a appliqué un soin critique à Ardichas, redonnant 52 points à l'entité Puissance.
 	--  [slfHeal] Esprit de soliloque a appliqué un soin critique à Yogimen, redonnant 228 points à l'entité Moral.
 	--  [Heal]    Eleria a appliqué un soin avec Paroles de guérison Ardicapde, redonnant 227 points à Moral.
-	initiator_name, match = string.match(line, '^(.*) a appliqué un soin (.*)%.$');
+	
+	local initiatorName, match = string.match(line, '^(.*) a appliqué un soin (.*)%.$');
 
-	if (initiator_name ~= nil) then
-			crit_type =
+	if (initiatorName ~= nil) then
+		local critType =
 				string.match(match, 'critique') and 2 or
-				string.match(match, 'dévastateur') and 3 or 
-				1;
+				string.match(match, 'dévastateur') and 3 or 1;
+				
 			match = string.gsub(match, '^critique ', '');
 			match = string.gsub(match, '^dévastateur ', '');
 
 		local self_heal = (string.match(match, '^à ') and true or false);
 
 		-- Soins personnels (Self heal)
+		-- Guérison d'Attaque fortifiante a appliqué un soin à Adra, redonnant 314,802 points à l'entité Moral.
 		if (self_heal) then
-			skill_name = initiator_name;
-			target_name, dmg_amount, morale_power = string.match(match, '^à (.*), redonnant ([%d,]*) points? à l\'entité ?(.*)$');
-			initiator_name = target_name;
+			skillName = initiatorName;
+			targetName, dmg_amount, moralePower = string.match(match, '^à (.*), redonnant ([%d,]*) points? à l\'entité ?(.*)$');
+			initiatorName = targetName;
 
 		-- Soins sur une cible (Heal applied)
 		else
-			skill_name, target_name, dmg_amount, morale_power = string.match(match, '^avec (.*) ([^%s]+), redonnant ([%d,]*) points? à ?(.*)$');
+			skillName, targetName, dmg_amount, moralePower = string.match(match, '^avec (.*) ([^%s]+), redonnant ([%d,]*) points? à ?(.*)$');
 		end
 
-		morale_power = (morale_power == 'Moral' and 1 or (morale_power == 'Puissance' and 2 or 3));
-		dmg_amount = (morale_power == 3 and 0 or string.gsub(dmg_amount, ',', '') + 0);
+		moralePower = (moralePower == 'Moral' and 1 or (moralePower == 'Puissance' and 2 or 3));
+		dmg_amount = (moralePower == 3 and 0 or string.gsub(dmg_amount, ',', '') + 0);
 
-		return (morale_power == 2 and 4 or 3), trim_articles(initiator_name), trim_articles(target_name), skill_name, dmg_amount, crit_type;
+		return (moralePower == 2 and event_type.POWER_RESTORE or event_type.HEAL), TrimArticles(initiatorName), TrimArticles(targetName), skillName, dmg_amount, critType;
 	end
 	
 	-- 3) Ligne de buff --
 	-- MarieChantal a appliqué un bénéfice avec Paroles de guérison Eleria.
+	-- Osred a appliqué un bénéfice critique avec Cri de ralliement Osred.
 
-	local initiatorName,skillName,targetName = string.match(line,"^(.*) a appliqué un bénéfice avec (.*) (.*)%.$");
+	local initiatorName,skillName,targetName = string.match(line,"^(.*) a appliqué un bénéfice (.*)avec (.*) (.*)%.$");
 	
 	if (initiatorName ~= nil) then
---		initiatorName = string.gsub(initiatorName,"^[Ll]e ","");
---		targetName = string.gsub(targetName,"^[Ll]e ","");		
+
 		-- Update
-		return event_type.BENEFIT,trim_articles(initiatorName),trim_articles(targetName),skillName;
+		return event_type.BENEFIT,TrimArticles(initiatorName),TrimArticles(targetName),skillName;
 	end
 	
-	-- 4) Avoid line --
+	-- 4) Ligne d'évitements --
 	-- L' Profanateur ghâshfra vigoureux a essayé d'utiliser une attaque de lancer faible sur MarieChantal mais a esquivé la tentative.
+	-- L' Cible DPS factice a essayé d'utiliser Attaque à distance sur Adragor mais il a esquivé la tentative.
 	-- L' Berserker hante-jours a essayé d'utiliser une double attaque au corps à corps sur Eleria mais elle a paré la tentative.
-	-- L' Archer corsaire a essayé d'utiliser une attaque au corps à corps faible sur Cashel mais il a paré la tentative.
-	-- Ardichas a essayé d'utiliser Tir pénétrant amélioré : Brûlure sur le Trompeur immonde vigoureux mais il a esquivé la tentative.
 
 	-- Évitements standards (complets)
-	local initiator_name, skill_name, target_name, avoidType = string.match(line, "^(.*) a essayé d'utiliser (.*) sur (.*) mais (.*) la tentative%.$");
+	-- L' Eau sinistre redoutable a essayé d'utiliser Maladie sur Osred mais il a résisté la tentative.
+	-- L' Eau sinistre redoutable a essayé d'utiliser une attaque au corps à corps modérée sur Osred mais il a esquivé la tentative.
+	
+	local initiatorName, skillName, targetName, avoidType = string.match(line, "^(.*) a essayé d'utiliser (.*) sur (.*) mais (.*) la tentative%.$");
 
-	if (initiator_name ~= nil) then
+	if (initiatorName ~= nil) then
 		avoid_Type =
 			string.match(avoidType,"bloqué") and 5 or
 			string.match(avoidType,"paré") and 6 or
 			string.match(avoidType,"esquivé") and 7 or
 			string.match(avoidType,"résisté") and 4 or
 			string.match(avoidType,"immunisé contre") and 3 or 1;
-			
-	-- miss or deflect (deflect added in v4.2.2)
-	-- La Berserker hante-jours n'a pas réussi à utiliser une frappe de taille faible sur la Eleria.
 
 		if (avoid_type == 1) then
 			return nil;
 		end
-		return 1, trim_articles(initiator_name), trim_articles(target_name), skill_name, 0, avoid_Type, 1, 10;
+		return event_type.DMG_DEALT, TrimArticles(initiatorName), TrimArticles(targetName), skillName, 0, avoid_Type, 1, 10;
+	end
+			
+	-- 4b miss or deflect (deflect added in v4.2.2)
+
+	-- La Eau sinistre misérable n'a pas réussi à utiliser une double attaque au corps à corps sur le Osred.
+	local initiatorName, skillName, targetName = string.match(line, "^(.*) n'a pas réussi à utiliser (.*) sur (.*)%.$");
+
+	-- il manque le deflect
+	
+	if (initiatorName ~= nil) then
+		local avoidType = 2;
+	
+		-- Sanity check: must have avoided in some manner
+		if (avoidType == 1) then return nil end
+		
+		-- Update
+		return event_type.DMG_DEALT,initiatorName,targetName,skillName,0,avoidType,1,13;
 	end
 	
-	local initiator_name, skill_name, target_name = string.match(line, "^(.*) n'a pas réussi à utiliser (.*) sur (.*)%.$");
+	-- 5) Reflect line 
 
-	if (initiator_name ~= nil) then
-		avoid_type = 2;
-
-		return 1, trim_articles(initiator_name), trim_articles(target_name), skill_name, 0, avoid_type, 1, 10;
-	end
+	-- reflet de dégâts
+	-- Le Beorgal a renvoyé 1,106 Commun de dégâts au Moral de le Gobelin porteur de bombes.
 	
-	-- 5) Reflect line --
-	-- Norchador a renvoyé 210 Ombre de dégâts au Moral de la Eleria.
+	-- reflet soins
 	-- Le Sangsue gardienne a renvoyé 339 points redonnés au Moral de Eleria.
-	local initiatorName,amount,dmgType,targetName = string.match(line,"^(.*) a renvoyé ([%d,]*) (.*) au Moral de (.*)%.$");
+
+	local initiatorName,amount,reflectType,targetName = string.match(line,"^(.*) a renvoyé ([%d,]*) (.*) au Moral de (.*)%.$");
 	
 	if (initiatorName ~= nil) then
 		local skillName = "Reflect";
 		amount = string.gsub(amount,",","")+0;
 		
-		local dmgType = string.match(dmgType,"^(.*)de dégâts$");
+		local dmgType = string.match(reflectType,"^(.*)de dégâts$");
 		-- a damage reflect
 		if (dmgType ~= nil) then
 			dmgType = 
@@ -717,139 +728,155 @@ L["Parse"] = function(line)
 				dmgType == "Froid" and 4 or
 				dmgType == "Acide" and 5 or
 				dmgType == "Ombre" and 6 or
-				dmgType == "Lumière" and 7 or
+				dmgType == "Légère" and 7 or
 				dmgType == "Beleriand" and 8 or
 				dmgType == "Ouistrenesse" and 9 or
 				dmgType == "de nain d'antan" and 10 or
 				dmgType == "Orc" and 11 or
 				dmgType == "Maléfique" and 12 or 13;						
 			-- Update
-			return 1,trim_articles(initiatorName),trim_articles(targetName),skillName,amount,1,1,dmgType;
+			return event_type.DMG_DEALT,TrimArticles(initiatorName),TrimArticles(targetName),skillName,amount,1,1,dmgType;
 		-- a heal reflect
 		else
 			-- Update
-			return 3,trim_articles(initiatorName),trim_articles(targetName),skillName,amount,1;
+			return event_type.HEAL,TrimArticles(initiatorName),TrimArticles(targetName),skillName,amount,1;
 		end
 	end
 	
 	-- 6) Temporary Morale bubble line (as of 4.1.0)
+	-- Vous avez perdu 11 points de Moral temporaire !
   local amount = string.match(line,"^Vous avez perdu ([%d,]*) points de Moral temporaire !$");
 	if (amount ~= nil) then
 		amount = string.gsub(amount,",","")+0;
 		
 		-- the only information we can extract directly is the target and amount
-		return 14,nil,trim_articles(player.name),nil,amount;
+		return event_type.TEMP_MORALE_LOST,nil,TrimArticles(player.name),nil,amount;
 	end
 	
 	-- 7) Combat State Break notice (as of 4.1.0)
 	
 	-- 7a) Root broken
-	initiator_name, target_name = string.match(line, "^(.*) délivrée? ?(.*) de l'immobilisation\194\160!$");
+	-- Racine invoquée vous a délivré de l'immobilisation !
+	initiatorName, targetName = string.match(line, "^(.*) délivré (.*) de l'immobilisation !$");  -- à vérifier
 
-	if (initiator_name ~= nil) then
-		initiator_name =
-			string.match(initiator_name, "^Vous avez") and player.name or
-			string.match(initiator_name, " vous a$") and string.gsub(initiator_name, " vous a$", "") or
-			string.gsub(initiator_name, " a$", "");
-		target_name = (target_name == "" and player.name or target_name);
+	if (initiatorName ~= nil) then
+		-- the only information we can extract directly is the target name
+		initiatorName =
+			string.match(initiatorName, "^Vous avez") and player.name or
+			string.match(initiatorName, " vous a$") and string.gsub(initiatorName, " vous a$", "") or
+			string.gsub(initiatorName, " a$", "");
+		targetName = (targetName == "" and player.name or targetName);
 
 		if (printDebug) then
-  		Turbine.Shell.WriteLine("root_broken", line, "ini_name: " .. initiator_name .. " tgt_name: " .. target_name);
+  			Turbine.Shell.WriteLine("root_broken", line, "ini_name: " .. initiatorName .. " tgt_name: " .. targetName);
 		end
 
-		return event_type.CC_BROKEN, nil, trim_articles(target_name), nil;
+		return event_type.CC_BROKEN, nil, TrimArticles(targetName), nil;
 	end
 	
 	-- 7b) Daze broken
-	initiator_name, target_name = string.match(line, "^(.*) délivrée? ?(.*) de l'hébétement\194\160!$");
+	-- 	Vous avez délivré Gobelin manipulé de l'hébétement !	
+	initiatorName, targetName = string.match(line, "^(.*) délivré (.*) de l'hébétement !$"); -- à vérifier
 
-	if (initiator_name ~= nil) then
-		initiator_name =
-			string.match(initiator_name, "^Vous avez") and player.name or
-			string.match(initiator_name, " vous a$") and string.gsub(initiator_name, " vous a$", "") or
-			string.gsub(initiator_name, " a$", "");
-		target_name = (target_name == "" and player.name or target_name);
+	if (initiatorName ~= nil) then
+		initiatorName =
+			string.match(initiatorName, "^Vous avez") and player.name or
+			string.match(initiatorName, " vous a$") and string.gsub(initiatorName, " vous a$", "") or
+			string.gsub(initiatorName, " a$", "");
+		targetName = (targetName == "" and player.name or targetName);
 
 		if (printDebug) then
-		  Turbine.Shell.WriteLine("daze_broken", line, "ini_name: " .. initiator_name .. " tgt_name: " .. target_name);
-		end
-
-		return event_type.CC_BROKEN, nil, target_name, nil;
+		  Turbine.Shell.WriteLine("daze_broken", line, "ini_name: " .. initiatorName .. " tgt_name: " .. targetName);
+		end  
+		  
 	end
-	
+
+	-- 7c) Fear broken
+	-- Votre attaque a dissipé la peur qui étreignait Gobelin porteur de bombes !
+	local targetName = string.match(line,"^.* a dissipé la peur qui étreignait (.*) !$");   -- à vérifier
+	if (targetName ~= nil) then
+		
+		-- the only information we can extract directly is the target name
+		return event_type.CC_BROKEN,nil,targetName,nil;
+	end
+
+
 	-- 8) Interrupt line --
 	
-	local target_name, initiator_name = string.match(line, "^(.*) a été interrompu par (.*)!$");
+	local targetName, initiatorName = string.match(line, "^(.*) a été interrompu par (.*) !$");
 
-	if (target_name ~= nil) then
-		return event_type.INTERRUPT, trim_articles(initiator_name), trim_articles(target_name);
+	if (targetName ~= nil) then
+		return event_type.INTERRUPT, TrimArticles(initiatorName), TrimArticles(targetName);
 	end
 	
 	-- 9) Dispell line (corruption removal) --
 	
-	local corruption, target_name = string.match(line, "Vous avez dissipé l'effet (.*) affectant (.*)%.$");
+	local corruption, targetName = string.match(line, "Vous avez dissipé l'effet (.*) affectant (.*)%.$");
 
 	if (corruption ~= nil) then
-		initiator_name = player.name;
+		initiatorName = player.name;
 		-- NB: Currently ignore corruption name
 		
 		-- Update
-		return event_type.CORRUPTION, trim_articles(initiator_name), trim_articles(target_name);
+		return event_type.CORRUPTION, TrimArticles(initiatorName), TrimArticles(targetName);
 	end
 	
 	-- 10) Defeat lines ---
 	
 	-- 10a) Defeat line 1 (mob or played was killed)
-	initiator_name = string.match(line, "^.* a vaincu (.*)%.$");
+	-- Hellokitting a vaincu la Racine invoquée.
+	initiatorName = string.match(line, "^.* a vaincu (.*)%.$");
 
-	if (initiator_name ~= nil) then
+	if (initiatorName ~= nil) then
 
 	-- Update
-		return event_type.DEATH, trim_articles(initiator_name);
+		return event_type.DEATH, TrimArticles(initiatorName);
 	end
 
 	-- 10b) Defeat line 2 (mob died)
-	initiator_name = string.match(line, "^(.*) meurt%.$");
+	initiatorName = string.match(line, "^(.*) meurt%.$");
 
-	if (initiator_name ~= nil) then
+	if (initiatorName ~= nil) then
 		
 		-- Update
-		return event_type.DEATH, trim_articles(initiator_name);
+		return event_type.DEATH, TrimArticles(initiatorName);
 	end
 
 	-- 10c) Defeat line 3 (a player was killed or died)
-	initiator_name = string.match(line, "^(.*) a péri%.$");
+	initiatorName = string.match(line, "^(.*) a péri%.$");
 
-	if (initiator_name ~= nil) then
+	if (initiatorName ~= nil) then
 		
 		-- Update
-		return event_type.DEATH, trim_articles(initiator_name);
+		return event_type.DEATH, TrimArticles(initiatorName);
 	end
 
 	-- 10d) Defeat line 4 (you were killed)
 	match = string.match(line, "^.* a réussi à vous mettre hors de combat%.$");
 
 	if (match ~= nil) then
+		initiatorName = player.name;
 		
 		-- Update
-		return event_type.DEATH, trim_articles(player.name);
+		return event_type.DEATH, TrimArticles(player.name);
 	end
 
 	-- 10e) Defeat line 5 (you died)
 	match = string.match(line, "^Un incident vous a réduit à l'impuissance%.$");
 
 	if (match ~= nil) then
-		
+--	initiatorName = player.name;	-- à activer ?
 		-- Update
-		return event_type.DEATH, trim_articles(player.name);
+		return event_type.DEATH, TrimArticles(player.name);
 	end	
 	-- 10f) Defeat line 6 (you killed a mob)
+	-- Votre coup puissant a vaincu la Racine invoquée.
 	local initiatorName = string.match(line,"^Votre coup puissant a vaincu (.*)%.$");
 	
 	if (initiatorName ~= nil) then
 		
 		-- Update
-		return event_type.DEATH,trim_articles(initiatorName);
+		return event_type.DEATH,TrimArticles(initiatorName);
 	end
 	
 	-- 11) Revive lines --
@@ -860,7 +887,7 @@ L["Parse"] = function(line)
 	if (initiatorName ~= nil) then
 	  
 		-- Update
-	  return event_type.REVIVE,trim_articles(initiatorName);
+	  return event_type.REVIVE,TrimArticles(initiatorName);
 	end
 	
 	-- 11b) Revive line 2 (player succumbed)
@@ -869,7 +896,7 @@ L["Parse"] = function(line)
 	if (initiatorName ~= nil) then
 	  
 		-- Update
-	  return event_type.REVIVE,trim_articles(initiatorName);
+	  return event_type.REVIVE,TrimArticles(initiatorName);
 	end
 	
 	-- 11c) Revive line 3 (you were revived)
@@ -913,45 +940,45 @@ end
 L["Default"] = "Par défaut";
 
 -- 0) Temporary Morale Skills {combat log name, effect name}
-
--- Champion
-L["TrueHeroicsEffect"] = "True Heroics";
-L["TrueHeroicsLog"] = "True Heroics";
-L["SuddenDefenceEffect"] = "Sudden Defence";
-L["SuddenDefenceLog"] = "Sudden Defence";
--- Minstrel
+   -- Champion
+L["TrueHeroicsEffect"] = "Grands actes d'héroïsme";
+L["TrueHeroicsLog"] = "Grands actes d'héroïsme";  
+L["SuddenDefenceEffect"] = "Défense soudaine";
+L["SuddenDefenceLog"] = "Défense soudaine";
+  -- Minstrel
 L["StoryOfTheHammerhandEffect"] = "Histoire du Poing de Marteau";
 L["StoryOfTheHammerhandLog"] = "Histoire of the Hammerhand";
 L["SongOfTheHammerhandEffect"] = "Chant du Poing de Marteau";
 L["SongOfTheHammerhandLog"] = "Chant du Poing de Marteau";
 L["GiftOfTheHammerhandEffect"] = "Don du Poing de Marteau";
 L["GiftOfTheHammerhandLog"] = "Don du Poing de Marteau";
--- Rune-Keeper
+  -- Rune-Keeper
 L["WordOfExaltationEffect"] = "Mot d'exaltation";
 L["WordOfExaltationLog"] = "Mot d'exaltation";
-L["EssayOfExaltationEffect"] = "Essai d'exaltation";
-L["EssayOfExaltationLog"] = "Mot d'exaltation";
--- Other
-L["MartyrsFortitudeEffect"] = "Martyr's Fortitude";
-L["MartyrsFortitudeLog"] = "Martyr's Fortitude";
-L["FrostRingEffect"] = "Ring of Frost";
+L["EssayOfExaltationEffect"] = "Mot d'exaltation";  -- ou "Essai d'exaltation"
+L["EssayOfExaltationLog"] = "Essai d'exaltation";  -- ou "Mot d'exaltation"
+  -- Other
+L["MartyrsFortitudeEffect"] = "Force d'âme du martyr";  -- A vérifier - Effet déclenchable par un set de bijoux niveau 75
+L["MartyrsFortitudeLog"] = "Force d'âme du martyr"; -- A vérifier
+L["FrostRingEffect"] = "Anneau du froid"; -- A vérifier -- L'effet de l'anneau de froid lors du combat contre Saroumane ?
 L["FrostRingLog"] = "Shield of the Blizzard";
 
 -- 1) Burglar Skills
-
--- Buffs (effect name)
+  -- Trait Lines : Il s'agit à priori du nom des chacun des 3 arbres de traits, tel qu'ils s'affichent dans le chat suite à leur chargement.
+L["TheMischiefMaker"] = "L'espiègle";
+L["TheQuietKnife"] = "Le poignard silencieux";
+L["TheGambler"] = "Le parieur";
+  -- Buffs (effect name)
 L["TouchAndGo"] = "Touch and Go";
 L["KnivesOut"] = "Knives Out";
 L["Mischievous"] = "Mischievous";
 L["QuietKnife"] = "Quiet Knife";
 L["Gambler"] = "Gambler";
-L["TheMischiefMaker"] = "The Mischief-maker"; -- same as stance name
-L["TheQuietKnife"] = "The Quiet Knife"; -- same as stance name
-L["TheGambler"] = "The Gambler"; -- same as stance name
+  -- Skills
 L["Feint"] = "Feint";
 L["ImprovedFeint"] = "Improved Feint";
 L["ArmourOfTheUnseen"] = "Armour of the Unseen";
--- Debuffs (log name)
+  -- Debuffs (log name)
 L["RevealWeakness"] = "Reveal Weakness";
 L["Addle"] = "Addle";
 L["TrickDisable"] = "Trick: Disable";
@@ -962,10 +989,10 @@ L["Slowed"] = "Slowed";
 L["TrickEnrage"] = "Trick: Enrage";
 L["ASmallSnag"] = "A Small Snag";
 L["QuiteASnag"] = "Quite a Snag";
--- Removals (log name)
+  -- Removals (log name)
 L["MischievousDelight"] = "Mischievous Delight";
 L["MischievousGlee"] = "Mischievous Glee";
--- Crowd Control (log name)
+  -- Crowd Control (log name)
 L["Riddle"] = "Riddle";
 L["ImprovedRiddle"] = "Improved Riddle";
 L["Confound"] = "Confound";
@@ -982,129 +1009,125 @@ L["MarblesTier2"] = "Marbles Tier 2";
 L["MarblesTier3"] = "Marbles Tier 3";
 
 -- 2) Captain Skills
-
--- Trait Lines
-L["LeadTheCharge"] = "A la charge!";
+  -- Trait Lines
+L["LeadTheCharge"] = "A la charge";
 L["LeaderOfMen"] = "Meneur d'hommes";
-L["HandsOfHealing"] = "Mains Guérisseuses";
--- Buffs (effect name)
-L["MusterCourage"] = "Rassemblement du courage";
-L["InHarmsWay"] = "In Harm's Way";
-L["WarCry"] = "War-cry";
+L["HandsOfHealing"] = "Mains guérisseuses";
+  -- Buffs (effect name)
+L["MusterCourage"] = "Rassemblement de courage";
+L["InHarmsWay"] = "Au cœur du danger";
+L["WarCry"] = "Cri de guerre"; -- Obsolete
 L["BladeOfElendil"] = "Lame d'Elendil";
-L["Motivated"] = "Motivation";
+L["Motivated"] = "Discours motivant amélioré"; -- or "motivation" ?
 L["OnGuard"] = "En garde";
 L["RelentlessAttack"] = "Attaque acharnée";
-L["Focus"] = "Focus";
+L["Focus"] = "Concentration";
 L["ShieldBrother"] = "Frère de bouclier";
 L["WatchfulShieldBrother"] = "Frère de bouclier vigilant";
 L["SongBrother"] = "Frère de chants";
 L["BladeBrother"] = "Frère d'armes";
-L["ShieldOfTheDunedain"] = "Bouclier des D\195\186nedain";
-L["ToArmsShieldBrother"] = "Aux armes! (Frère de bouclier)";
-L["ToArmsFellowshipShieldBrother"] = "Aux armes! (Frère de bouclier communauté)";
-L["ToArmsSongBrother"] = "Aux armes! (Frère de chants)";
-L["ToArmsFellowshipSongBrother"] = "Aux armes! (Frère de chants communauté)";
-L["ToArmsBladeBrother"] = "Aux armes! (Frère d'armes)";
-L["ToArmsFellowshipBladeBrother"] = "Aux armes! (Frère d'armes communauté)";
-L["StrengthOfWillShieldBrother"] = "Inspiration (Frère de bouclier)";
-L["StrengthOfWillFellowshipShieldBrother"] = "Inspiration (Frère de bouclier communauté)";
-L["StrengthOfWillSongBrother"] = "Inspiration (Frère de chants)";
-L["StrengthOfWillFellowshipSongBrother"] = "Inspiration (Frère de chants communauté)";
-L["StrengthOfWillBladeBrother"] = "Inspiration (Frère d'armes)";
-L["StrengthOfWillFellowshipBladeBrother"] = "Inspiration (Frère d'armes communauté)";
+L["ShieldOfTheDunedain"] = "Bouclier des Dúnedain";
+L["ToArmsShieldBrother"] = "Aux-armes";
+L["ToArmsFellowshipShieldBrother"] = "Aux armes! (Frère de bouclier communauté)"; -- obsolete ?
+L["ToArmsSongBrother"] = "Aux armes ! (Frère de chants)";
+L["ToArmsFellowshipSongBrother"] = "Aux armes! (Frère de chants communauté)"; -- obsolete ?
+L["ToArmsBladeBrother"] = "Aux armes ! (Frère d'armes)";
+L["ToArmsFellowshipBladeBrother"] = "Aux armes! (Frère d'armes communauté)"; -- obsolete ?
+L["StrengthOfWillShieldBrother"] = "Inspiration (Frère de bouclier)"; -- obsolete ?
+L["StrengthOfWillFellowshipShieldBrother"] = "Inspiration (Frère de bouclier communauté)"; -- obsolete ?
+L["StrengthOfWillSongBrother"] = "Inspiration (Frère de chants)"; -- obsolete ?
+L["StrengthOfWillFellowshipSongBrother"] = "Inspiration (Frère de chants communauté)"; -- obsolete ?
+L["StrengthOfWillBladeBrother"] = "Inspiration (Frère d'armes)"; -- obsolete ?
+L["StrengthOfWillFellowshipBladeBrother"] = "Inspiration (Frère d'armes communauté)"; -- obsolete ?
 L["RallyingCry"] = "Cri de ralliement";
-L["InDefenceOfMiddleEarth"] = "A la défense de la Terre du Milieu";
-L["DefensiveStrike"] = "Frappe certaine";
+L["InDefenceOfMiddleEarth"] = "A la défense de la Terre du Milieu"; -- Obsolete ?
+L["DefensiveStrike"] = "Attaque retenue"; -- Obsolete
 L["ImprovedDefensiveStrike"] = "Frappe certaine améliorée";
 L["LastStand"] = "Dernier combat";
--- Debuffs (log name)
+  -- Debuffs (log name)
 L["NobleMark"] = "Marque de noblesse";
 L["TellingMark"] = "Marque efficace";
 L["RevealingMark"] = "Marque révélatrice";
 
 -- 3) Champion Skills
-
--- Trait Lines
+  -- Trait Lines
 L["TheBerserker"] = "Berserker";
 L["TheDeadlyStorm"] = "Tempête mortelle";
 L["TheMartialChampion"] = "Champion du combat";
--- Buffs (effect name)
-L["Fervour"] = "Ferveur"; -- obsolete since U12
-L["Glory"] = "Gloire"; -- obsolete since U12
-L["Ardour"] = "Ardeur"; -- obsolete since U12
+  -- Buffs (effect name)
+L["Fervour"] = "Ferveur"; -- obsolete
+L["Glory"] = "Gloire"; -- obsolete
+L["Ardour"] = "Ardeur"; -- obsolete
 L["ControlledBurn"] = "Brûlure contrôlée";
-L["Flurry"] = "Flurry";
+L["Flurry"] = "Déluge de coups";
 L["SuddenDefence"] = "Défense soudaine";
-L["SeekingBlades"] = "Seeking Blades";
+L["SeekingBlades"] = "Lame chercheuse"; -- obsolete
 L["Adamant"] = "Adamantite";
-L["Invincible"] = "Invincible";
--- Hamstring (log name)
+L["Invincible"] = "Invincibilité"; -- or "Invincible"
+  -- Hamstring (log name)
 L["Hamstring"] = "Coup aux jarrets";
--- Crowd Control (log name)
+  -- Crowd Control (log name)
 L["HornOfGondor"] = "Cor du Gondor";
-L["Horn"] = "cor";
--- Benefits (log name)
-L["EbbingIre"] = "Ebbing Ire";
-L["RisingIre"] = "Rising Ire";
+L["Horn"] = "Cor";
+  -- Benefits (log name)
+L["EbbingIre"] = "Colère atténuée";
+L["RisingIre"] = "Colère grandissante"; -- obsolete
 
 -- 4) Guardian Skills
-
--- Trait lines
-L["TheKeenBlade"] = "The Keen Blade";
-L["TheFighterOfShadow"] = "The Fighter of Shadow";
-L["TheDefenderOfTheFree"] = "The Defender of the Free";
--- Buffs (effect name)
+  -- Trait lines
+L["TheKeenBlade"] = "Lame acérée";
+L["TheFighterOfShadow"] = "Adversaire de l'Ombre";
+L["TheDefenderOfTheFree"] = "Défenseur des Peuples Libres";
+  -- Buffs (effect name)
 L["Protection"] = "Protection";
-L["ProtectionByTheSword"] = "Protection by the Sword";
-L["ShieldWall"] = "Shield Wall";
-L["GuardiansBlockStance"] = "Guardian's Block Stance";
-L["GuardiansParryStance"] = "Guardian's Parry Stance";
-L["Overpower"] = "Overpower";
-L["GuardiansThreatStance"] = "Guardian's Threat Stance";
-L["GuardiansPledge"] = "Guardian's Pledge";
+L["ProtectionByTheSword"] = "Protection par l'épée";
+L["ShieldWall"] = "Mur de boucliers";
+L["GuardiansBlockStance"] = "Guardian's Block Stance";  -- obsolete
+L["GuardiansParryStance"] = "Guardian's Parry Stance";  -- obsolete
+L["Overpower"] = "Surpuissance";  -- obsolete
+L["GuardiansThreatStance"] = "Guardian's Threat Stance"; -- obsolete
+L["GuardiansPledge"] = "Serment de gardien";
 L["GuardiansWard"] = "Guardian's Ward";
 L["ImprovedGuardiansWard"] = "Improved Guardian's Ward";
-L["GuardiansWardTactics"] = "Guardian's Ward Tactics";
+L["GuardiansWardTactics"] = "Tactiques de Protection de gardien";
 L["ImprovedGuardiansWardTactics"] = "Improved Guardian's Ward Tactics";
 L["WarriorsBlock"] = "Warrior's Block";
 L["WarriorsParry"] = "Warrior's Parry";
 L["WarriorsPower"] = "Warrior's Power";
 L["WarriorsThreat"] = "Warrior's Threat";
--- Debuffs (log name)
+  -- Debuffs (log name)
 L["Bash"] = "Bash";
-L["ShieldSmash"] = "Shield-smash";
-L["ToTheKing"] = "To the King";
-L["Challenge"] = "Challenge";
+L["ShieldSmash"] = "Écrasement au bouclier";
+L["ToTheKing"] = "Au roi";
+L["Challenge"] = "Défi";
 L["ImprovedChallenge"] = "Improved Challenge";
-L["ChallengeTheDarkness"] = "Challenge the Darkness";
+L["ChallengeTheDarkness"] = "Challenge the Darkness";   -- obsolete
 L["ImprovedOverwhelm"] = "Improved Overwhelm";
 L["ImprovedSting"] = "Improved Sting";
 L["ImminentCleansing"] = "Imminent Cleansing";
 
 -- 5) Hunter Skills
-
--- Trait lines
+  -- Trait lines
 L["TheBowmaster"] = "Maître archer";
 L["TheTrapperOfFoes"] = "Piégeur d'ennemis";
-L["TheHuntsman"] = "Flèche Sylvaine";
--- Buffs (effect name)
-L["StanceStrength"] = "Posture: force";
-L["StancePrecision"] = "Posture: précision";
-L["StanceEndurance"] = "Posture: endurance";
+L["TheHuntsman"] = "Flèche sylvaine";
+  -- Buffs (effect name)
+L["StanceStrength"] = "Posture : force";
+L["StancePrecision"] = "Posture : précision";
+L["StanceEndurance"] = "Posture : endurance";
 L["BurnHot"] = "Vive flamme";
-L["CoolBurn"] = "Cool Burn";
+L["CoolBurn"] = "Cool Burn";  -- obsolete
 L["Fleetness"] = "Célérité";
 L["ImprovedFleetness"] = "Célérité améliorée";
 L["SwiftStroke"] = "Décochage rapide";
 L["NeedfulHaste"] = "Hâte nécessaire";
-L["HuntersArt"] = "Hunter's Art";-- Always exist ????
--- Debuffs (log name)
+L["HuntersArt"] = "Art du chasseur"; -- Obsolete
+  -- Debuffs (log name)
 L["QuickShot"] = "Tir rapide";
 L["LowCut"] = "Coups au jambes";
 L["CripplingShot"] = "Crippling Shot";
-L["SlowingCut"] = "Slowing Cut";
--- Crowd Control (log name)
+L["SlowingCut"] = "Coupure ralentissante";
+  -- Crowd Control (log name)
 L["DazingBlow"] = "Coups d'hébétement";
 L["ImprovedDazingBlow"] = "Coups d'hébètement amélioré";
 L["DistractingShot"] = "Tir de distraction";
@@ -1113,22 +1136,21 @@ L["CryOfThePredator"] = "Cri du prédateur";
 L["BardsArrow"] = "Flèche de Bard";
 L["TrapDamage"] = "Dégâts de piège";
 
--- 6) Lore-Master Skills
-
--- Trait lines
+-- 6) Lore-Master 
+  -- Trait lines
 L["MasterOfNaturesFury"] = "Maître de la fureur naturelle";
 L["TheAncientMaster"] = "Maître ancien";
 L["TheKeeperOfAnimals"] = "Gardien des animaux";
--- Buffs (effect name)
+  -- Buffs (effect name)
 L["AirLore"] = "Connaissance de l'air";
-L["ContinualAirLore"] = "Continual Air-lore"; --exist ??
+L["ContinualAirLore"] = "Continual Air-lore"; -- exist ??
 L["SignOfPowerRighteousness"] = "Signe du pouvoir : Intégrité";
 L["SignOfPowerVigilance"] = "Signe du pouvoir : Vigilance";
 L["SignOfTheWildRage"] = "Signe du pouvoir : Rage"; --exist ??
 L["ImprovedSignOfTheWildRage"] = "Improved Sign of the Wild: Rage"; --exist ??
 L["SignOfTheWildProtection"] = "Sign of the Wild: Protection"; --exist ??
--- Debuffs (log name)
--- L["KnowledgeOfTheLoreMaster"] = "Knowledge of the Lore-master";
+  -- Debuffs (log name)
+  -- L["KnowledgeOfTheLoreMaster"] = "Knowledge of the Lore-master";
 L["GustOfWind"] = "Bourrasque";
 L["FireLore"] = "Connaissance du feu";
 L["WindLore"] = "Connaissance du vent";
@@ -1137,7 +1159,7 @@ L["AncientCraft"] = "Artisanat ancien";
 L["SignOfPowerCommand"] = "Signe du pouvoir : Commandement";
 L["ImprovedSignOfPowerCommand"] = "Signe du pouvoir : commandement amélioré";
 L["SignOfPowerSeeAllEnds"] = "Signe du pouvoir : voir la fin des choses";
--- Crowd Control (log name)
+  -- Crowd Control (log name)
 L["BlindingFlash"] = "Lumière aveuglante";
 L["ImprovedBlindingFlash"] = "Lumière aveuglante améliorée";
 L["BaneFlare"] = "Eclat fatal";
@@ -1149,13 +1171,12 @@ L["TestOfWill"] = "Test de volonté";
 L["EntsGoToWar"] = "Marche guerrière des Ents";
 L["ImprovedStaffStrike"] = "Coup de bâton améliore";
 
--- 7) Minstrel Skills
-
--- Trait lines
+-- 7) Minstrel
+  -- Trait lines
 L["TheWarriorSkald"] = "Skalde guerrier";
 L["TheProtectorOfSong"] = "Protecteur des chants";
 L["TheWatcherOfResolve"] = "Veilleur déterminé";
--- Buffs (effect name)
+  -- Buffs (effect name)
 L["AnthemOfWar"] = "Hymne de guerre";
 L["AnthemOfTheFreePeoples"] = "Hymne des Peuples Libres";
 L["AnthemOfProwess"] = "Anthem of Prowess";
@@ -1192,38 +1213,36 @@ L["SongOfTheDead"] = "Song of the Dead";
 L["InvocationOfElbereth"] = "Invocation d'Elbereth";
 
 -- 8) Rune-Keeper Skills
-
--- Trait lines
-L["CleansingFires"] = "Flamme purificatrice";
+  -- Trait lines
+L["CleansingFires"] = "Flammes purificatrices"; -- Au pluriel dans le log mais au singulier sur l'arbre de traits
 L["SolitaryThunder"] = "Tonnerre solitaire";
-L["BenedictionsOfPeace"] = "Bénédiction de la paix";
--- Buffs (effect name)
-L["DoNotFallToStorm"] = "Do Not Fall to Storm"; -- obsolete ?
-L["DoNotFallToFlame"] = "Do Not Fall to Flame"; -- obsolete ?
-L["DoNotFallToWinter"] = "Do Not Fall to Winter"; -- obsolete ?
+L["BenedictionsOfPeace"] = "Bénédictions de la paix"; -- Au pluriel dans le log mais au singulier sur l'arbre de traits
+  -- Buffs (effect name)
+L["DoNotFallToStorm"] = "Do Not Fall to Storm"; -- obsolete
+L["DoNotFallToFlame"] = "Do Not Fall to Flame"; -- obsolete
+L["DoNotFallToWinter"] = "Do Not Fall to Winter"; -- obsolete
 L["DoNotFallThisDay"] = "Tu ne succomberas pas aujourd'hui";
-L["ShallNotFallThisDay"] = "Shall Not Fall This Day";
-L["PreludeToHope"] = "Prelude à l'espoir";
+L["ShallNotFallThisDay"] = "Shall Not Fall This Day"; -- obsolete
+L["PreludeToHope"] = "Prélude à l'espoir"; -- il manque "Prelude à la Puissance" (sans accent)
 L["RuneOfRestoration"] = "Rune de restauration";
-L["WritOfHealthTier1"] = "Allégorie de la santé - Niveau 1";
-L["WritOfHealthTier2"] = "Allégorie de la santé - Niveau 2";
-L["WritOfHealthTier3"] = "Allégorie de la santé - Niveau 3";
+L["WritOfHealthTier1"] = "Allégorie de la santé - niveau 1"; -- il manque "Allégorie de la santé" sans suffixe en tant que "bénéfice".
+L["WritOfHealthTier2"] = "Allégorie de la santé - niveau 2";
+L["WritOfHealthTier3"] = "Allégorie de la santé - niveau 3";
 L["OurFatesEntwined"] = "Nos destins entrelacés";
-L["AllFatesEntwined"] = "Nos destins entrelacés"; -- obsolete ?
+L["AllFatesEntwined"] = "Nos destins entrelacés"; -- obsolete
 L["GloriousForeshadowing"] = "Présage glorieux";
-L["WondrousForeshadowing"] = "Wondrous Foreshadowing"; -- obsolete ?
+L["WondrousForeshadowing"] = "Présage merveilleux"; -- obsolete
 
 -- 9) Warden Skills
-
--- Trait lines
-L["WayOfTheSpear"] = "La voie de la lance";
-L["WayOfTheFist"] = "La voie du poing";
-L["WayOfTheShield"] = "La voie du bouclier";
--- Buffs (effect name)
+  -- Trait lines
+L["WayOfTheSpear"] = "La voie de la lance";  -- obsolete
+L["WayOfTheFist"] = "La voie du poing";  -- obsolete
+L["WayOfTheShield"] = "La voie du bouclier";  -- obsolete
+  -- Buffs (effect name)
 L["Conviction"] = "Conviction";
-L["DeterminationStance"] = "Determination Stance";
+L["DeterminationStance"] = "Détermination"; -- A vérifier
 L["Conservation"] = "Conservation";
-L["Recklessness"] = "Recklessness";
+L["Recklessness"] = "Imprudence";  -- A vérifier
 L["WayOfTheWarden"] = "Way of the Warden";
 L["ShieldBashBlock"] = "Shield-bash - Block";
 L["WallOfSteelParry"] = "Wall of Steel - Parry";
@@ -1242,20 +1261,43 @@ L["T3HealOverTime"] = "Guérison au fil du temps de niveau 3";
 L["T4HealOverTime"] = "Guérison au fil du temps de niveau 4";
 
 -- 10) Racial Skills
-L["DutyBound"] = "Duty Bound";
-L["DwarfEndurance"] = "Dwarf Endurance";
+L["DutyBound"] = "Appel du devoir";
+L["DwarfEndurance"] = "Endurance de nain";
 
 -- 11) Beorning
--- Traits
-L["WayofTheHide"] = "Way of the Hide"
-L["WayofTheClaw"] = "Way of the Claw"
-L["WayofTheRoar"] = "Way of the Roar"
+  -- Traits
+L["WayofTheHide"] = "La Peau"
+L["WayofTheClaw"] = "La Griffe"
+L["WayofTheRoar"] = "Le Cri"
+  -- Buffs
+L["EncouragingRoar"] = "Rugissement d'encouragement";
+L["RejuvenatingBellow"] = "Hurlement du renouveau";
+L["BracingRoar"] = "Rugissement fortifiant";
+L["Sacrifice"] = "Sacrifice";
+L["BearUp"] = "Tenez bon";
+L["VigilantRoar"] = "Rugissement vigilant";
+L["AssertiveRoar"] = "Rugissement assuré";
+L["SluggishStings"] = "Abeilles lénifiantes"; -- to be checked
+L["EnragingSacrifice"] = "Sacrifice rageant";
+L["DebilitatingBees"] = "Abeilles affaiblissantes";
+L["EncouragingStrike"] = "Frappe encourageante"; 
+L["ShakeFree"] = "Arrachement";
+L["Takedown"] = "Tacle";
+L["CripplingStings"] = "Dards invalidants";
+L["CripplingRoar"] = "Rugissement invalidant"; -- ou "Rugissement perçant" le nom de l'effet de ralentissement
+L["ThickenedHide"] = "Cuir renforcé";
+L["Counter"] = "Contre";
+L["CallToWild"] = "Appel sauvage";
+  -- Crowd control
+L["GrislyCry"] = "Cri atroce";
 
--- 12 Brawler
-L["TheFulcrum"] = "The Fulcrum";
-L["TheMaelstrom"] = "The Maelstrom";
-L["TheFundament"] = "The Fundament";
-L["GetSerious"] = "Get Serious";
+-- 12 Brawler : bagarreur
+  -- Traits
+L["TheFulcrum"] = "Le Fulcrum";
+L["TheMaelstrom"] = "Le Maelström";
+L["TheFundament"] = "La Fondation";
+
+L["GetSerious"] = "Choses sérieuses";
 L["WeatherBlows"] = "Weather Blows";
 L["SkipFree"] = "Skip Free";
 L["IgnorePain"] = "Ignore Pain";
@@ -1263,29 +1305,6 @@ L["FollowMe"] = "Follow Me!";
 L["QuickFeint"] = "Quick Feint";
 L["OneforAll"] = "One for All";
 L["SkipFree"] = "Skip Free";
-
--- Buffs
-L["EncouragingRoar"] = "Encouraging Roar";
-L["RejuvenatingBellow"] = "Rejuvenating Bellow";
-L["BracingRoar"] = "Bracing Roar";
-L["Sacrifice"] ="Sacrifice";
-L["BearUp"] ="Bear Up";
-L["VigilantRoar"] = "Vigilant Roar";
-L["AssertiveRoar"] = "Assertive Roar";
-L["SluggishStings"] = "Sluggish Stings";
-L["EnragingSacrifice"] = "Enraging Sacrifice";
-L["DebilitatingBees"] = "Debilitating Bees";
-L["EncouragingStrike"] = "Encouraging Strike";
-L["ShakeFree"] = "Shake Free";
-L["Takedown"] = "Takedown";
-L["CripplingStings"] = "Crippling Stings";
-L["CripplingRoar"] = "Crippling Roar";
-L["ThickenedHide"] ="Thickened Hide";
-L["Counter"] = "Counter";
-L["CallToWild"] = "Call To Wild";
-
--- Crowd control
-L["GrislyCry"] = "Grisly Cry";
 
 -- Other
 L["VagabondsCraft"] = "Vagabond's Craft";
