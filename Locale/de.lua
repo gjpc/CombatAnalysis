@@ -549,7 +549,9 @@ L["Parse"] = function(line)
 	-- 1) Damage line ---
 	
 	local initiatorName,avoidAndCrit,skillName,targetNameAmountAndType = string.match(line,"^(.*) gelang ein (.*)Treffer mit \"(.*)\" gegen (.*)%.$");
-	
+	if (initiatorName == nil) then
+		initiatorName,avoidAndCrit,skillName,targetNameAmountAndType = string.match(line,"^(.*) erzielte (.*)Treffer mit (.*) bei (.*)%.$");
+	end
 	if (initiatorName ~= nil) then
 		initiatorName = TrimArticles(initiatorName);
 		
@@ -560,8 +562,12 @@ L["Parse"] = function(line)
 		local critType =
 			string.match(avoidAndCrit,"kritischer $") and 2 or
 			string.match(avoidAndCrit,"zerst\195\182rerischer $") and 3 or 1;
-		
+		-- erzielte Treffer mit Ausführen bei SPS-Übungspuppe in Höhe von 18,630 (9,874 von 53 Zorn) Beleriand Schaden auf Moral.	
 		local targetName,amount,dmgType,moralePower = string.match(targetNameAmountAndType, "^(.*) f\195\188r ([%d,]*) Punkte Schaden des Typs \"(.*)\" auf (.*)$");
+		if (targetName == nil) then
+			targetName,amount,dmgType,moralePower = string.match(targetNameAmountAndType, "^(.*) in H\195\182he von ([%d,]*) %([%d,]* von %d* %a*%) (.*) Schaden auf (.*)$");
+		end 
+		
 		-- damage was absorbed
 		if targetName == nil then
 			targetName = TrimArticles(targetNameAmountAndType);
